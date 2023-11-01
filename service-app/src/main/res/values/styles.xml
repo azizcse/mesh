@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextAppearance">@style/MenuItemTextAppearance</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextInputLayout">
+        <item name="colorAccent">@color/colorGradientStart</item>
+        <item name="colorPrimary">#00bb5c</item>
+    </style>
+
+    <style name="MenuItemTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Tooltip">
+        <item name="android:text">Hello World!</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="backgroundColor">#00574B</item>
+        <item name="cornerRadius">10dp</item>
+        <!--        <item name="arrowWidth">48dp</item>
+                <item name="arrowHeight">48dp</item>-->
+    </style>
+
+    <style name="CustomButton">
+        <item name="android:layout_width">@dimen/width_100</item>
+        <item name="android:layout_height">@dimen/height_50</item>
+        <item name="android:layout_marginStart">@dimen/margin_15</item>
+        <item name="android:layout_marginEnd">@dimen/margin_15</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="hint_style">
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="colorAccent">@color/hint_text_color</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ScrollStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fillViewport">true</item>
+    </style>
+    <style name="MySwitch" parent="@style/Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textColorPrimaryDisableOnly">@color/black</item>
+        <item name="android:colorControlActivated">@color/color_magenta</item>
+        <item name="android:colorForeground">@color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

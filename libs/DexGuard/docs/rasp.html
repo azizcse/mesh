@@ -1,0 +1,1844 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>RASP - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+      <link rel="stylesheet" href="css/extra2.css">
+    
+      <link rel="stylesheet" href="css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#runtime-application-self-protection-rasp" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                RASP
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RASP
+      </label>
+    
+    <a href="rasp.html" title="RASP" class="md-nav__link md-nav__link--active">
+      RASP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-for-automatic-rasp" class="md-nav__link">
+    Quick start for automatic RASP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-configuration-file" class="md-nav__link">
+    Add configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-checks" class="md-nav__link">
+    Enable checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-callback" class="md-nav__link">
+    Configure callback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-application-classes" class="md-nav__link">
+    Custom application classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-application-protection-for-manual-rasp" class="md-nav__link">
+    Custom application protection for manual RASP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-application-protection-for-automatic-rasp-injection" class="md-nav__link">
+    Custom application protection for automatic RASP injection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-specific-files" class="md-nav__link">
+    Checking Specific Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-specific-certificate-hash" class="md-nav__link">
+    Checking Specific Certificate Hash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-injection-location" class="md-nav__link">
+    Adjusting the injection location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-amount-of-checks" class="md-nav__link">
+    Adjusting the amount of checks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-for-automatic-rasp" class="md-nav__link">
+    Quick start for automatic RASP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-configuration-file" class="md-nav__link">
+    Add configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-checks" class="md-nav__link">
+    Enable checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-callback" class="md-nav__link">
+    Configure callback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-application-classes" class="md-nav__link">
+    Custom application classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-application-protection-for-manual-rasp" class="md-nav__link">
+    Custom application protection for manual RASP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-application-protection-for-automatic-rasp-injection" class="md-nav__link">
+    Custom application protection for automatic RASP injection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-specific-files" class="md-nav__link">
+    Checking Specific Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-specific-certificate-hash" class="md-nav__link">
+    Checking Specific Certificate Hash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-injection-location" class="md-nav__link">
+    Adjusting the injection location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-amount-of-checks" class="md-nav__link">
+    Adjusting the amount of checks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="runtime-application-self-protection-rasp">Runtime Application Self-Protection (RASP)<a class="headerlink" href="#runtime-application-self-protection-rasp" title="Permanent link">&para;</a></h1>
+<p>Runtime application self-protection or RASP enables applications to defend themselves against analysis and attacks at runtime.
+The various RASP checks monitor, at runtime, the integrity of the application and its execution environment.</p>
+<p>There are two ways to add RASP to an application using DexGuard:</p>
+<ul>
+<li>Automatically injecting the checks: this option is the easiest way to add RASP to your application and due to the randomness upon every build, this option is inherently more resilient against reverse engineering.</li>
+<li>Manually adding checks using the <a href="runtime.html">DexGuard Runtime Library</a>: this gives you complete control over the location of RASP checks but requires you to manually add code throughout your application; this
+  option is best if you need more control or if you wish to protect an Android library.</li>
+</ul>
+<p>If you're already a user of the DexGuard Runtime Library you can enable automatic RASP checks but these
+checks are independent of your original checks. However, using both options together might result in a performance hit
+because more RASP checks will be added to your application compared to using just one option.
+If your application performed some action when you detected a threat you should now configure a callback to perform the same action for the automatic checks. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Automatic injection is not yet supported for libraries but you can still use the <a href="runtime.html">DexGuard Runtime Library</a> to add
+RASP checks to your application.</p>
+</div>
+<h2 id="quick-start-for-automatic-rasp">Quick start for automatic RASP<a class="headerlink" href="#quick-start-for-automatic-rasp" title="Permanent link">&para;</a></h2>
+<p>Enabling automatic RASP support for an application requires:</p>
+<ol>
+<li>Adding the necessary <a href="#add-configuration-file">configuration file</a> to your Gradle build configuration.</li>
+<li>Enabling the <a href="#enable-checks">desired checks</a> in your DexGuard configuration.</li>
+<li>Specifying a reaction, either a <a href="#configuring-callback">callback</a> or enabling <a href="threatcast.html">ThreatCast</a> reporting.</li>
+</ol>
+<p>By default, a detected threat will cause the application to crash for <a href="#enable-checks">some categories of threats</a>.</p>
+<p>The sample project named <code>RASP</code> in the <code>samples/basic</code> folder of the DexGuard release zip demonstrates 
+the automatic injection of RASP checks.</p>
+<h3 id="add-configuration-file">Add configuration file<a class="headerlink" href="#add-configuration-file" title="Permanent link">&para;</a></h3>
+<p>Add the <code>dexguard-rasp.pro</code> configuration file in addition 
+to one of the usual <a href="defaultconfigurations.html">default configuration</a> files:</p>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Gradle plugin (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;path/to/dexguard/distribution&#39;</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="c1">// Standard release configuration and the additional RASP configuration.</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+
+            <span class="c1">// RASP default configuration</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-rasp.pro&#39;</span>
+
+            <span class="c1">// Your own configuration</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Gradle plugin (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">path</span> <span class="p">=</span> <span class="s">&quot;path/to/dexguard/distribution&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Standard release configuration and the additional RASP configuration.</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+
+            <span class="c1">// RASP default configuration</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-rasp.pro&quot;</span><span class="p">)</span>
+
+            <span class="c1">// Your own configuration</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Standalone</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="c"># Standard release configuration and the additional RASP configuration.</span>
+<span class="nb">-include </span><span class="err">/lib/dexguard-release.pro</span>
+
+<span class="c"># RASP default configuration</span>
+<span class="nb">-include </span><span class="err">/lib/dexguard-rasp.pro</span>
+
+<span class="c"># Your own configuration</span>
+<span class="nb">-injars </span><span class="err">your-app.apk</span>
+<span class="nb">-outjars </span><span class="err">your-app-protected.apk</span>
+<span class="nb">-libraryjars </span><span class="err">..</span><span class="k k-Filename">.</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">com.example.MyClass</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="enable-checks">Enable checks<a class="headerlink" href="#enable-checks" title="Permanent link">&para;</a></h3>
+<p>By default, all RASP checks are disabled. To enable them, you can use the <code>-raspchecks</code> option in your configuration.
+The option takes a list of one or more RASP detectors.</p>
+<p>For example, to enable APK tamper and emulator detectors, add the following to your DexGuard configuration:</p>
+<div class="codehilite"><pre><span></span><code>-raspchecks emulator,apktamper
+</code></pre></div>
+
+<p>You can prefix a detector name with <code>!</code> to disable that detector but enable others. For example, the following enables all detectors except
+the APK tamper detector:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspchecks</span> <span class="err">!</span><span class="kt">apktamper</span>
+</code></pre></div>
+
+<p>You can also use a <code>*</code> wildcard to enable all detectors or <code>none</code> to disable all detectors:</p>
+<div class="codehilite"><pre><span></span><code><span class="c"># Enable all</span>
+<span class="err">-</span><span class="kt">raspchecks</span> <span class="kt">*</span>
+
+<span class="c"># Disable all</span>
+<span class="err">-</span><span class="kt">raspchecks</span> <span class="kt">none</span>
+
+<span class="c"># Disable all except emulator</span>
+<span class="err">-</span><span class="kt">raspchecks</span> <span class="kt">emulator</span>
+</code></pre></div>
+
+<p>By default, for some threat categories, the application will crash when a threat is detected. You can override this
+behaviour with the <code>-raspcontinueon</code> option in your configuration.
+For example, if you just wish to report an APK tampering threat without crashing, you can allow the execution to continue normally
+by adding the following to your DexGuard configuration: </p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspcontinueon</span> <span class="kt">apktamper</span>
+</code></pre></div>
+
+<p>The full list of tamper detectors is shown in the table below and detailed information on each of these can be found <a href="runtime.html">here</a>.
+You can also find an example configuration in the <code>RASP</code> sample in the <code>samples/basic</code> folder.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Detector Name</th>
+<th>Config Name</th>
+<th>Default Threat Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tamper Detector</td>
+<td><code>apktamper</code></td>
+<td>Crash</td>
+</tr>
+<tr>
+<td>Certificate Checker</td>
+<td><code>certificatetamper</code></td>
+<td>Crash</td>
+</tr>
+<tr>
+<td>File Checker</td>
+<td><code>filetamper</code></td>
+<td>Crash</td>
+</tr>
+<tr>
+<td>debug Detector</td>
+<td><code>debug</code></td>
+<td>Crash</td>
+</tr>
+<tr>
+<td>emulator Detector</td>
+<td><code>emulator</code></td>
+<td>Crash</td>
+</tr>
+<tr>
+<td>hook Detector</td>
+<td><code>hook</code></td>
+<td>Continue</td>
+</tr>
+<tr>
+<td>root Detector</td>
+<td><code>root</code></td>
+<td>Continue</td>
+</tr>
+<tr>
+<td>Virtual Environment Detector</td>
+<td><code>virtualenvironment</code></td>
+<td>Continue</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>You can use the negation and <code>*</code> wildcard with <code>-raspcontinueon</code> too:</p>
+<div class="codehilite"><pre><span></span><code><span class="c"># Don&#39;t crash on any threat categories</span>
+<span class="err">-</span><span class="kt">raspcontinueon</span> <span class="kt">*</span>
+
+<span class="c"># Crash on all threat categories</span>
+<span class="err">-</span><span class="kt">raspcontinueon</span> <span class="kt">none</span>
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Android platform is extremely diverse in both hardware and software with some devices even being sold rooted by default. 
+Although DexGuard's checks are carefully selected and tested based on all the input we see it might, on very rare occasions, happen to result in false positives. For this reason, root detection, virtual environment and hook detection checks are more likely than others to return false positives, wrongly indicating that a threat is present.
+Therefore, the <code>dexguard-rasp.pro</code> configuration contains <code>-raspcontinueon hook,root,virtualenvironment</code> as the default.
+See the <a href="runtime.html">Runtime Library documentation</a> for more information.</p>
+</div>
+<h3 id="configure-callback">Configure callback<a class="headerlink" href="#configure-callback" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Guardsquare provides a free threat reporting tool, <a href="threatcast.html">ThreatCast</a>, that works seamlessly with automatic RASP support.</p>
+</div>
+<p>A custom callback can be configured that will be executed when a threat is detected. The callback is executed in addition to the default crashing behaviour and 
+will be executed before crashing. In order to add a callback, you must add a dependency to your application:</p>
+<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Manual Download (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">repositories</span> <span class="o">{</span>
+    <span class="n">flatDir</span> <span class="o">{</span> <span class="n">dirs</span> <span class="s1">&#39;libs&#39;</span> <span class="o">}</span> <span class="c1">// For the DexGuard libraries.</span>
+    <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android support libraries.</span>
+    <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For any other libraries.</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="c1">// ...</span>
+    <span class="n">implementation</span> <span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;dexguard-rasp&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;jar&#39;</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>You can find the dependency at the following locations:</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DexGuard RASP support library</td>
+<td>${DexGuardInstallPath}/lib/dexguard-rasp.jar</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Manual Download (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">repositories</span> <span class="p">{</span>
+    <span class="n">flatDir</span> <span class="p">{</span> <span class="n">dirs</span><span class="p">(</span><span class="s">&quot;libs&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// For the DexGuard libraries.</span>
+    <span class="n">google</span><span class="p">()</span>  <span class="c1">// For the Android support libraries.</span>
+    <span class="n">mavenCentral</span><span class="p">()</span> <span class="c1">// For any other libraries.</span>
+<span class="p">}</span>
+
+<span class="n">dependencies</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="n">implementation</span><span class="p">(</span><span class="n">mapOf</span><span class="p">(</span><span class="s">&quot;name&quot;</span> <span class="n">to</span> <span class="s">&quot;dexguard-rasp&quot;</span><span class="p">,</span>
+                         <span class="s">&quot;ext&quot;</span>  <span class="n">to</span> <span class="s">&quot;jar&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>You can find the dependency at the following locations:</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DexGuard RASP support library</td>
+<td>${DexGuardInstallPath}/lib/dexguard-rasp.jar</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Maven</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">repositories</span> <span class="o">{</span>
+    <span class="n">maven</span> <span class="o">{</span>  <span class="c1">// For the DexGuard libraries.</span>
+        <span class="n">credentials</span>  <span class="o">{</span>
+            <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;${dexguardMavenUser}&quot;</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;${dexguardMavenPassword}&quot;</span>
+        <span class="o">}</span>
+        <span class="n">url</span> <span class="s2">&quot;https://maven.guardsquare.com&quot;</span>
+        <span class="n">authentication</span> <span class="o">{</span>
+            <span class="n">basic</span><span class="o">(</span><span class="n">BasicAuthentication</span><span class="o">)</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android support libraries.</span>
+    <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For any other libraries.</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="c1">// ... </span>
+    <span class="n">implementation</span> <span class="s1">&#39;com.guardsquare:dexguard-rasp:9.1.9&#39;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>A method such as the following <code>myCallback</code> method can be added to the application:</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Java</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorldActivity</span> <span class="kd">extends</span> <span class="n">Activity</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * This is an optional DexGuard RASP callback method. This signature must match.</span>
+<span class="cm">     *</span>
+<span class="cm">     * Any strings used in the callback will be automatically encrypted.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param detectionReport A detection report containing threat information.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">myCallback</span><span class="p">(</span><span class="n">DetectionReport</span> <span class="n">detectionReport</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// The type of threat detected can be checked.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">detectionReport</span><span class="p">.</span><span class="na">isRunningInEmulator</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MyApp&quot;</span><span class="p">,</span> <span class="s">&quot;Emulator detected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">HelloWorldActivity</span> <span class="p">:</span> <span class="n">Activity</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="k">companion</span> <span class="k">object</span>
+    <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * This is an optional DexGuard RASP callback method. This signature must match.</span>
+<span class="cm">         *</span>
+<span class="cm">         * Any strings used in the callback will be automatically encrypted.</span>
+<span class="cm">         *</span>
+<span class="cm">         * @param detectionReport A detection report containing threat information.</span>
+<span class="cm">         */</span>
+        <span class="n">@JvmStatic</span>
+        <span class="k">fun</span> <span class="nf">myCallback</span><span class="p">(</span><span class="n">detectionReport</span><span class="p">:</span> <span class="n">DetectionReport</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Log</span><span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="s">&quot;HelloWorldActivity&quot;</span><span class="p">,</span> <span class="s">&quot;Threat detected&quot;</span><span class="p">)</span>
+            <span class="c1">// The type of threat detected can be checked.</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">detectionReport</span><span class="p">.</span><span class="n">isRunningInEmulator</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Log</span><span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="s">&quot;HelloWorldActivity&quot;</span><span class="p">,</span> <span class="s">&quot;Emulator Detected&quot;</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>along with the following DexGuard configuration to set <code>myCallback</code> as the RASP callback method:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspcallback</span> <span class="kd">class </span><span class="nc">com.example.HelloWorldActivity </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">myCallback</span><span class="p">(</span><span class="kt">com.guardsquare.dexguard.rasp.callback.DetectionReport</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The method must be static and have the same parameter as in the example.
+You don't need a <code>-keep</code> rule for the method.</p>
+</div>
+<p>The <code>DetectionReport</code> contains several methods that allow you to determine the type of threat. You can find the complete list in the <a href="rasp/com/guardsquare/dexguard/rasp/callback/DetectionReport.html">DetectionReport JavaDoc</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The method <code>getDebugInfo()</code> contains encoded debugging information. If you're not using ThreatCast, we highly recommend that you log
+this value as it will be helpful for providing to Guardsquare support when diagnosing any problems.</p>
+</div>
+<p><a name="custom_application_classes"></a></p>
+<h3 id="custom-application-classes">Custom application classes<a class="headerlink" href="#custom-application-classes" title="Permanent link">&para;</a></h3>
+<p>Root detection requires an isolated process to perform some of its checks. This process is automatically created but it shares 
+initialization defined in the Application class. This initialization code is not required for such process, and may even cause wrong behavior. </p>
+<h4 id="custom-application-protection-for-manual-rasp">Custom application protection for manual RASP<a class="headerlink" href="#custom-application-protection-for-manual-rasp" title="Permanent link">&para;</a></h4>
+<p>If you are using manual RASP, to avoid this unexpected behaviour, you should add the following protection code in front of each method overridden in the custom application class. You should also protect the class constructor the same way, and any static initialization code.
+This code disables all specific initialization when executed in the isolated process which used to detect rooting. For instance, if the custom application class refer to any other class, make sure that the protection check applied before using that class.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.example</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Application</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.guardsquare.dexguard.runtime.detection.DexGuardServiceIdentifier</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomApplication</span> <span class="kd">extends</span> <span class="n">Application</span> 
+<span class="p">{</span>
+    <span class="c1">// Static initialization is optional</span>
+    <span class="kd">static</span> 
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">DexGuardServiceIdentifier</span><span class="p">.</span><span class="na">isRootDetectionProcess</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="c1">// Static application initialization code</span>
+            <span class="c1">// ...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Creating a constructor is optional</span>
+    <span class="kd">public</span> <span class="nf">CustomApplication</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">DexGuardServiceIdentifier</span><span class="p">.</span><span class="na">isRootDetectionProcess</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Application initialization code</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Overriding this method is optional</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="p">()</span> 
+    <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">DexGuardServiceIdentifier</span><span class="p">.</span><span class="na">isRootDetectionProcess</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Application initialization code</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Overriding this method is optional</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">attachBaseContext</span><span class="p">(</span><span class="n">Context</span> <span class="n">context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">attachBaseContext</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">DexGuardServiceIdentifier</span><span class="p">.</span><span class="na">isRootDetectionProcess</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Application initialization code</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Call isRootDetectionProcess() and return if true </span>
+    <span class="c1">// for all methods  overriden in the CustomApplication class</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have several classes which inherit, directly or indirectly, from <code>Application</code>, 
+the same process should be applied on all of them. </p>
+</div>
+<h4 id="custom-application-protection-for-automatic-rasp-injection">Custom application protection for automatic RASP injection<a class="headerlink" href="#custom-application-protection-for-automatic-rasp-injection" title="Permanent link">&para;</a></h4>
+<p>If you are using <code>-raspchecks root</code>, you don't need to add the above protection code because it is automatically injected in the rest of the methods. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the constructor of the Application class calls super() with parameters, DexGuard will not be able to protect such code and you will have to revert to manual protection. This will be indicated by the message <code>Warning: MyApplication.&lt;init&gt; contains a call to parametrized super constructor. This cannot be automatically protected from execution in isolated process. Please protect it manually.</code>.</p>
+</div>
+<p>If you are using automatic RASP injection and manual protection for the isolated process, 
+RASP injection should be disabled for the constructor of the custom application class.
+<div class="codehilite"><pre><span></span><code>-raspclassfilter class !com.example.CustomApplication {
+    &lt;init&gt;(...);
+}
+</code></pre></div></p>
+<h2 id="checking-specific-files">Checking Specific Files<a class="headerlink" href="#checking-specific-files" title="Permanent link">&para;</a></h2>
+<p>If the File Checker is enabled then by default all files will be checked for tampering.
+Instead, specific files can be checked by listing them in the DexGuard configuration. For example, the following snippet will cause 
+the File Checker to check only <code>assets/main.js</code> and <code>assets/secret.js</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspfiletamperlist</span> <span class="kt">assets</span><span class="err">/</span><span class="kt">main.js</span><span class="p">,</span><span class="kt">assets</span><span class="err">/</span><span class="kt">secret.js</span>
+</code></pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The File Checker will be triggered if the application is modified by other tools after DexGuard. In these cases the files to check should
+be explicitly listed and there are some exceptions. This can occur, for example, with app bundles: it is not possible to check the files <code>resources.arsc</code>, <code>AndroidManifest.xml</code>, 
+or other xml files, since the Android bundletool still manipulates them when creating the final APK. See the <a href="runtime.html">Runtime Library</a> documentation
+for more details and additional limitations.</p>
+</div>
+<h2 id="checking-specific-certificate-hash">Checking Specific Certificate Hash<a class="headerlink" href="#checking-specific-certificate-hash" title="Permanent link">&para;</a></h2>
+<p>When using app signing by Google Play, Google manages and protects your app's signing key for you and signs your APKs on your behalf.
+In this case DexGuard does not know which signing key will be used and thus does not know which certificate hash should be used to detect resigning of your app.</p>
+<p>To circumvent this issue, you can provide the certificate hash of the signing key used by Google using the following option.
+The certificate hash can be provided with or without the colons. We only support the SHA-256 hash.
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspcertificatehash</span> <span class="err">&quot;</span><span class="kt">EB</span><span class="p">:</span><span class="kt">B0</span><span class="p">:</span><span class="kt">FE</span><span class="p">:</span><span class="kt">DF</span><span class="p">:</span><span class="kt">19</span><span class="p">:</span><span class="kt">42</span><span class="p">:</span><span class="kt">A0</span><span class="p">:</span><span class="kt">99</span><span class="p">:</span><span class="kt">B2</span><span class="p">:</span><span class="kt">87</span><span class="p">:</span><span class="kt">C3</span><span class="p">:</span><span class="kt">DB</span><span class="p">:</span><span class="kt">00</span><span class="p">:</span><span class="kt">FF</span><span class="p">:</span><span class="kt">73</span><span class="p">:</span><span class="kt">21</span><span class="p">:</span><span class="kt">62</span><span class="p">:</span><span class="kt">15</span><span class="p">:</span><span class="kt">24</span><span class="p">:</span><span class="kt">81</span><span class="p">:</span><span class="kt">AB</span><span class="p">:</span><span class="kt">B2</span><span class="p">:</span><span class="kt">B6</span><span class="p">:</span><span class="kt">C7</span><span class="p">:</span><span class="kt">CB</span><span class="p">:</span><span class="kt">CD</span><span class="p">:</span><span class="kt">B2</span><span class="p">:</span><span class="kt">BA</span><span class="p">:</span><span class="kt">58</span><span class="p">:</span><span class="kt">94</span><span class="p">:</span><span class="kt">A7</span><span class="p">:</span><span class="kt">68</span><span class="err">&quot;</span>
+<span class="err">-</span><span class="kt">raspcertificatehash</span> <span class="err">&quot;</span><span class="kt">EBB0FEDF1942A099B287C3DB00FF732162152481ABB2B6C7CBCDB2BA5894A768</span><span class="err">&quot;</span>
+</code></pre></div></p>
+<p>You can find the certificate hash of the signing key used by Google on your Google Play console under the "App Signing" section.</p>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<p>Automatically injecting the checks could incur a performance cost as the checks themselves take time to process and enabling more checks might result in a higher performance cost.</p>
+<h3 id="adjusting-the-injection-location">Adjusting the injection location<a class="headerlink" href="#adjusting-the-injection-location" title="Permanent link">&para;</a></h3>
+<p>To minimize the performance cost of the injected checks, override the class filters to exclude performance sensitive classes from injection.
+The <code>-raspclassfilter</code> configuration option determine into which classes the RASP checks will be injected.</p>
+<p>For example, if your app startup time is slowed down significantly, you can add the following to your configuration to exclude your startup activity from injection:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspclassfilter</span> <span class="kd">class </span><span class="nc">!com.example.StartupActivity</span>
+</code></pre></div>
+
+<h3 id="adjusting-the-amount-of-checks">Adjusting the amount of checks<a class="headerlink" href="#adjusting-the-amount-of-checks" title="Permanent link">&para;</a></h3>
+<p>DexGuard randomly insert checks in all of the application's code. This will make it harder to remove all the RASP checks at the cost of performance and size.
+This trade-off can be influenced through the appropriate aggressiveness setting. The option is used with the detector name
+and an aggressiveness level:</p>
+<p><div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspaggressiveness</span> <span class="kt">detector</span> <span class="kt">level</span>
+</code></pre></div>
+The available values for aggressiveness are: <code>min</code>, <code>low</code>, <code>medium</code>, <code>high</code>, <code>max</code>, <code>all</code>.</p>
+<p>For example, if you want to increase the amount of hook detection checks which are injected into your app's code, you can put the following in your DexGuard configuration:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">raspaggressiveness</span> <span class="kt">hook</span> <span class="kt">high</span>
+</code></pre></div>
+
+<p>The default aggressiveness levels are listed in the table below:</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Detector Name</th>
+<th>Config Name</th>
+<th>Default Aggressiveness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tamper Detector</td>
+<td><code>apktamper</code></td>
+<td><code>medium</code></td>
+</tr>
+<tr>
+<td>Certificate Checker</td>
+<td><code>certificatetamper</code></td>
+<td><code>medium</code></td>
+</tr>
+<tr>
+<td>File Checker</td>
+<td><code>filetamper</code></td>
+<td><code>medium</code></td>
+</tr>
+<tr>
+<td>debug Detector</td>
+<td><code>debug</code></td>
+<td><code>medium</code></td>
+</tr>
+<tr>
+<td>emulator Detector</td>
+<td><code>emulator</code></td>
+<td><code>high</code></td>
+</tr>
+<tr>
+<td>hook Detector</td>
+<td><code>hook</code></td>
+<td><code>low</code></td>
+</tr>
+<tr>
+<td>root Detector</td>
+<td><code>root</code></td>
+<td><code>low</code></td>
+</tr>
+<tr>
+<td>Virtual Environment Detector</td>
+<td><code>virtualenvironment</code></td>
+<td><code>medium</code></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>You can get some basic feedback about which detectors were enabled and how many checks were injected with configuration option <code>-verbose</code> (and Gradle option <code>--info</code> to see the output).</p>
+<p>For more detailed information, in a Gradle build you can find the inject mapping in <code>build/outputs/mapping/&lt;variant_dir&gt;/injectmapping.txt</code>
+or you can add the following to your DexGuard configuration to print a list of RASP injections to a file:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">printinjectmapping</span> <span class="kt">inject.txt</span>
+</code></pre></div>
+
+<p>The file will contain a mapping of which RASP checking code was injected into which method in your application.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The file format is not finalised and is subject to change.</p>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="protection.html" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Overview
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="java.html" title="Java" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Java
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

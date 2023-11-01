@@ -1,0 +1,6 @@
+com.guardsquare.dexguard.encryption.asset
+com.guardsquare.dexguard.encryption.clazz
+com.guardsquare.dexguard.encryption.nativelibrary
+com.guardsquare.dexguard.encryption.resource
+com.guardsquare.dexguard.encryption.string
+com.guardsquare.dexguard.obfuscation.asset

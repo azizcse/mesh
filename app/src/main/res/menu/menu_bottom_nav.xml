@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_msg_sending_status"
+        android:title="0"
+        app:showAsAction="always" />
+    <!-- <item
+         android:id="@+id/menu_data_plan_setting"
+         android:enabled="false"
+         android:title="@string/my_data_plan"
+         app:showAsAction="always" />-->
+    <item
+        android:id="@+id/menu_resume_file_test"
+        android:title="File resume"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_network_reform_test"
+        android:title="Reform"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_log_history"
+        android:title="Log History"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_send_all_message"
+        android:title="Send all"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_get_nodeInfo"
+        android:title="Print NodeInfo in Log"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_ble_message"
+        android:title="BLE MSG"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_bt_message"
+        android:title="BT MSG"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_user_delete"
+        android:title="User clear"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_content_broadcast"
+        android:title="Select Broadcast file"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_mode_selection"
+        android:title="User mode"
+        app:showAsAction="never" />
+
+    <!--    <item
+            android:id="@+id/menu_conn_stat"
+            android:title="Connection Stat"
+            app:showAsAction="never" />-->
+
+    <!--<item
+        android:id="@+id/menu_wifi_search"
+        android:title="WiFi Search"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_ble_search"
+        android:title="Ble Search"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_ble_discoverable"
+        android:title="Ble discoverable"
+        app:showAsAction="never"/>-->
+
+</menu>

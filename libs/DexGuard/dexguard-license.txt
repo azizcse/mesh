@@ -1,0 +1,10 @@
+# DexGuard license file
+licensee              = W3 ENGINEERS LTD
+contact               =  
+contactEmail          = sabbir@w3engineers.com
+product               = DexGuard
+version               = 7.*,8.*,9.*
+package               = com.intermeshnetworks.service
+expiryDate            = 2022-06-08
+maintenanceExpiryDate = 2022-06-08
+key                   = 19762cd1e1cd6c396468d3c72be7ba547c8400f4f34f5be6d1f3515ba11a9fae94ccffa7822cf6ed56ed5d48fc888d1a52db83753d08b0223a105fcaa072b36b

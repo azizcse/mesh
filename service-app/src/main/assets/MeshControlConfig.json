@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "clients": [
+    {
+      "app_token": "com.w3engineers.unicef.telemesh",
+      "key_hash":"ahodnkdkdf",
+      "sha_key" :"65:99:3F:C9:07:E8:F5:23:EF:AE:9C:4F:12:88:CC:39:37:DA:F6:E0:1D:54:0B:B8:16:1E:A2:69:72:4C:39:0E",
+      "wallet_creation_enable": true,
+      "discovery_enable": true,
+      "message_enable": true,
+      "blokchain_enable": true,
+      "app_download_enable": true
+    },
+    {
+      "app_token": "com.w3engineers.ext.viper",
+      "key_hash":"ahodnkdkdf",
+      "sha_key" :"65:99:3F:C9:07:E8:F5:23:EF:AE:9C:4F:12:88:CC:39:37:DA:F6:E0:1D:54:0B:B8:16:1E:A2:69:72:4C:39:0E",
+      "wallet_creation_enable": true,
+      "discovery_enable": true,
+      "message_enable": true,
+      "blokchain_enable": true,
+      "app_download_enable": true
+    },
+    {
+      "app_token": "com.w3engineers.ext.mamba",
+      "key_hash":"ahodnkdkdf",
+      "sha_key" :"65:99:3F:C9:07:E8:F5:23:EF:AE:9C:4F:12:88:CC:39:37:DA:F6:E0:1D:54:0B:B8:16:1E:A2:69:72:4C:39:0E",
+      "wallet_creation_enable": true,
+      "discovery_enable": true,
+      "message_enable": true,
+      "blokchain_enable": true,
+      "app_download_enable": true
+    },
+    {
+      "app_token": "com.w3engineers.theapp",
+      "key_hash":"ahodnkdkdf",
+      "sha_key" :"65:99:3F:C9:07:E8:F5:23:EF:AE:9C:4F:12:88:CC:39:37:DA:F6:E0:1D:54:0B:B8:16:1E:A2:69:72:4C:39:0E",
+      "wallet_creation_enable": false,
+      "discovery_enable": true,
+      "message_enable": false,
+      "blokchain_enable": false,
+      "app_download_enable": true
+    },
+
+    {
+      "app_token": "org.telegram.messenger",
+      "key_hash":"ahodnkdkdf",
+      "sha_key" :"65:99:3F:C9:07:E8:F5:23:EF:AE:9C:4F:12:88:CC:39:37:DA:F6:E0:1D:54:0B:B8:16:1E:A2:69:72:4C:39:0E",
+      "wallet_creation_enable": false,
+      "discovery_enable": true,
+      "message_enable": false,
+      "blokchain_enable": false,
+      "app_download_enable": true
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+plugins {
+    id 'com.android.library'
+    //id 'com.google.protobuf'
+}
+
+def isDebugDatabaseEnabled = !project.hasProperty('org.w3.debugdb') ||//If not specified then assume true
+        project.getProperty('org.w3.debugdb').toBoolean()
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        release {
+            debuggable rootProject.ext.r_debugable
+            minifyEnabled rootProject.ext.r_minifyEnable
+            shrinkResources rootProject.ext.r_shrinkEnable
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BT_UUID', '"' + BT_UUID + '"'
+            buildConfigField 'String', 'NETWORK_PREFIX', '"' + NETWORK_PREFIX + '"'
+            buildConfigField 'int', 'PORT', PORT
+
+            /*String TUNNEL_PASSWORD
+            Properties properties = new Properties()
+            if (rootProject.file('local.properties').canRead()) {
+                TUNNEL_PASSWORD = properties.getProperty('TUNNEL_PASSWORD', '')
+            }*/
+            buildConfigField 'String', 'TUNNEL_PASSWORD', TUNNEL_PASSWORD
+        }
+        debug {
+
+            debuggable rootProject.ext.d_debugable
+            minifyEnabled rootProject.ext.d_minifyEnable
+            shrinkResources rootProject.ext.d_shrinkEnable
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            String defaultString = ''
+            String btUuid = defaultString, networkPrefix = defaultString, port = '0', bleServiceUuid = defaultString, TUNNEL_PASSWORD
+            Properties properties = new Properties()
+            if (rootProject.file('local.properties').canRead()) {
+                properties.load(rootProject.file("local.properties").newDataInputStream())
+                btUuid = properties.getProperty('BT_UUID', defaultString)
+                networkPrefix = properties.getProperty('NETWORK_PREFIX', defaultString)
+                port = properties.getProperty('PORT', '0')
+                bleServiceUuid = properties.getProperty('BLE_SERVICE_UUID', defaultString)
+                TUNNEL_PASSWORD = properties.getProperty('TUNNEL_PASSWORD', '')
+            }
+
+            if (btUuid == defaultString) {
+                throw new GradleException('You must provide: BT_UUID property in your ' +
+                        'local.properties')
+            }
+            if (bleServiceUuid == defaultString) {
+                throw new GradleException('You must provide: BLE_SERVICE_UUID property in your ' +
+                        'local.properties')
+            }
+
+            if (networkPrefix == defaultString) {
+                throw new GradleException('You must provide: NETWORK_PREFIX property in your ' +
+                        'local.properties')
+            }
+            buildConfigField 'String', 'BT_UUID', '"' + btUuid + '"'
+            buildConfigField 'String', 'NETWORK_PREFIX', '"' + networkPrefix + '"'
+            buildConfigField 'int', 'PORT', port
+            buildConfigField 'String', 'BLE_SERVICE_UUID', '"' + bleServiceUuid + '"'
+            buildConfigField 'String', 'TUNNEL_PASSWORD', TUNNEL_PASSWORD
+        }
+        demo {
+            String TUNNEL_PASSWORD = ""
+            Properties properties = new Properties()
+            if (rootProject.file('local.properties').canRead()) {
+                TUNNEL_PASSWORD = properties.getProperty('TUNNEL_PASSWORD', '')
+            }
+            buildConfigField 'String', 'TUNNEL_PASSWORD', TUNNEL_PASSWORD
+            buildConfigField 'String', 'BT_UUID', '"' + BT_UUID_DEMO + '"'
+            buildConfigField 'String', 'NETWORK_PREFIX', '"' + NETWORK_PREFIX_DEMO + '"'
+            buildConfigField 'int', 'PORT', PORT
+            buildConfigField 'String', 'BLE_SERVICE_UUID', '"' + BT_UUID_DEMO + '"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+/*protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.0.0"
+    }
+    plugins {
+        lite {
+            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.plugins {
+                lite {}
+            }
+        }
+    }
+}*/
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    mavenCentral()
+}
+
+apply from: "$project.rootDir/gradle/sharedDependencies.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':jsch')
+    implementation files('src/libs/lz4-java-1.7.1.jar')
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    api 'com.google.code.gson:gson:2.8.7'
+    //implementation 'commons-io:commons-io:2.4'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    /*implementation('org.web3j:core:4.2.0-android') {
+      exclude group: 'org.bouncycastle'
+    }*/
+    //implementation 'org.bouncycastle:bcprov-jdk15on:1.61'
+    //implementation 'com.snatik:storage:2.1.0'
+
+    //implementation 'com.google.protobuf:protobuf-lite:3.0.0'
+
+    implementation 'io.netty:netty-buffer:4.1.0.CR3'
+    //implementation 'com.thanosfisherman.wifiutils:wifiutils:1.4.0'
+    // Crash Reporter
+    implementation 'com.balsikandar.android:crashreporter:1.0.9'
+    implementation 'androidx.lifecycle:lifecycle-reactivestreams:2.2.0'
+
+    // implementation 'com.github.fatangare.LogcatViewer:logcatviewer:aadf092447'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    api 'androidx.room:room-runtime:2.2.4'
+    annotationProcessor 'androidx.room:room-compiler:2.2.4'
+
+    //implementation 'com.github.yatindeokar:MyLoadingButton:v1.0.1'
+    implementation 'androidx.work:work-runtime:2.3.2'
+    api 'androidx.room:room-rxjava2:2.2.4'
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    //implementation 'com.treebo:internetavailabilitychecker:1.0.4'
+
+    //implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+
+    //implementation 'com.github.vihtarb:tooltip:0.2.0'
+    //implementation 'com.fenchtose:tooltip:0.1.6'
+
+    //implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+//    implementation 'org.webrtc:google-webrtc:1.0.+'
+
+    implementation('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    api "com.github.w3-engineers:strom:0.0.14"
+    implementation project(path: ':hardwareoff')
+
+
+    if (isDebugDatabaseEnabled) {
+        debugImplementation 'com.awesomedroidapps:inappstoragereader:1.0.2'
+    }
+
+    implementation 'org.conscrypt:conscrypt-android:2.2.1'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+    //Text compression test
+    //implementation "com.github.tommyettinger:blazingchain:1.4.4.3"
+}

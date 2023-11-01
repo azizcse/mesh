@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            debuggable rootProject.ext.r_debugable
+            minifyEnabled rootProject.ext.r_minifyEnable
+            shrinkResources rootProject.ext.r_shrinkEnable
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'int', 'FILE_SERVER_PORT', FILE_SERVER_PORT
+            buildConfigField 'String', 'BT_FILE_UUID', '"' + BT_FILE_UUID + '"'
+        }
+
+        debug {
+
+            debuggable rootProject.ext.d_debugable
+            minifyEnabled rootProject.ext.d_minifyEnable
+            shrinkResources rootProject.ext.d_shrinkEnable
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            Properties properties = new Properties()
+            String defaultString = '', FILE_SERVER_PORT = '-1', btFileUuid = defaultString
+
+            if (rootProject.file('local.properties').canRead()) {
+                properties.load(rootProject.file("local.properties").newDataInputStream())
+                btFileUuid = properties.getProperty('BT_FILE_UUID', defaultString)
+                FILE_SERVER_PORT = properties.getProperty('FILE_SERVER_PORT', '-1')
+            }
+
+            if(btFileUuid == defaultString) {
+                throw new GradleException('You must provide: BT_FILE_UUID property in your ' +
+                        'local.properties')
+            }
+            buildConfigField 'int', 'FILE_SERVER_PORT', FILE_SERVER_PORT
+            buildConfigField 'String', 'BT_FILE_UUID', '"' + btFileUuid + '"'
+        }
+
+        demo {
+            buildConfigField 'int', 'FILE_SERVER_PORT', FILE_SERVER_PORT
+            buildConfigField 'String', 'BT_FILE_UUID', '"' + BT_FILE_UUID_DEMO + '"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Meshlib
+    api project(path: ':meshlib')
+
+    //Room
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

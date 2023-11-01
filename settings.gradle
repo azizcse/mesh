@@ -1,0 +1,2 @@
+include ':jsch'
+include ':app',':service-app', ':meshlib', ':hardwareoff', ':meshfilesharing', 'wallet_gen', ':paylib'

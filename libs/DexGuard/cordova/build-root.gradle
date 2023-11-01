@@ -1,0 +1,16 @@
+buildscript {
+    repositories {
+        maven {
+            url 'DEXGUARD_PATH_PLACEHOLDER/lib'
+        }
+    }
+    dependencies {
+        classpath 'com.guardsquare:dexguard-gradle-plugin:+'
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir { dirs 'DEXGUARD_PATH_PLACEHOLDER/lib' }
+    }
+}

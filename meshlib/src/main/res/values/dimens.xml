@@ -1,0 +1,30 @@
+<resources>
+
+    <!--Common dimensions-->
+    <dimen name="sharer_role_top">20dp</dimen>
+    <dimen name="sharer_role_end">5dp</dimen>
+    <dimen name="width_3">3dp</dimen>
+    <dimen name="width_13">13dp</dimen>
+
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="width_56">56dp</dimen>
+    <dimen name="width_50">50dp</dimen>
+    <dimen name="width_40">40dp</dimen>
+    <dimen name="width_55">55dp</dimen>
+    <dimen name="width_60">60dp</dimen>
+    <dimen name="height_2">2dp</dimen>
+    <dimen name="width_0">0dp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="height_350">350dp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="height_150">150dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="text_small_body_14">14sp</dimen>
+
+</resources>

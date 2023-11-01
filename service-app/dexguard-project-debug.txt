@@ -1,0 +1,20 @@
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+#
+# This file is no longer maintained and is not used by new (2.2+) versions of the
+# Android plugin for Gradle. Instead, the Android plugin for Gradle generates the
+# default rules at build time and stores them in the build directory.
+
+# Optimizations: If you don't want to optimize, use the
+# proguard-android.txt configuration file instead of this one, which
+# turns off the optimization flags.  Adding optimization introduces
+# certain risks, since for example not all optimizations performed by
+# ProGuard works on all versions of Dalvik.  The following flags turn
+# off various optimizations known to have issues, but the list may not
+# be complete or up to date. (The "arithmetic" optimization can be
+# used if you are only targeting Android 2.0 or later.)  Make sure you
+# test thoroughly if you go this route.
+-dontshrink
+-dontoptimize
+-dontobfuscate
+

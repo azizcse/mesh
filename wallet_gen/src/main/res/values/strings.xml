@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Viper</string>
+    <string name="wallet_directory_name">mesh_service</string>
+</resources>

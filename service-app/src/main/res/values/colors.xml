@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="colorPrimary">#008577</color>-->
+
+    <color name="colorPrimary">#083480</color>
+    <color name="colorPrimaryDark">#052459</color>
+    <color name="colorAccent">#083480</color>
+
+    <color name="select_photo_text_color">#3C3C3C</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="incoming_message_color">#D6FDEE</color>
+    <color name="outcoming_message_color">#F0F0F0</color>
+    <color name="bottom_bar_color">#B2DFDB</color>
+    <color name="colorBackgroundDark">#d7d9db</color>
+    <color name="colorBackground">#00aa81</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorGradientStart">#46c1d3</color>
+    <color name="colorChatHeadMsg">#0FB589</color>
+    <color name="colorGradientPrimary">#00bb5c</color>
+
+    <color name="colorRed">#FF0000</color>
+
+    <color name="error_color">#7F0000</color>
+    <color name="warning_color">#3939FF</color>
+    <color name="info_color">#398EEA</color>
+
+
+    <color name="body_text">#4C4C4C</color>
+
+    <color name="telemeshColorPrimary">#083480</color>
+
+    <color name="white">#ffffff</color>
+    <color name="light_black">#80000000</color>
+    <color name="color_green">#00C853</color>
+    <color name="color_orange">#ff443f</color>
+    <color name="light_orange">#ff8f8c</color>
+
+    <color name="color_magenta">#008bfa</color>
+    <color name="light_magenta">#73008DFF</color>
+    <color name="black">#000000</color>
+
+    <color name="new_user_button_color">#008DFF</color>
+    <color name="next_button_color">#EBEBEB</color>
+
+    <color name="toolbar_color">#083480</color>
+    <color name="hint_text_color">#9E9E9E</color>
+    <color name="chat_background">#F5F5F5</color>
+    <color name="message_text_color">#212121</color>
+    <color name="password_border_color">#E4E4E4</color>
+    <color name="instruction_background">#FFF2B5</color>
+    <color name="skip_text_color">#7F7F7F</color>
+    <color name="data_plan_selected_text">#212121</color>
+    <color name="white_light">#CCFFFFFF</color>
+    <color name="currency_note_shape_color">#6E97CAFF</color>
+    <color name="currency_text_color">#083480</color>
+    <color name="inst_background">#FFF2B5</color>
+    <color name="data_plan_unselected_text">#7F7F7F</color>
+    <color name="divider_color">#99000000</color>
+    <color name="collapse_button_color">#FBFBFB</color>
+    <color name="ninety_black">#E6000000</color>
+
+</resources>

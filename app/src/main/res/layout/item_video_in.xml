@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_8">
+
+        <com.jarvanmo.exoplayerview.ui.ExoVideoView
+            android:id="@+id/image_view_message_in"
+            android:layout_width="@dimen/width_200"
+            android:layout_height="@dimen/height_200"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_view_message_in_thumb"
+            android:layout_width="@dimen/width_200"
+            android:src="@mipmap/ic_action_picture"
+            android:layout_height="@dimen/height_200"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_view_retry"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_retry"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_message_in_thumb"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_message_in_thumb"
+            app:layout_constraintStart_toStartOf="@+id/image_view_message_in_thumb"
+            app:layout_constraintTop_toTopOf="@+id/image_view_message_in_thumb" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

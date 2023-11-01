@@ -1,0 +1,29 @@
+# DexGuard's default settings are fine for this sample application.
+
+# We'll just display some more statistics about the processed code.
+-verbose
+
+# If you encounter problems in your project, you can let DexGuard instrument
+# your code, so the app prints out configuration suggestions at run-time, in
+# the logcat:
+#
+# -addconfigurationdebugging
+
+# Encrypt all asset files that are referenced from the code.
+# In this sample, they are referenced in com.example.MyAssetInputStreamFactory.
+# You should have a similar class in your application.
+-encryptassetfiles assets/**
+
+# Obfuscate the JavaScript files in the application
+-obfuscatejavascript assets/www/**.js
+-javascriptconfiguration javascript.yml
+
+# Asset files which are not referenced from code will be removed
+# (default behavior since DexGuard 7.1). We have to explicitly keep
+# all assets to prevent this for a Cordova/Ionic app.
+-keepresourcefiles assets/**
+
+# Ionic specific keep rules
+-keepclassmembers class org.apache.cordova.CordovaWebViewImpl {
+    *** getView();
+}

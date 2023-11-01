@@ -1,0 +1,2129 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Overview - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+      <link rel="stylesheet" href="css/extra2.css">
+    
+      <link rel="stylesheet" href="css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#quick-troubleshooting" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Overview
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
+    
+    <a href="troubleshooting.html" title="Overview" class="md-nav__link md-nav__link--active">
+      Overview
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-troubleshooting" class="md-nav__link">
+    Quick troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    Problems while processing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes and non-fatal warnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    Serious warnings and I/O errors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-errors" class="md-nav__link">
+    Other errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afterprocessing" class="md-nav__link">
+    Unexpected observations after processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Problems while installing an Android application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    Problems at runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espresso" class="md-nav__link">
+    Problems with Espresso tests
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-troubleshooting" class="md-nav__link">
+    Quick troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    Problems while processing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes and non-fatal warnings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    Serious warnings and I/O errors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-errors" class="md-nav__link">
+    Other errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afterprocessing" class="md-nav__link">
+    Unexpected observations after processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Problems while installing an Android application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    Problems at runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espresso" class="md-nav__link">
+    Problems with Espresso tests
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Overview</h1>
+                
+                <p>While preparing a configuration for processing your code, you may bump
+into a few problems. The following sections discuss some common issues
+and solutions:</p>
+<h2 id="quick-troubleshooting">Quick troubleshooting<a class="headerlink" href="#quick-troubleshooting" title="Permanent link">&para;</a></h2>
+<p>If you have problems setting up your project:</p>
+<ul>
+<li>Check if you can build and run a sample, to verify that your environment
+  is set up properly:</li>
+</ul>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux/macOS</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code>./gradlew assembleRelease
+adb install build/outputs/apk/release/HelloWorld-release-protected.apk
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Windows</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code>gradlew assembleRelease
+adb install build\outputs\apk\release\HelloWorld-release-protected.apk
+</code></pre></div>
+
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>By default, the target in the samples is "android-28", so you should have the target API for Android 9.0 installed.</p>
+</div>
+<p>If the obfuscated application crashes at runtime, you may have to add some
+custom configuration to <code>dexguard-project.txt</code>. 
+The most common issues you will encounter are:</p>
+<p><strong>1. ClassNotFoundException</strong>: 
+The application tries to access a class by means of reflection,
+but DexGuard has removed or obfuscated it.
+You should explicitly preserve the class.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">mypackage.MyClass</span>
+</code></pre></div>
+
+<p><strong>2. NoSuchMethodException</strong>:
+The application tries to access a method by means of reflection 
+(for a WebView, for instance), but DexGuard has removed or obfuscated it. 
+You should explicitly preserve the method.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">mypackage.MyClass </span><span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">myMethod</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>3. Resources$NotFoundException</strong>:
+The application tries to access a resource by its name
+(typically with <code>Resources#getIdentifier</code>) instead of its numeric identifier,
+but DexGuard has removed or obfuscated the resource or its name.
+You should explicitly preserve the resource.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresources </span><span class="err">drawable/my_icon</span>
+</code></pre></div>
+
+<p>You can look at the generated files <code>bin/proguard/seeds.txt</code> and
+<code>bin/proguard/usage.txt</code> to check which classes and class members
+DexGuard has explicitly kept (due to the configuration), or removed
+(because they appeared unused).</p>
+<h2 id="processing">Problems while processing<a class="headerlink" href="#processing" title="Permanent link">&para;</a></h2>
+<h3 id="notes">Notes and non-fatal warnings<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<p>DexGuard may print out some notes and non-fatal warnings.
+You can switch off these notes by specifying the <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</p>
+<dl>
+<dt id="dynamicalclass"><strong>Note: can't find dynamically referenced class '...'</strong></dt>
+<dd>DexGuard can't find a class or interface that your code is accessing by
+  means of introspection. You should consider adding the jar that contains
+  this class.</dd>
+<dt id="dynamicalclasscast"><strong>Note: '...' calls '(...)Class.forName(variable).newInstance()'</strong></dt>
+<dd>Your code uses reflection to dynamically create class instances, with a
+  construct like <code>(MyClass)Class.forName(variable).newInstance()</code>. Depending
+  on your application, you may need to keep the mentioned classes with an
+  option like <code>-keep class MyClass</code>, or their implementations with an option
+like <code>-keep class * implements MyClass</code>.</dd>
+<dt id="dynamicalclassmember"><strong>Note: '...' accesses a field/method '...' dynamically</strong></dt>
+<dd>Your code uses reflection to find a field or a method, with a construct
+  like <code>.getField("myField")</code>. Depending on your application, you may need
+  to figure out where the mentioned class members are defined and keep them
+  with an option like <code>-keep class MyClass { MyFieldType myField; }</code>.
+  Otherwise, DexGuard might remove or obfuscate them. You can switch off these notes by specifying the
+  <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="attributes"><strong>Note: '...' calls 'Class.get...'</strong>, <strong>'...' calls 'Field.get...'</strong>, or <strong>'...' calls 'Method.get...'</strong></dt>
+<dd>Your code uses reflection to access metadata from the code, with an
+  invocation like <code>class.getAnnotations()</code>. You then generally need to
+  preserve optional <a href="attributes.html">class file attributes</a>, which DexGuard
+  removes by default. These attributes contain information about annotations,
+  enclosing classes, enclosing methods, etc. In a summary in the log, DexGuard
+  provides a suggested configuration, like <a href="usage.html#keepattributes"><code>-keepattributes
+  *Annotation*</code></a>. You should only switch off these notes 
+  if you're certain the attributes are not necessary.
+  You can switch off these notes by specifying the
+  <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="webview"><strong>Note: '...' calls 'WebView.addJavascriptInterface' for '...'</strong></dt>
+<dd>DexGuard lists a number of constructs like
+  <code>webView.addJavascriptInterface(new MyInterfaceClass(),
+  "myInterfaceName")</code>. Such a construct means that the Javascript code in the
+  WebView can invoke methods in <code>MyInterfaceClass</code>. You should therefore let
+  DexGuard know not to remove or rename those methods. If the methods have been
+  annotated with <code>@JavascriptInterface</code> (as required as of Android SDK
+  17), the <a href="examples.html#androidapplication">default configuration for Android</a>
+  will take care of it. Otherwise, you have to keep the methods with an option
+  like <code>-keepclassmembers class MyInterfaceClass { public &lt;methods&gt;; }</code>.
+  You can switch off these notes by specifying the
+  <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="unknownclass"><strong>Note: the configuration refers to the unknown class '...'</strong></dt>
+<dd>Your configuration refers to the name of a class that is not present in
+  the program jars or library jars. You should check whether the name is
+  correct. Notably, you should make sure that you always specify
+  fully-qualified names, not forgetting the package names.</dd>
+<dt id="descriptorclass"><strong>Note: the configuration keeps the entry point '...', but not the descriptor class '...'</strong></dt>
+<dd>Your configuration contains a <a href="usage.html#keep"><code>-keep</code></a> option to preserve
+  the given method (or field), but no <code>-keep</code> option for the given class that
+  is an argument type or return type in the method's descriptor. You may then
+  want to keep the class too. Otherwise, DexGuard will obfuscate its name,
+  thus changing the method's signature. The method might then become
+  unfindable as an entry point, e.g. if it is part of a public API. You can
+  automatically keep such descriptor classes with the <code>-keep</code> option modifier
+  <a href="usage.html#includedescriptorclasses"><code>includedescriptorclasses</code></a>
+  (<code>-keep,includedescriptorclasses</code> ...). You can switch off these notes by specifying the
+  <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="libraryclass"><strong>Note: the configuration explicitly specifies '...' to keep library class '...'</strong></dt>
+<dd>Your configuration contains a <a href="usage.html#keep"><code>-keep</code></a> option to preserve
+  the given library class. However, you don't need to keep any library
+  classes. DexGuard always leaves underlying libraries unchanged. You can switch off these notes by specifying the
+  <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="classmembers"><strong>Note: the configuration doesn't specify which class members to keep for class '...'</strong></dt>
+<dd>Your configuration contains a
+  <a href="usage.html#keepclassmembers"><code>-keepclassmembers</code></a>/<a href="usage.html#keepclasseswithmembers"><code>-keepclasseswithmembers</code></a>
+  option to preserve fields or methods in the given class, but it doesn't
+  specify which fields or methods. This way, the option simply won't have any
+  effect. You probably want to specify one or more fields or methods, as usual
+  between curly braces. You can specify all fields or methods with a wildcard
+  <code>*;</code>. You should also consider whether you just need the more common
+  <a href="usage.html#keep"><code>-keep</code></a> option, which preserves all specified classes <em>and</em>
+  class members. The <a href="usage.html#keepoverview">overview of all <code>keep</code> options</a>
+  can help.</dd>
+<dt id="nosideeffects"><strong>Note: the configuration specifies that none of the methods of class '...' have any side effects</strong></dt>
+<dd>Your configuration contains an option
+  <a href="usage.html#assumenosideeffects"><code>-assumenosideeffects</code></a> to indicate that the
+  specified methods don't have any side effects. However, the configuration
+  tries to match <em>all</em> methods, by using a wildcard like "<code>*;</code>". This includes
+  methods from <code>java.lang.Object</code>, such as <code>wait()</code> and <code>notify()</code>. Removing
+  invocations of those methods will most likely break your application. You
+  should list the methods without side effects more conservatively. You can
+  switch off these notes by specifying the <a href="usage.html#dontnote"><code>-dontnote</code></a>
+  option.</dd>
+<dt id="duplicateclass"><strong>Note: duplicate definition of program/library class</strong></dt>
+<dd>Your program jars or library jars contain multiple definitions of the
+  listed classes. DexGuard continues processing as usual, only considering the
+  first definitions. </dd>
+<dd>The note may be an indication of some problem though,
+  so it's advisable to remove the duplicates. A convenient way to do so is by
+  specifying filters on the input jars or library jars. The standard Android and
+  DexGuard build processes automatically specify the input jars for you.
+  There may not be an easy way to filter them to remove
+  these notes. You could remove the duplicate classes manually from your
+  libraries. </dd>
+<dd>You should also not add libraries to your application that are already part
+  of the Android runtime (notably <code>org.apache.commons.logging.Log</code>, <code>org.w3c.dom</code>, <code>org.xml.sax</code>,
+  <code>org.xmlpull.v1</code>, <code>org.apache.http</code>, and
+  <code>org.json</code>). They are possibly inconsistent, and the runtime libraries
+  would get precedence over these anyway.</dd>
+<dt id="duplicatezipentry"><strong>Warning: can't write resource '...' duplicate zip entry</strong></dt>
+<dd>Your input jars contain multiple resource files with the same name.
+  DexGuard continues copying the resource files as usual, skipping any files
+  with previously used names. </dd>
+<dd>Once more, the warning may be an indication of some problem, so it's advisable
+  to remove the duplicates. A convenient way to do so is by specifying filters
+  on the input jars. There is no option to switch off these warnings.
+  The standard Android and DexGuard build processes automatically specify the
+  input jars for you. There may not be an easy way to filter them to remove
+  these warnings. You could remove the duplicate resource files manually from
+  the input and the libraries.</dd>
+</dl>
+<h3 id="warnings">Serious warnings and I/O errors<a class="headerlink" href="#warnings" title="Permanent link">&para;</a></h3>
+<p>DexGuard may terminate when it encounters parsing errors or I/O errors,
+or some more serious warnings:</p>
+<dl>
+<dt id="unresolvedclass"><strong>Warning: can't find superclass or interface</strong> or<br/><strong>Warning: can't find referenced class</strong></dt>
+<dd>
+<p>A class in one of your program jars or library jars references a
+  class or interface that is missing from the input. The warning lists both
+  the referencing class(es), and the missing referenced class(es). There can be
+  a few causes, each with their own solutions:</p>
+<ol>
+<li>
+<p>If the missing class is referenced from your own code, you may
+    have forgotten to specify an essential library. Just like when
+    compiling all code from scratch, you must specify all libraries
+    that the code is referencing, directly or indirectly. If the
+    library should be processed and included in the output, you
+    should specify it with <a href="usage.html#injars"><code>-injars</code></a>, otherwise
+    you should specify it with <a href="usage.html#libraryjars"><code>-libraryjars</code></a>.
+    For example, if DexGuard complains that it can't find a
+    <code>java.lang</code> class, you have to make sure that you are specifying
+    the runtime library of your platform. For Android, it is
+    typically packaged in <code>android.jar</code>.</p>
+</li>
+<li>
+<p>If the missing class is referenced from a pre-compiled
+    third-party library, and your original code runs fine without
+    it, then the missing dependency doesn't seem to hurt. The
+    cleanest solution is to <a href="usage.html#filters">filter out</a> the
+    <em>referencing</em> class or classes from the input, with a filter
+    like
+     <code>-injars myapplication.jar(!somepackage/SomeUnusedReferencingClass.class)</code>".
+    DexGuard will then skip this class entirely in the input, and it
+    will not bump into the problem of its missing reference.
+    However, you may then have to filter out other classes that are
+    in turn referencing the removed class. In practice, this works
+    best if you can filter out entire unused packages at once, with
+    a wildcard filter like
+    <code>-libraryjars mylibrary.jar(!someunusedpackage/**)</code>.</p>
+</li>
+<li>
+<p>Instead of filtering out the problematic classes, the 
+    <a href="usage.html#ignorewarnings"><code>-ignorewarnings</code></a> or
+    <a href="usage.html#dontwarn"><code>-dontwarn</code></a> options can be used to let 
+    DexGuard accept that there are classes missing. You should only
+    use these options if you are certain that your application works
+    without them.</p>
+</li>
+</ol>
+<dl>
+<dd>For example, if you're developing for Android, and DexGuard
+complains that it can't find a <code>java.awt</code> class, then some
+library that you are using is referencing <code>java.awt</code>.
+Android does not have this package, 
+so your application may not be using any <code>java.awt</code> classes anyway.
+In this case, it's not an issue that they are missing, and
+you can let DexGuard accept this with "<code>-dontwarn java.awt.**</code>".</dd>
+<dd>If the missing class is an Android runtime class, you should make
+sure that you are building against an Android runtime that is
+sufficiently recent.</dd>
+</dl>
+</dd>
+<dt><strong>Error: can't find any super classes of '...' (not even immediate super class '...')</strong><br/></dt>
+<dt id="superclass"><strong>Error: can't find common super class of '...' and '...'</strong></dt>
+<dd>It seems like you tried to avoid the warnings from the previous paragraph
+  by specifying <a href="usage.html#ignorewarnings"><code>-ignorewarnings</code></a> or
+  <a href="usage.html#dontwarn"><code>-dontwarn</code></a>, but it didn't work out. DexGuard's
+  optimization step and preverification step really need the missing classes
+  to make sense of the code. Preferably, you would solve the problem by adding
+  the missing library, as discussed in the previous paragraph.
+  If you're sure the class that references the missing class isn't used either,
+  you could also try filtering it out from the input, by adding a filter to 
+  the corresponding <a href="usage.html#injars"><code>-injars</code></a> option: <code>-injars
+  myapplication.jar(!somepackage/SomeUnusedClass.class)</code>. As a final
+  solution, you could switch off optimization
+  (<a href="usage.html#dontoptimize"><code>-dontoptimize</code></a>) and preverification
+  (<a href="usage.html#dontpreverify"><code>-dontpreverify</code></a>).</dd>
+<dt id="unresolvedprogramclassmember"><strong>Warning: can't find referenced field/method '...' in program class '...'</strong></dt>
+<dd>A program class is referencing a field or method that is missing from
+  another program class. The warning lists both the referencing class, and the
+  missing referenced class member. Your compiled class files are most likely
+  inconsistent. Possibly, some class file didn't get recompiled properly, or
+  some class file was left behind after its source file was removed. Try
+  removing all compiled class files and rebuilding your project.</dd>
+<dt id="unresolvedlibraryclassmember"><strong>Warning: can't find referenced field/method '...' in library class '...'</strong></dt>
+<dd>A program class is referencing a field or method that is missing from a
+  library class. The warning lists both the referencing class, and the missing
+  referenced class member. Your compiled class files are inconsistent with the
+  libraries. You may need to recompile the class files, or otherwise upgrade
+  the libraries to consistent versions.</dd>
+<dd>Alternatively, you may get away with ignoring the inconsistency
+  with the options <a href="usage.html#ignorewarnings"><code>-ignorewarnings</code></a>
+  or even <a href="usage.html#dontwarn"><code>-dontwarn</code></a>. For instance if the
+  code contains a class to optionally support recent versions of
+  Android, you can specify "<code>-dontwarn mypackage.MySupportClass</code>".</dd>
+<dt id="unresolvedenclosingmethod"><strong>Warning: can't find enclosing class/method</strong></dt>
+<dd>If there are unresolved references to classes that are defined inside
+  methods in your input, once more, your compiled class files are likely
+  inconsistent. Possibly, some class file didn't get recompiled properly, or
+  some class file was left behind after its source file was removed. Try
+  removing all compiled class files and rebuilding your project.</dd>
+<dt id="checkedfileinstantapps"><strong>Warning: there were checked files in an Instant App build</strong></dt>
+<dd>One or more program classes of an Instant App attempts to perform file-level
+  tamper detection, which is currently unsupported.</dd>
+<dt id="dependency"><strong>Warning: library class '...' depends on program class '...'</strong></dt>
+<dd>If any of your library classes depend on your program classes, by
+  extending, implementing or just referencing them, your processed code will
+  generally be unusable. </dd>
+<dd>Program classes can depend on library classes, but
+  not the other way around. Program classes are processed, while library
+  classes always remain unchanged. It is therefore impossible to adapt
+  references from library classes to program classes, for instance if the
+  program classes are renamed. </dd>
+<dd>You should define a clean separation between
+  program code (specified with <a href="usage.html#injars"><code>-injars</code></a>) and library code
+  (specified with <a href="usage.html#libraryjars"><code>-libraryjars</code></a>).</dd>
+<dt id="unexpectedclass"><strong>Warning: class file '...' unexpectedly contains class '...'</strong></dt>
+<dd>The given class file contains a definition for the given class, but the
+  directory name of the file doesn't correspond to the package name of the
+  class. DexGuard will accept the class definition, but will not write out
+  the processed version. Please make sure to package your input classes correctly. 
+  Notably, class files that are in the <code>WEB-INF/classes</code> directory in a WAR should 
+  be packaged in a jar and put in the <code>WEB-INF/lib</code> directory. 
+  If you don't mind these classes not being written to the output,
+  you can specify the <a href="usage.html#ignorewarnings"><code>-ignorewarnings</code></a> option,
+  or even the <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option.</dd>
+<dt id="mappingconflict1"><strong>Warning: '...' is not being kept as '...', but remapped to '...'</strong></dt>
+<dd>There is a conflict between a <a href="usage.html#keep"><code>-keep</code></a> option and the
+  mapping file specified with an <a href="usage.html#applymapping"><code>-applymapping</code></a>
+  option, in the obfuscation step. The given class name or class member name
+  can't be kept by its original name, as specified in the configuration, but
+  it has to be mapped to the other given name, as specified in the mapping
+  file. You should adapt your configuration, or your mapping file to remove the
+  conflict. Alternatively, if you're sure the renaming won't hurt, you can
+  specify the <a href="usage.html#ignorewarnings"><code>-ignorewarnings</code></a> option, or even the
+  <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option.</dd>
+<dt id="mappingconflict2"><strong>Warning: field/method '...' can't be mapped to '...'</strong></dt>
+<dd>There is a conflict between some new program code and the mapping file
+  specified with an <a href="usage.html#applymapping"><code>-applymapping</code></a> option, in the
+  obfuscation step. The given class member can't be mapped to the given name,
+  because it would conflict with another class member that is already being
+  mapped to the same name. This can happen if you are performing incremental
+  obfuscation, and applying an obfuscation mapping file from an initial
+  obfuscation step. For instance, some new class may have been added that
+  extends two existing classes, introducing a conflict in the name space of
+  its class members. If you're sure the class member receiving another name
+  than the one specified won't hurt, you can specify the
+  <a href="usage.html#ignorewarnings"><code>-ignorewarnings</code></a> option, or even the
+  <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option. Note that you should always use the
+  <a href="usage.html#useuniqueclassmembernames"><code>-useuniqueclassmembernames</code></a> option in
+  the initial obfuscation step, in order to reduce the risk of conflicts.</dd>
+<dt id="encryptkeptclass"><strong>Warning: not encrypting kept class '...'</strong></dt>
+<dd>Your configuration contains options <a href="usage.html#keep"><code>-keep</code></a> and
+  <a href="usage.html#encryptclasses"><code>-encryptclasses</code></a> to keep and to encrypt the
+  given class. This would most likely result in broken code, since an
+  encrypted class is no longer a valid entry point. To avoid problems, the class
+  won't be encrypted. You can suppress this warning by specifying the
+  <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option.</dd>
+<dt id="encryptresourceclass"><strong>Warning: not encrypting class '...', referenced from a resource file</strong></dt>
+<dd>Your configuration contains the option
+  <a href="usage.html#encryptclasses"><code>-encryptclasses</code></a> to encrypt the given class,
+  which is also referenced from a resource file.
+  This would most likely result in broken code, since an
+  encrypted class is no longer a valid entry point. To avoid problems, the class
+  won't be encrypted. You can suppress this warning by specifying the
+  <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option.</dd>
+<dt id="encryptextendedclass"><strong>Warning: not encrypting class '...', extended by the unencrypted class '...'</strong></dt>
+<dd>Your configuration contains the option
+  <a href="usage.html#encryptclasses"><code>-encryptclasses</code></a> to encrypt the given class, but 
+  the class is extended from by another, unencrypted class.
+  The former class can't be encrypted either, for technical
+  reasons. You can suppress this warning by specifying the
+  <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option.</dd>
+<dt id="encryptdescriptorclass"><strong>Warning: not encrypting class '...', referenced in a method descriptor</strong></dt>
+<dd>Your configuration contains the option
+  <a href="usage.html#encryptclasses"><code>-encryptclasses</code></a> to encrypt the given class, but
+  the class is referenced in the descriptor (argument types)
+  of a method that occurs in encrypted and in unencrypted classes. Such a
+  descriptor class can't be encrypted, for technical reasons. You can suppress
+  this warning by specifying the <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option.</dd>
+<dt id="splitkeptclass"><strong>Note: not splitting kept class '...'</strong></dt>
+<dd>Your configuration contains the <a href="usage.html#keep"><code>-keep</code></a> and
+  <a href="usage.html#splitdexfile"><code>-splitdexfile</code></a> options to keep and split the given
+  class. This would most likely result in broken code, since a split class
+  is no longer a valid entry point. To avoid problems,the class is not split.
+  You can suppress this note by specifying the
+  <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="splitresourceclass"><strong>Note: not splitting class '...', referenced from a resource file</strong></dt>
+<dd>Your configuration contains the option
+  <a href="usage.html#splitdexfile"><code>-splitdexfile</code></a> to split the given class, which is
+  however also referenced from a resource file. This would most likely result
+  in broken code, since a split class is no longer a valid entry
+  point. To avoid problems, the class is not split. You can suppress this note
+  by specifying the <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="splitextendedclass"><strong>Note: not splitting class '...', extended by the unsplit class '...'</strong></dt>
+<dd>Your configuration contains the option
+  <a href="usage.html#splitdexfile"><code>-splitdexfile</code></a> to split the given class, but 
+  the class is extended by another class that is not split. The
+  former class can't be split either, for technical reasons. You can suppress
+  this note by specifying the <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="splitdescriptorclass"><strong>Note: not splitting class '...', referenced in a method descriptor</strong></dt>
+<dd>Your configuration contains the option
+  <a href="usage.html#splitdexfile"><code>-splitdexfile</code></a> to split the given class, but 
+  the class is referenced in the descriptor (argument types) of a
+  method that occurs in split and in unsplit classes. Such a descriptor class
+  can't be split, for technical reasons. You can suppress this note by
+  specifying the <a href="usage.html#dontnote"><code>-dontnote</code></a> option.</dd>
+<dt id="unsupportedclassversion"><strong>Error: Unsupported class version number</strong></dt>
+<dd>You are trying to process class files compiled for a recent version of
+  Java that your copy of DexGuard doesn't support yet. You
+  should check if a new release of DexGuard is available that solves the
+  compatibility issues.</dd>
+<dt id="notbinaryresource"><strong>IOException: Can't process resource XML file '...' (Not a binary Android resource XML file)</strong></dt>
+<dd>You are probably processing an Android library project, while specifying a
+  configuration for an Android application project. </dd>
+<dd>Library projects contain
+  Android resource XML files in text form, while application projects contain
+  them in compiled binary form. Mixing up the project type causes parsing
+  problems. </dd>
+<dd>For example, in your <code>build.gradle</code> file, you should point to the
+  default configuration <code>dexguard-library-release.pro</code> instead of
+  <code>dexguard-release.pro</code>. Technically, the former contains the option
+  <code>-android</code> (intended for Android libraries), while the latter contains the
+  option <code>-dalvik</code> (intended for Android applications).</dd>
+<dt id="nativestringsection"><strong>IOException: Can't write resource ['...'.so]: New string section exceeds the length of the original</strong></dt>
+<dd>This is a rare problem, where the combined obfuscated native function
+  names are longer than the original native function names. You can generally
+  work around it by reducing the obfuscation of the JNI methods:</dd>
+<dt><div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembernames</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">native</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></dt>
+<dd>
+<p>If this isn't sufficient, you can disable the obfuscation of the JNI
+  methods entirely:</p>
+</dd>
+<dt><div class="codehilite"><pre><span></span><code><span class="nb">-keepclasseswithmembernames</span><span class="p">,</span><span class="k">includedescriptorclasses</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">native</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></dt>
+<dd>If ever necessary, you can leave native libraries untouched with the
+  following configuration, <em>before</em> the default configuration:</dd>
+<dt><div class="codehilite"><pre><span></span><code><span class="nb">-adaptresourcefilecontents </span><span class="err">!lib/**.so</span>
+</code></pre></div></dt>
+<dd>
+<p>The default configurations <code>dexguard-release-conservative.pro</code> and
+  <code>dexguard-library-release-conservative.pro</code> contain these settings.</p>
+</dd>
+<dt><strong>Error: You have to specify <a href="usage.html#keep"><code>-keep</code></a> options</strong></dt>
+<dd>You either forgot to specify <a href="usage.html#keep"><code>-keep</code></a> options, or you
+  mistyped the class names. DexGuard has to know exactly what you want to
+  keep: an application, an applet, a servlet, a midlet,..., or any combination
+  of these. Without the proper seed specifications, DexGuard will shrink,
+  optimize, or obfuscate all class files away.</dd>
+<dt><strong>Error: Expecting class path separator ';' before 'Files\Java\</strong>...<strong>'</strong> (in Windows)</dt>
+<dd>If the path of your runtime jar contains spaces, like in "Program Files",
+  you have to enclose it with single or double quotes, as explained in the
+  section on <a href="usage.html#filename">file names</a>. This is true for all
+  file names containing special characters, on all platforms.</dd>
+<dt id="cantread"><strong>Error: Can't read '...'</strong></dt>
+<dd>DexGuard can't read the specified file or directory. Double-check that the
+  name is correct in your configuration, that the file is readable, and that
+  it is not corrupt.</dd>
+<dd>An additional message "Unexpected end of ZLIB input
+  stream" suggests that the file is truncated. You should make sure that
+  the file is complete on disk when DexGuard starts, and that it is not 
+  somehow overwritten by DexGuard's own output.</dd>
+<dt id="cantwrite"><strong>Error: Can't write '...'</strong></dt>
+<dd>DexGuard can't write the specified file or directory. Double-check that
+  the name is correct in your configuration and that the file is writable.</dd>
+<dt id="nosuchproperty"><strong>No such property: '...'</strong></dt>
+<dd>The DexGuard plugin can't find a property in Gradle or in the Android
+  plugin. You should verify if the versions of the plugins are compatible. If
+  you are using an older version of the Android plugin than the documented
+  version, you should upgrade. If you are using a more recent version, you
+  should check if a new release of DexGuard is available that solves the
+  compatibility issues.</dd>
+</dl>
+<h3 id="other-errors">Other errors<a class="headerlink" href="#other-errors" title="Permanent link">&para;</a></h3>
+<dl>
+<dt id="outofmemoryerror"><strong>OutOfMemoryError</strong></dt>
+<dd>
+<dl>
+<dt>You can try increasing the heap size of the Java virtual machine, with the</dt>
+<dt>usual <code>-Xmx</code> options.</dt>
+<dd>
+<ul>
+<li>In Java, specify the option as an argument to the JVM: <code>java -Xmx1024m</code></li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>In Gradle, you can pass this option to DexGuard
+using the <a href="setup/gradle-plugin.html#jvmargs">jvmArgs property</a> of the DexGuard Gradle block.</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dd>
+<p>You can also reduce the amount of memory that DexGuard needs by
+  removing unnecessary library jars from your configuration, or by
+  filtering out unused library packages and classes.</p>
+</dd>
+<dt id="stackoverflowerror"><strong>StackOverflowError</strong></dt>
+<dd>This error might occur when processing a large code base.
+  In theory, increasing the stack size
+  of the Java virtual machine (with the usual <code>-Xss</code> option) should help.
+  In practice however, the <code>-Xss</code> setting doesn't have any effect on the main
+  thread, due to <a href="http://bugs.sun.com/view_bug.do?bug_id=4362291">Sun Bug
+  #4362291</a>. As a result,
+  this solution will only work when running DexGuard in a different thread.</dd>
+<dt id="unexpectederror"><strong>Unexpected error</strong></dt>
+<dd>DexGuard has encountered an unexpected condition, typically in the
+  optimization step. It may or may not recover. You should be able to avoid it
+  using the <a href="usage.html#dontoptimize"><code>-dontoptimize</code></a> option. In any case,
+  please report the problem, preferably with the simplest example that causes
+  DexGuard to crash.</dd>
+<dt id="otherwise"><strong>Otherwise...</strong></dt>
+<dd>Maybe your class files are corrupt. See if recompiling them and trying
+  again helps. If not, please report the problem, preferably with the simplest
+  example that causes DexGuard to crash.</dd>
+</dl>
+<h2 id="afterprocessing">Unexpected observations after processing<a class="headerlink" href="#afterprocessing" title="Permanent link">&para;</a></h2>
+<p>If DexGuard seems to run fine, but your processed code doesn't look
+right, there might be a couple of reasons:</p>
+<dl>
+<dt id="disappearingclasses"><strong>Disappearing classes</strong></dt>
+<dd>If you are working on Windows and it looks like some classes have
+  disappeared from your output, you should make sure you're not writing your
+  output class files to a directory (or unpacking the output jar). On
+  platforms with case-insensitive file systems, such as Windows, unpacking
+  tools often let class files with similar lower-case and upper-case names
+  overwrite each other. If you really can't switch to a different operating
+  system, you could consider using DexGuard's
+  <a href="usage.html#dontusemixedcaseclassnames"><code>-dontusemixedcaseclassnames</code></a> option.</dd>
+<dd>You should make sure your class files are in directories that
+  correspond to their package names. DexGuard will read misplaced class files,
+  but it will not write their processed versions. Notably, class
+  files that are in the <code>WEB-INF/classes</code> directory in a WAR should be
+  packaged in a jar and put in the <code>WEB-INF/lib</code> directory.</dd>
+<dt id="notkept"><strong>Classes or class members not being kept</strong></dt>
+<dd>If DexGuard is not keeping the right classes or class members, make sure
+  you are using fully qualified class names. If the package name of some class
+  is missing, DexGuard won't match the elements that you might be expecting.
+  It may help to double-check for typos too. You can use the
+  <a href="usage.html#printseeds"><code>-printseeds</code></a> option to see which elements are being
+  kept.</dd>
+<dd>If you are using marker interfaces to keep other classes, the marker
+  interfaces themselves are probably being removed in the shrinking
+  step. You should therefore always explicitly keep any marker
+  interfaces, with an option like
+  <code>-keep interface MyMarkerInterface</code>.</dd>
+<dd>Similarly, if you are keeping classes based on annotations, you may
+  have to avoid that the annotation classes themselves are removed in
+  the shrinking step. You should package the annotation classes as a
+  library, or explicitly keep them in your program code with an option
+  like "<code>-keep @interface *</code>". </dd>
+<dd>Please note that for DexGuard to see runtime-invisible annotations, you currently have to 
+  implement the <a href="troubleshooting.html#preserveruntimeinvisibleannotations">workaround for runtime-invisible annotations</a>.</dd>
+<dt id="classnamesnotobfuscated"><strong>Class names not being obfuscated</strong></dt>
+<dd>If the names of some classes in your obfuscated code aren't obfuscated, you
+  should first check all your configuration files. Chances are that some
+  <code>-keep</code> option is preserving the original names. These options may be hiding
+  in your own configuration files or in configuration files from libraries.</dd>
+<dd>Furthermore, some class names mentioned in the Android manifest must always
+  be preserved, to avoid compatibility issues when upgrading versions of the
+  app. More specifically, DexGuard automatically keeps the names of exported
+  activities, broadcast receivers and services. You can find the underlying
+  reasons in the Google blog <a href="https://android-developers.googleblog.com/2011/06/things-that-cannot-change.html">"Things that cannot
+  change"</a>.</dd>
+<dt id="fieldnamesnotobfuscated"><strong>Field names not being obfuscated</strong></dt>
+<dd>If the names of some fields in your obfuscated code aren't obfuscated, this
+  may be due to <code>-keep</code> options preserving the original names, for the sake of
+  libraries like GSON. Such libraries perform reflection on the fields. If the
+  names were obfuscated, the resulting JSON strings would come out obfuscated
+  as well, which generally breaks persistence of the data or communication
+  with servers.</dd>
+<dt id="methodnamesnotobfuscated"><strong>Method names not being obfuscated</strong></dt>
+<dd>If the names of some methods in your obfuscated code aren't obfuscated, this
+  is most likely because they extend or implement method names in the
+  underlying runtime libraries. Since the runtime libraries are not obfuscated,
+  any corresponding names in the application code can't be obfuscated either,
+  since they must remain consistent.</dd>
+<dt id="variablenamesnotobfuscated"><strong>Variable names not being obfuscated</strong></dt>
+<dd>If the names of the local variables and parameters in your obfuscated code
+  don't look obfuscated, because they suspiciously resemble the names of their
+  types, it's probably because the decompiler that you are using is coming up
+  with those names. DexGuard's obfuscation step does remove the original names
+  entirely, unless you explicitly keep the <code>LocalVariableTable</code> or
+  <code>LocalVariableTypeTable</code> attributes.</dd>
+<dt id="stringsnotencrypted"><strong>Strings not being encrypted</strong></dt>
+<dd>If you have applied <a href="usage.html#encryptstrings"><code>-encryptstrings</code></a>, but the
+  specified strings are still readable when you disassemble the code, you
+  should make sure that obfuscation is enabled. Obfuscation is only the
+  default for release builds. With the <a href="usage.html#verbose"><code>-verbose</code></a> option,
+  DexGuard reports how many strings it has encrypted in the build log.
+  Furthermore, you should check how you have specified the strings: string
+  literals, all the strings in specified classes, all the strings in specified
+  methods, or all the uses of specified string constants. Note that the Java
+  compiler inlines string constants wherever they are used. If you
+  explicitly keep a final string field with <a href="usage.html#keep"><code>-keep</code></a>, its
+  uses may be encrypted, but its definition is preserved without encryption.</dd>
+<dt id="classesnotencrypted"><strong>Classes not being encrypted</strong></dt>
+<dd>If you have applied <a href="usage.html#encryptclasses"><code>-encryptclasses</code></a>, but the
+  specified classes are still readable when you disassemble the code, you
+  should make sure that obfuscation is enabled. Obfuscation is only the
+  default for release builds. With the <a href="usage.html#verbose"><code>-verbose</code></a> option,
+  DexGuard reports how many classes it has encrypted in the build log.
+  Due to technical constraints, classes that are created by reflection can't
+  be encrypted. This can be reflection in your application (e.g. for
+  deserialization) or in the Android runtime (e.g. activities, layouts, etc.).
+  DexGuard will avoid encrypting such classes and print out warnings about it.
+  The recommended solution is to move sensitive code to separate (inner)
+  classes and encrypt those.</dd>
+<dt id="nativelibrariesnotencrypted"><strong>Native libraries not being encrypted</strong></dt>
+<dd>If you have applied
+  <a href="usage.html#encryptnativelibraries"><code>-encryptnativelibraries</code></a>, but the
+  specified native libraries are not encrypted (for instance, they still
+  clearly start with "ELF"), you should make sure that obfuscation is
+  enabled. Obfuscation is only the default for release builds.</dd>
+<dd>Furthermore,
+  you should make sure that your code loads each native library with
+  <code>System.loadLibrary("mylibrary")</code>, with the library name specified as a
+  string literal or constant. With the <a href="usage.html#verbose"><code>-verbose</code></a> option,
+  DexGuard then reports in the build log how many native libraries it has
+  encrypted.</dd>
+<dt id="assetsnotencrypted"><strong>Assets not being encrypted</strong></dt>
+<dd>If you have applied <a href="usage.html#encryptassetfiles"><code>-encryptassetfiles</code></a>,
+  but the specified assets remain readable inside the processed application,
+  you should make sure that obfuscation is enabled. Obfuscation is only
+  the default for release builds. </dd>
+<dd>Furthermore, you should make sure that your
+  code loads each asset file with <code>AssetManager#open("myfile")</code>, with the file
+  name specified as a string literal or constant. With the
+  <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard then reports in the build
+  log how many asset files it has encrypted.</dd>
+<dt accesstowrongclassesreflected="accesstowrongclassesreflected"><strong>Access to wrong classes reflected</strong></dt>
+<dd>If you have applied <a href="usage.html#accessthroughreflection"><code>-accessthroughreflection</code></a>,
+  using a wildcard class specification together with a member specification,
+  DexGuard will reflect the access to any class matching the class specification,
+  regardless if the member specification matches or not (contrary to other configuration
+  directives). Additionally, all access to matching members is reflected. You should
+  make sure that the class specification only matches classes that need to be
+  accessed through reflection.</dd>
+<dt consumed="consumed" librarynotobfuscatedwhen="librarynotobfuscatedwhen"><strong>Library project is not obfuscated when consumed by app</strong></dt>
+<dd>If you have applied DexGuard to a library module that is consumed by an
+  application module in the same project, the library module may seem unaffected
+  by DexGuard. This is not the case. What happened is that since the Android
+  gradle plugin v3.0, the library module's aar file is no longer exploded. Instead,
+  the intermediate files are used. Since DexGuard outputs an obfuscated aar, the
+  files the Android gradle plugin uses are not processed by DexGuard. In order to
+  work around this issue, refer to the setup of the <code>AssetEncryptionLibrary</code> and
+  <code>NativeLibraryInLibraryProject</code> samples provided with your DexGuard download.</dd>
+</dl>
+<h2 id="installing">Problems while installing an Android application<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<p>If DexGuard runs fine, but <code>adb install</code> refuses to install your
+processed application, it should print out one of the following error messages:</p>
+<dl>
+<dt id="manifestmalformed"><strong>Failure [INSTALL_PARSE_FAILED_MANIFEST_MALFORMED]</strong></dt>
+<dd>In a custom build process, you need to specify some attribute names that
+  the obfuscation step needs to preserve in the Android manifest file, with
+  the option
+  <a href="usage.html#keepresourcexmlattributenames"><code>-keepresourcexmlattributenames</code></a>.</dd>
+<dt id="nocertificates"><strong>Failure [INSTALL_PARSE_FAILED_NO_CERTIFICATES]</strong></dt>
+<dd>On Android 2.2 or older, if you also see "Package ... has no certificates
+  at entry ...; ignoring!" in the logcat output, your application may contain
+  file names with special UTF-8 characters. You then need to avoid file name
+  dictionaries with such characters (including the default file name
+  dictionary). You can specify or override it with the option
+  <a href="usage.html#resourcefilenameobfuscationdictionary"><code>-resourcefilenameobfuscationdictionary</code></a>
+  with your own text file. You can specify an empty file, so DexGuard just
+  continues with a, b, c, etc.</dd>
+<dt id="samsungupload"><strong>File upload has failed for the Samsung app market</strong></dt>
+<dd>If you get "File upload has failed. There is no application
+  ID(PackageName) or Version information(VersionName) in the Android
+  Manifest.xml file you have registered." while publishing your Android
+  application on the Samsung app market, then you need to <a href="examples.html#samsungmarket">preserve additional
+  XML attribute names</a>.</dd>
+<dt id="airwatchupload"><strong>File upload has failed for AirWatch</strong></dt>
+<dd>If you get "System.IndexOutOfRangeException: Index was outside the bounds of
+  the array." while publishing your Android application to AirWatch, then you need
+  to preserve additional XML attribute names:</dd>
+</dl>
+<p><code>-keepresourcexmlattributenames manifest/package,manifest/versionName</code></p>
+<p>and add the following to your <code>gradle.properties</code> in the root project folder:</p>
+<div class="codehilite"><pre><span></span><code><span class="na">  android.enableAapt2</span><span class="o">=</span><span class="s">false</span>
+<span class="na">  systemProp.encode.resourcexml.utf16</span><span class="o">=</span><span class="s">true</span>
+</code></pre></div>
+
+<h2 id="runtime">Problems at runtime<a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h2>
+<p>If DexGuard runs fine, but your processed application doesn't work,
+there might be several reasons:</p>
+<dl>
+<dt id="stacktraces"><strong>Stack traces without class names or line numbers</strong></dt>
+<dd>If your stack traces don't contain any class names or lines numbers, even
+  though you are keeping the proper attributes, make sure this debugging
+  information is present in your compiled code to start with. Notably the Ant
+  <code>javac</code> task has debugging information switched off by default.</dd>
+<dt id="noclassdeffounderror"><strong>NoClassDefFoundError</strong></dt>
+<dd>Your class path is probably incorrect. It should at least contain all
+  library jars, and your processed program jar.</dd>
+<dt id="classnotfoundexception"><strong>ClassNotFoundException</strong></dt>
+<dd>Your code is probably calling <code>Class.forName</code>, trying to create the
+  missing class dynamically. DexGuard can only detect constant name arguments,
+  like <code>Class.forName("com.example.MyClass")</code>. For variable name arguments
+  like <code>Class.forName(someClass)</code>, you have to keep all possible classes using
+  the appropriate <a href="usage.html#keep"><code>-keep</code></a> option, e.g. <code>-keep class
+  com.example.MyClass</code> or <code>-keep class * implements
+  com.example.MyInterface</code>.</dd>
+<dd>While setting up your configuration, you can
+  specify the option
+  <a href="usage.html#addconfigurationdebugging"><code>-addconfigurationdebugging</code></a> to help
+  track down these cases at runtime and let the instrumented code suggest
+  settings for them.</dd>
+<dt id="nosuchfieldexception"><strong>NoSuchFieldException</strong></dt>
+<dd>Your code is probably calling something like <code>myClass.getField</code>, trying to
+  find some field dynamically. Since DexGuard can't always detect this
+  automatically, you have to keep the missing field using the appropriate
+  <a href="usage.html#keep"><code>-keep</code></a> option, e.g. "<code>-keepclassmembers class
+  mypackage.MyClass { int myField; }</code>". While setting up your configuration,
+  you can specify the option
+  <a href="usage.html#addconfigurationdebugging"><code>-addconfigurationdebugging</code></a> to help
+  track down these cases at run-time and let the instrumented code suggest
+  settings for them.</dd>
+<dt id="nosuchmethodexception"><strong>NoSuchMethodException</strong></dt>
+<dd>Your code is probably calling something like <code>myClass.getMethod</code>, trying to
+  find some method dynamically. Since DexGuard can't always detect this
+  automatically, you have to keep the missing method using the appropriate
+  <a href="usage.html#keep"><code>-keep</code></a> option, e.g. <code>-keepclassmembers class
+  com.example.MyClass { void myMethod(); }</code>. While setting up your
+  configuration, you can specify the option
+  <a href="usage.html#addconfigurationdebugging"><code>-addconfigurationdebugging</code></a> to help
+  track down these cases at run-time and let the instrumented code suggest
+  settings for them.</dd>
+<dt id="unsatisfiedlinkerror"><strong>UnsatisfiedLinkError: Couldn't load '...': findLibrary returned null</strong></dt>
+<dd>Your code is failing to load or find a native library from bytecode.
+  DexGuard may have shrunk the native library, since it
+  can't always detect all usages automatically. You have to keep the
+  native library using the appropriate
+  <a href="usage.html#keepresourcefiles"><code>-keepresourcefiles</code></a> option, e.g.
+  <code>-keepresourcefiles lib/*/libexample.so</code>.</dd>
+<dt id="unsatisfiedlinkerror2"><strong>Failed registering methods for '...'</strong></dt>
+<dd>A native library in your application is calling <code>RegisterNatives</code>, trying
+  to link JNI methods (in bytecode) with JNI functions (in native code). The
+  call generally uses hard-coded method names. However, DexGuard can't detect
+  and handle such calls automatically, so it may have obfuscated these method
+  names in the bytecode. The call then fails. Like with any reflection, you
+  need to preserve the referenced method names using the appropriate
+  <a href="usage.html#keep"><code>-keep</code></a> option, e.g. <code>-keep class package.MyJniClass {
+  native &lt;methods&gt;; }</code>.</dd>
+<dt><strong>MissingResourceException</strong> or <strong>NullPointerException</strong></dt>
+<dd>Your processed code may be unable to find some resource files. DexGuard
+  simply copies resource files over from the input jars to the output jars.
+  Their names and contents remain unchanged, unless you specify the options
+  <a href="usage.html#adaptresourcefilenames"><code>-adaptresourcefilenames</code></a> and/or
+  <a href="usage.html#adaptresourcefilecontents"><code>-adaptresourcefilecontents</code></a>.
+  Furthermore, directory entries in jar files aren't copied, unless you
+  specify the option <a href="usage.html#keepdirectories"><code>-keepdirectories</code></a>. Note that
+  Sun advises against calling <code>Class.getResource()</code> for directories (Sun Bug
+  #4761949](<a href="http://bugs.sun.com/view_bug.do?bug_id=4761949">http://bugs.sun.com/view_bug.do?bug_id=4761949</a>)).</dd>
+<dt id="resourcesnotfoundexception"><strong>Resources$NotFoundException: Resource ID #0x0</strong></dt>
+<dd>Your Android application is probably calling <code>resources.getIdentifier</code>,
+  <code>resources.getValue</code>, <code>resources.getDrawable</code>, or a similar method that
+  retrieves a resource by its name and type. Just like with reflection on
+  class names, you have to keep this resource with its original name,
+  using the appropriate <a href="usage.html#keepresources"><code>-keepresources</code></a> option,
+  e.g. <code>-keepresources drawable/my_icon</code> or <code>-keepresources layout/*</code>.
+  Whenever possible in your code, you should reference resources by their more
+  efficient numeric identifiers from the <code>R</code> classes, which don't require any
+  configuration.</dd>
+<dt id="fragmentinstantiationexception"><strong>Fragment$InstantiationException</strong></dt>
+<dd>You may be encrypting a Fragment class in your Android application. When
+  DexGuard encrypts classes, it makes sure that they are decrypted the first
+  time they are instantiated or accessed. This is not possible for classes
+  that are instantiated through reflection, such as Fragment classes. A
+  workaround may be to access the class early on in the application, e.g.
+  <code>Class c = MyFragment.class;</code> This should let the application decrypt and
+  load the class before the Android support classes try to access it.</dd>
+<dt id="filenotfoundexception"><strong>FileNotFoundException</strong></dt>
+<dd>Your Android application may be calling <code>assetManager.open</code>,
+  <code>assetManager.openFd</code>, or a similar method that retrieves an asset file.
+  DexGuard can't always detect this automatically. Just like with reflection
+  on resources, you then have to keep this asset with its original name, using
+  the appropriate <a href="usage.html#keepresourcefiles"><code>-keepresourcefiles</code></a> option,
+  e.g. <code>-keepresourcefiles assets/my_icon.png</code>.</dd>
+<dt id="enumconstantnotpresentexceptionproxy"><strong>ArrayStoreException: sun.reflect.annotation.EnumConstantNotPresentExceptionProxy</strong></dt>
+<dd>You are probably running code that has been processed for Android on a Java
+  virtual machine. If the code contains annotations with obfuscated enum
+  values, the Java VM and the Android VM behave differently in a subtle way.
+  If you do want to test such processed code on a Java VM, you should preserve
+  the names of the enum types: <code>-keepnames enum *</code>.</dd>
+<dt id="disappearingannotations"><strong>Disappearing annotations</strong></dt>
+<dd>By default, the obfuscation step removes all annotations. If your
+  application relies on annotations to function properly, you should
+  explicitly keep them with <code>-keepattributes *Annotation*</code>.</dd>
+<dt id="preserveruntimeinvisibleannotations"><strong>Preserving runtime-invisible annotations</strong></dt>
+<dd>By default, D8/R8 strips runtime-invisible annotations when building a release configuration.
+  As a consequence, these annotations will not be visible to DexGuard when post-processing.</dd>
+<dd>This may be a problem when using <a href="annotations.html">annotation based DexGuard configuration</a> 
+  or when using DexGuard with <a href="setup/espresso.html">Espresso testing</a>. In such cases, you can instruct 
+  D8/R8 to not strip the annotations by making the following changes to your build.gradle file:</dd>
+</dl>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildTypes</span> <span class="o">{</span>
+  <span class="n">release</span> <span class="o">{</span>
+      <span class="o">...</span>
+      <span class="c1">// Enable R8 for the build type.</span>
+      <span class="n">minifyEnabled</span> <span class="kc">true</span>
+      <span class="c1">// Supply the configuration detailed below.</span>
+      <span class="n">proguardFile</span> <span class="s2">&quot;r8-rules.pro&quot;</span>
+  <span class="o">}</span>
+  <span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildTypes</span> <span class="p">{</span>
+  <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">...</span>
+      <span class="c1">// Enable R8 for the build type.</span>
+      <span class="n">isMinifyEnabled</span> <span class="p">=</span> <span class="k">true</span>
+      <span class="c1">// Supply the configuration detailed below.</span>
+      <span class="n">proguardFile</span><span class="p">(</span><span class="s">&quot;r8-rules.pro&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<dl>
+<dd>The configuration that is supplied to R8 this way instructs it to do nothing and
+  causes the runtime-invisible annotations to not be stripped.</dd>
+<dt><div class="codehilite"><pre><span></span><code>    <span class="c"># r8-rules.pro</span>
+    <span class="nb">-dontobfuscate</span>
+    <span class="nb">-dontoptimize</span>
+    <span class="nb">-dontshrink</span>
+</code></pre></div></dt>
+<dd>
+<p>Please note that this workaround is <strong>the only exception</strong> where <code>minifyEnabled</code> should be 
+  set to true on a DexGuard-enabled build type. For all other DexGuard-enabled build types, 
+  make sure to set <code>minifyEnabled</code> to false.</p>
+</dd>
+<dt id="invalidjarfile"><strong>Invalid or corrupt jarfile</strong></dt>
+<dd>You are probably starting your application with the java option <code>-jar</code>
+  instead of the option <code>-classpath</code>. The java virtual machine returns with
+  this error message if your jar doesn't contain a manifest file
+  (<code>META-INF/MANIFEST.MF</code>), if the manifest file doesn't specify a main class
+  (<code>Main-Class:</code> ...), or if the jar doesn't contain this main class. You
+  should then make sure that the input jar contains a valid manifest file to
+  start with, that this manifest file is the one that is copied (the first
+  manifest file that is encountered), and that the main class is kept in your
+  configuration,</dd>
+<dt id="invalidjarindexexception"><strong>InvalidJarIndexException: Invalid index</strong></dt>
+<dd>At least one of your processed jar files contains an index file
+  <code>META-INF/INDEX.LIST</code>, listing all class files in the jar. DexGuard by
+  default copies files like these unchanged. DexGuard may however remove or
+  rename classes, thus invalidating the file. You should filter the index file
+  out of the input (<code>-injars in.jar(!META-INF/INDEX.LIST)</code>) or update the file
+  after having applied DexGuard (<code>jar -i out.jar</code>).</dd>
+<dt id="disappearingloops"><strong>Disappearing loops</strong></dt>
+<dd>If your code contains empty busy-waiting loops, DexGuard's optimization
+  step may remove them. More specifically, this happens if a loop continuously
+  checks the value of a non-volatile field that is changed in a different
+  thread. The specifications of the Java Virtual Machine require that you
+  always mark fields that are accessed across different threads without
+  further synchronization as <code>volatile</code>. If this is not possible for some
+  reason, you'll have to switch off optimization using the
+  <a href="usage.html#dontoptimize"><code>-dontoptimize</code></a> option.</dd>
+<dt id="securityexception"><strong>SecurityException: SHA1 digest error</strong></dt>
+<dd>You may have forgotten to sign your program jar <em>after</em> having processed
+  it with DexGuard.</dd>
+<dt id="classcastexception"><strong>ClassCastException: class not an enum</strong><br/><strong>IllegalArgumentException: class not an enum type</strong></dt>
+<dd>You should make sure you're preserving the special methods of enumeration
+  types, which the runtime environment calls by introspection. The required
+  options are shown in the <a href="examples.html#enumerations">examples</a>.</dd>
+<dt id="arraystoreexception"><strong>ArrayStoreException: sun.reflect.annotation.EnumConstantNotPresentExceptionProxy</strong></dt>
+<dd>You are probably processing annotations involving enumerations. You
+  should make sure you're preserving the special methods of the enumeration
+  type, as shown in the examples.</dd>
+<dt id="illegalargumentexception"><strong>IllegalArgumentException: methods with same signature but incompatible return types</strong></dt>
+<dd>You are probably running some code that has been obfuscated with the
+  <a href="usage.html#overloadaggressively"><code>-overloadaggressively</code></a> option. The class
+  <code>java.lang.reflect.Proxy</code> can't handle classes that contain methods with the
+  same names and signatures, but different return types. Its method
+  <code>newProxyInstance</code> then throws this exception. You can avoid the problem by
+  not using the option.</dd>
+<dt id="compilererror"><strong>CompilerError: duplicate addition</strong></dt>
+<dd>You are probably compiling or running some code that has been obfuscated
+  with the <a href="usage.html#overloadaggressively"><code>-overloadaggressively</code></a> option.
+  This option triggers a bug in <code>sun.tools.java.MethodSet.add</code> in Sun's JDK
+  1.2.2, which is used for (dynamic) compilation. You should avoid this
+  option.</dd>
+<dt id="classformaterror1"><strong>ClassFormatError: repetitive field name/signature</strong></dt>
+<dd>You are probably processing some code that has been obfuscated before with
+  the <a href="usage.html#overloadaggressively"><code>-overloadaggressively</code></a> option. You
+  should use the same option again in the second processing round.</dd>
+<dt id="classformaterror2"><strong>ClassFormatError: Invalid index in LocalVariableTable in class file</strong></dt>
+<dd>If you are keeping the <code>LocalVariableTable</code> or <code>LocalVariableTypeTable</code>
+  attributes, DexGuard's optimizing step is sometimes unable to update them
+  consistently. You should let the obfuscation step remove these
+  attributes or disable the optimization step.</dd>
+<dt id="dagger"><strong>NullPointerException: create returned null</strong> (Dagger)<br/><strong>IllegalStateException: Module adapter for class ... could not be loaded. Please ensure that code generation was run for this module.</strong><br/><strong>IllegalStateException: Could not load class ... needed for binding members/...</strong></dt>
+<dd>Dagger 1 relies on reflection to combine annotated base classes and their
+  corresponding generated classes. DexGuard's default configuration already
+  preserves the generated classes, but you still preserve the annotated base
+  classes in your project-specific configuration. This is explained in some
+  more detail in the <a href="examples.html#dagger">Dagger example</a>.</dd>
+<dt id="verifyerror"><strong>VerifyError</strong></dt>
+<dd>Verification errors when executing a program are almost certainly
+  the result of a bug in the optimization step of DexGuard. Make sure
+  you are using the latest version. You should be able to work around
+  the problem by using the
+  <a href="usage.html#dontoptimize"><code>-dontoptimize</code></a> option.</dd>
+</dl>
+<h2 id="espresso">Problems with Espresso tests<a class="headerlink" href="#espresso" title="Permanent link">&para;</a></h2>
+<p>This is a collection of the most common errors that occur when applying DexGuard to your Espresso test
+and how you can fix them. Please make sure your tests work without DexGuard first and that you have read
+the <a href="setup/espresso.html#best-practices">best practices</a> section on applying DexGuard to your Espresso tests
+before you read any further.</p>
+<dl>
+<dt e_notestsfound="e_notestsfound"><strong>No tests found.</strong></dt>
+<dd>This usually means that your test classes are not in the form that your test runner expects
+  (e.g. don't inherit from TestCase or lack @Test annotations).</dd>
+<dd>This is caused by the fact that DexGuard's shrinking has removed a part of the standard library 
+  from your application which Espresso depends on. Including the <code>dexguard-espresso.pro</code> default 
+  configuration should prevent this from happening.</dd>
+<dt e_nosucherror="e_nosucherror"><strong>NoClassDefFoundError</strong>, <strong>NoSuchFieldError</strong> or <strong>NoSuchMethodError</strong></dt>
+<dd>These errors usually mean that you use functionality from the application under test in your Espresso test.
+  Avoiding this is the preferred solution, but if that's not possible adding the appropriate keep rules to 
+  the application being tested will solve your problem.</dd>
+<dt e_resourcesnotfound="e_resourcesnotfound"><strong>Resources$NotFoundException</strong></dt>
+<dd>This exception usually means that a resource you reference in your Espresso test has been optimized by 
+  DexGuard and can no longer be found as a result. Ideally, you avoid this situation entirely, but if you
+  cannot, using the <code>dexguard-espresso-no-resource-optimizations.pro</code> will likely resolve the issue.</dd>
+<dt e_viewerror="e_viewerror"><strong>AmbiguousViewMatcherException</strong>, <strong>NoMatchingViewException</strong> or <strong>DefaultFailureHandler$AssertionFailedWithCauseError: 'with string from resource id: ...' doesn't match the selected view</strong></dt>
+<dd>These messages mean Espresso is unable to get the right view for the current test. 
+  This is likely caused by the resource optimizations DexGuard performs on them.
+  Including the <code>dexguard-espresso-no-resource-optimizations.pro</code> default configuration 
+  should solve the problem.</dd>
+<dt e_classoptimizations="e_classoptimizations"><strong>IncompatibleClassChangeError</strong></dt>
+<dd>When you get this error it means DexGuard optimized a part of the code in your application that you are
+  trying to access in your test. This is discouraged, but can be solved by including the
+  <code>dexguard-espresso-aggressive-optimizations.pro</code> default configuration which will disable the specific
+  optimization causing this error.</dd>
+<dt e_failedtofindjsonadapter="e_failedtofindjsonadapter"><strong>Failed to find the generated JsonAdapter class for class</strong></dt>
+<dd>This error occurs when using Moshi codegen which tries to access generated classes through reflection. 
+  Include <code>/lib/dexguard-moshi.pro</code> in your configuration file to fix this issue.</dd>
+</dl>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="tools/retrace.html" title="ReTrace" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                ReTrace
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="reportingissues.html" title="Reporting Issues" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Reporting Issues
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

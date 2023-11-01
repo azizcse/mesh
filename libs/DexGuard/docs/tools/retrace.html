@@ -1,0 +1,1671 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>ReTrace - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/extra2.css">
+    
+      <link rel="stylesheet" href="../css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#retrace" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                ReTrace
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ReTrace
+      </label>
+    
+    <a href="retrace.html" title="ReTrace" class="md-nav__link md-nav__link--active">
+      ReTrace
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with" class="md-nav__link">
+    Restoring a stack trace with line numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withverbose" class="md-nav__link">
+    Restoring a stack trace with line numbers (verbose)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#without" class="md-nav__link">
+    Restoring a stack trace without line numbers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inlined-methods" class="md-nav__link">
+    Inlined methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with" class="md-nav__link">
+    Restoring a stack trace with line numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withverbose" class="md-nav__link">
+    Restoring a stack trace with line numbers (verbose)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#without" class="md-nav__link">
+    Restoring a stack trace without line numbers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inlined-methods" class="md-nav__link">
+    Inlined methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="retrace">ReTrace<a class="headerlink" href="#retrace" title="Permanent link">&para;</a></h1>
+<p><strong>ReTrace</strong> is a companion tool for <strong>DexGuard</strong> (and for ProGuard) that
+'de-obfuscates' stack traces.</p>
+<p>When an obfuscated program throws an exception, the resulting stack
+trace typically isn't very informative. Class names and method names
+have been replaced by short meaningless strings. Source file names and
+line numbers are missing altogether. While this may be intentional, it
+can also be inconvenient when debugging problems.</p>
+<table class="diagram" align="center">
+  <tr>
+    <td><div class="lightgreen box">Original code</div></td>
+    <td><div class="right arrow">DexGuard</div></td>
+    <td><div class="darkgreen box">Obfuscated code</div></td>
+  </tr>
+  <tr>
+    <td/>
+    <td><div class="overlap"><div class="down arrow"></div></div>
+        <div class="overlap"><div class="green box">Mapping file</div></div></td>
+    <td><div class="down arrow">Crash!</div></td>
+  </tr>
+  <tr>
+    <td><div class="lightgreen box">Readable stack trace</div></td>
+    <td><div class="left arrow">ReTrace</div></td>
+    <td><div class="darkgreen box">Obfuscated stack trace</div></td>
+  </tr>
+</table>
+
+<p>ReTrace can read an obfuscated stack trace and restore it to what it
+would look like without obfuscation. The restoration is based on the
+mapping file that DexGuard can write out while obfuscating. The mapping
+file links the original class names and class member names to their
+obfuscated names.</p>
+<div class="admonition note">
+<p>The DexGuard Gradle plugin, Ant plugin, and Eclipse plugin automatically
+write out mapping files to their traditional locations in your Android
+project: <code>build/outputs/dexguard/&lt;variant&gt;/mapping/mapping.txt</code>,
+<code>bin/proguard/mapping.txt</code>, and <code>proguard/mapping.txt</code>, respectively.</p>
+</div>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>You can find the ReTrace jar in the <code>lib</code> directory of the DexGuard
+distribution. To run ReTrace, just type:</p>
+<p><code>java -jar retrace.jar</code>[<em>options...</em>] <em>mapping_file</em>
+[<em>stacktrace_file</em>]</p>
+<p>Alternatively, the <code>bin</code> directory contains some short Linux and Windows
+scripts containing this command. These are the arguments:</p>
+<dl>
+<dt><em>mapping_file</em></dt>
+<dd>Specifies the name of the mapping file, produced by DexGuard with the
+  option "<a href="../usage.html#printmapping"><code>-printmapping</code></a> <em>mapping_file</em>",
+  while obfuscating the application that produced the stack trace.</dd>
+<dt><em>stacktrace_file</em></dt>
+<dd>Optionally specifies the name of the file containing the stack trace. If
+  no file is specified, a stack trace is read from the standard input. The
+  stack trace must be encoded with UTF-8 encoding. Blank lines and
+  unrecognized lines are ignored.</dd>
+</dl>
+<p>The following options are supported:</p>
+<dl>
+<dt><code>-verbose</code></dt>
+<dd>Specifies to print out more informative stack traces that include not only
+  method names, but also method return types and arguments.</dd>
+<dt><code>-greedy</code></dt>
+<dd>Attempts to retrace obfuscated classnames in otherwise unrecognized lines.
+  Ths option might result in reduced performance when retracing large log files.</dd>
+<dt><code>-regex</code> <em>regular_expression</em></dt>
+<dd>
+<p>Specifies the regular expression that is used to parse the lines in the
+  stack trace. Specifying a different regular expression allows to
+  de-obfuscate more general types of input than just stack traces. A relatively
+  simple expression like this works for basic stack trace formats:</p>
+<div class="codehilite"><pre><span></span><code>(?:.*? at %c\.%m\(%s(?::%l)?\))|(?:(?:.*?[:&quot;] +)?%c(?::.*)?)
+</code></pre></div>
+
+
+</dd>
+</dl>
+<p>It for instance matches the following lines:</p>
+<div class="codehilite"><pre><span></span><code>Exception in thread &quot;main&quot; myapplication.MyException: Some message
+    at com.example.MyClass.myMethod(MyClass.java:123)
+</code></pre></div>
+
+
+<p>The regular expression is a Java regular expression (cfr. the
+  documentation of <code>java.util.regex.Pattern</code>), with a few additional
+  wildcards:</p>
+<table>
+<thead>
+<tr>
+<th>Wildcard</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%c</code></td>
+<td>matches a class name</td>
+<td><code>com.example.MyClass</code></td>
+</tr>
+<tr>
+<td><code>%C</code></td>
+<td>matches a class name with slashes</td>
+<td><code>com/example/MyClass</code></td>
+</tr>
+<tr>
+<td><code>%t</code></td>
+<td>matches a field type or method return type</td>
+<td><code>com.example.MyClass[]</code></td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>matches a field name</td>
+<td><code>myField</code></td>
+</tr>
+<tr>
+<td><code>%m</code></td>
+<td>matches a method name</td>
+<td><code>myMethod</code></td>
+</tr>
+<tr>
+<td><code>%a</code></td>
+<td>matches a list of method arguments</td>
+<td><code>boolean,int</code></td>
+</tr>
+<tr>
+<td><code>%s</code></td>
+<td>matches a source file name</td>
+<td><code>MyClass.java</code></td>
+</tr>
+<tr>
+<td><code>%l</code></td>
+<td>matches a line number inside a method</td>
+<td><code>123</code></td>
+</tr>
+</tbody>
+</table>
+<p>Elements that match these wildcards are de-obfuscated,
+  when possible. Note that regular expressions must not contain any
+  capturing groups. Use non-capturing groups instead: <code>(?:</code>...<code>)</code></p>
+<p>You can print out the default regular expression by running ReTrace without
+  arguments. It also matches more complex stack traces.</p>
+<p>The restored stack trace is printed to the standard output. The
+completeness of the restored stack trace depends on the presence of line
+number tables in the obfuscated class files:</p>
+<ul>
+<li>If all line numbers have been preserved while obfuscating the
+  application, ReTrace will be able to restore the stack
+  trace completely.</li>
+<li>If the line numbers have been removed, mapping obfuscated method
+  names back to their original names has become ambiguous. Retrace
+  will list all possible original method names for each line in the
+  stack trace. The user can then try to deduce the actual stack trace
+  manually, based on the logic of the program.</li>
+</ul>
+<p>Preserving line number tables is explained in detail in this
+<a href="../examples.html#stacktrace">example</a> in the DexGuard User Manual.</p>
+<p>Source file names are currently restored based on the names of the
+outer-most classes. If you prefer to keep the obfuscated name, you can
+replace <code>%s</code> in the default regular expression by <code>.*</code></p>
+<p>Unobfuscated elements and obfuscated elements for which no mapping is
+available will be left unchanged.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="with">Restoring a stack trace with line numbers<a class="headerlink" href="#with" title="Permanent link">&para;</a></h3>
+<p>Assume for instance an application has been obfuscated using the
+following extra options:</p>
+<div class="codehilite"><pre><span></span><code>-printmapping mapping.txt
+
+-renamesourcefileattribute MyApplication
+-keepattributes SourceFile,LineNumberTable
+</code></pre></div>
+
+
+<p>Now assume the processed application throws an exception:</p>
+<div class="codehilite"><pre><span></span><code>java.io.IOException: Can&#39;t read [dummy.jar] (No such file or directory)
+    at proguard.y.a(MyApplication:188)
+    at proguard.y.a(MyApplication:158)
+    at proguard.y.a(MyApplication:136)
+    at proguard.y.a(MyApplication:66)
+    at proguard.ProGuard.c(MyApplication:218)
+    at proguard.ProGuard.a(MyApplication:82)
+    at proguard.ProGuard.main(MyApplication:538)
+Caused by: java.io.IOException: No such file or directory
+    at proguard.d.q.a(MyApplication:50)
+    at proguard.y.a(MyApplication:184)
+    ... 6 more
+</code></pre></div>
+
+
+<p>If we have saved the stack trace in a file <code>stacktrace.txt</code>, we can use
+the following command to recover the stack trace:</p>
+<div class="codehilite"><pre><span></span><code>retrace mapping.txt stacktrace.txt
+</code></pre></div>
+
+
+<p>The output will correspond to the original stack trace:</p>
+<div class="codehilite"><pre><span></span><code>java.io.IOException: Can&#39;t read [dummy.jar] (No such file or directory)
+    at proguard.InputReader.readInput(InputReader.java:188)
+    at proguard.InputReader.readInput(InputReader.java:158)
+    at proguard.InputReader.readInput(InputReader.java:136)
+    at proguard.InputReader.execute(InputReader.java:66)
+    at proguard.ProGuard.readInput(ProGuard.java:218)
+    at proguard.ProGuard.execute(ProGuard.java:82)
+    at proguard.ProGuard.main(ProGuard.java:538)
+Caused by: java.io.IOException: No such file or directory
+    at proguard.io.DirectoryPump.pumpDataEntries(DirectoryPump.java:50)
+    at proguard.InputReader.readInput(InputReader.java:184)
+    ... 6 more
+</code></pre></div>
+
+
+<h3 id="withverbose">Restoring a stack trace with line numbers (verbose)<a class="headerlink" href="#withverbose" title="Permanent link">&para;</a></h3>
+<p>In the previous example, we could also use the verbose flag:</p>
+<div class="codehilite"><pre><span></span><code>java -jar retrace.jar -verbose mapping.txt stacktrace.txt
+</code></pre></div>
+
+
+<p>The output will then look as follows:</p>
+<div class="codehilite"><pre><span></span><code>java.io.IOException: Can&#39;t read [dummy.jar] (No such file or directory)
+    at proguard.InputReader.void readInput(java.lang.String,proguard.ClassPathEntry,proguard.io.DataEntryReader)(InputReader.java:188)
+    at proguard.InputReader.void readInput(java.lang.String,proguard.ClassPath,int,int,proguard.io.DataEntryReader)(InputReader.java:158)
+    at proguard.InputReader.void readInput(java.lang.String,proguard.ClassPath,proguard.io.DataEntryReader)(InputReader.java:136)
+    at proguard.InputReader.void execute(proguard.classfile.ClassPool,proguard.classfile.ClassPool)(InputReader.java:66)
+    at proguard.ProGuard.void readInput()(ProGuard.java:218)
+    at proguard.ProGuard.void execute()(ProGuard.java:82)
+    at proguard.ProGuard.void main(java.lang.String[])(ProGuard.java:538)
+Caused by: java.io.IOException: No such file or directory
+    at proguard.io.DirectoryPump.void pumpDataEntries(proguard.io.DataEntryReader)(DirectoryPump.java:50)
+    at proguard.InputReader.void readInput(java.lang.String,proguard.ClassPathEntry,proguard.io.DataEntryReader)(InputReader.java:184)
+    ... 6 more
+</code></pre></div>
+
+
+<h3 id="without">Restoring a stack trace without line numbers<a class="headerlink" href="#without" title="Permanent link">&para;</a></h3>
+<p>Assume for instance the application DexGuard has been obfuscated using
+the following extra options, this time without preserving the line
+number tables:</p>
+<div class="codehilite"><pre><span></span><code>-printmapping mapping.txt
+</code></pre></div>
+
+
+<p>A stack trace <code>stacktrace.txt</code> will then lack line number information,
+showing "Unknown source" instead:</p>
+<div class="codehilite"><pre><span></span><code>java.io.IOException: Can&#39;t read [dummy.jar] (No such file or directory)
+    at proguard.y.a(Unknown Source)
+    at proguard.y.a(Unknown Source)
+    at proguard.y.a(Unknown Source)
+    at proguard.y.a(Unknown Source)
+    at proguard.ProGuard.c(Unknown Source)
+    at proguard.ProGuard.a(Unknown Source)
+    at proguard.ProGuard.main(Unknown Source)
+Caused by: java.io.IOException: No such file or directory
+    at proguard.d.q.a(Unknown Source)
+    ... 7 more
+</code></pre></div>
+
+
+<p>We can still use the same command to recover the stack trace:</p>
+<div class="codehilite"><pre><span></span><code>java -jar retrace.jar mapping.txt stacktrace.txt
+</code></pre></div>
+
+
+<p>The output will now list all alternative original method names for each
+ambiguous obfuscated method name:</p>
+<div class="codehilite"><pre><span></span><code>java.io.IOException: Can&#39;t read [dummy.jar] (No such file or directory)
+    at proguard.InputReader.execute(InputReader.java)
+                            readInput(InputReader.java)
+    at proguard.InputReader.execute(InputReader.java)
+                            readInput(InputReader.java)
+    at proguard.InputReader.execute(InputReader.java)
+                            readInput(InputReader.java)
+    at proguard.InputReader.execute(InputReader.java)
+                            readInput(InputReader.java)
+    at proguard.ProGuard.readInput(ProGuard.java)
+    at proguard.ProGuard.execute(ProGuard.java)
+                         optimize(ProGuard.java)
+                         createPrintStream(ProGuard.java)
+                         closePrintStream(ProGuard.java)
+                         fileName(ProGuard.java)
+    at proguard.ProGuard.main(ProGuard.java)
+Caused by: java.io.IOException: No such file or directory
+    at proguard.io.DirectoryPump.pumpDataEntries(DirectoryPump.java)
+                                 readFiles(DirectoryPump.java)
+</code></pre></div>
+
+
+<p>For instance, ReTrace can't tell if the method <code>a</code> corresponds to
+<code>execute</code> or to <code>readInput</code>, so it lists both. You need to figure it out
+based on your knowledge of the application. Having line numbers and
+unambiguous names clearly is a lot easier, so you should consider
+<a href="../examples.html#stacktrace">preserving the line numbers</a> when you
+obfuscate your application.</p>
+<h2 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
+<p>A mapping file contains the original names and the obfuscated names of
+classes, fields, and methods. DexGuard can write out such a file while
+obfuscating an application or a library, with the option
+<a href="../usage.html#printmapping"><code>-printmapping</code></a>. ReTrace requires the mapping file
+to restore obfuscated stack traces to more readable versions. It is a readable
+file with UTF-8 encoding, so you can also look up names in an ordinary text
+viewer. The format is pretty self-explanatory, but we describe its details
+here.</p>
+<p>A mapping file contains a sequence of records of the following form:</p>
+<div class="codehilite"><pre><span></span><code>classline
+    fieldline *
+    methodline *
+</code></pre></div>
+
+
+<p>A <code>classline</code>, with a trailing colon, specifies a class and its obfuscated
+name:</p>
+<div class="codehilite"><pre><span></span><code>originalclassname -&gt; obfuscatedclassname:
+</code></pre></div>
+
+
+<p>A <code>fieldline</code>, with 4 leading spaces, specifies a field and its obfuscated
+name:</p>
+<div class="codehilite"><pre><span></span><code>    originalfieldtype originalfieldname -&gt; obfuscatedfieldname
+</code></pre></div>
+
+
+<p>A <code>methodline</code>, with 4 leading spaces, specifies a method and its obfuscated
+name:</p>
+<div class="codehilite"><pre><span></span><code>    [startline:endline:]originalreturntype [originalclassname.]originalmethodname(originalargumenttype,...)[:originalstartline[:originalendline]] -&gt; obfuscatedmethodname
+</code></pre></div>
+
+
+<ul>
+<li>An asterisk "*" means the line may occur any number of times.</li>
+<li>Square brackets "[]" mean that their contents are optional.</li>
+<li>Ellipsis dots "..." mean that  any number of the preceding items may be specified.</li>
+<li>The colon ":", the separator ".", and the arrow "-&gt;" are literal tokens.</li>
+</ul>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>The following snippet gives an impression of the structure of a mapping file:</p>
+<div class="codehilite"><pre><span></span><code>com example.application.ArgumentWordReader -&gt; com.example.a.a:
+    java.lang.String[] arguments -&gt; a
+    int index -&gt; a
+    36:57:void &lt;init&gt;(java.lang.String[],java.io.File) -&gt; &lt;init&gt;
+    64:64:java.lang.String nextLine() -&gt; a
+    72:72:java.lang.String lineLocationDescription() -&gt; b
+com.example.application.Main -&gt; com.example.application.Main:
+    com.example.application.Configuration configuration -&gt; a
+    50:66:void &lt;init&gt;(com.example.application.Configuration) -&gt; &lt;init&gt;
+    74:228:void execute() -&gt; a
+    2039:2056:void com.example.application.GPL.check():39:56 -&gt; a
+    2039:2056:void execute():76 -&gt; a
+    2236:2252:void printConfiguration():236:252 -&gt; a
+    2236:2252:void execute():80 -&gt; a
+    3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+    3040:3042:void printConfiguration():243 -&gt; a
+    3040:3042:void execute():80 -&gt; a
+    3260:3268:void readInput():260:268 -&gt; a
+    3260:3268:void execute():97 -&gt; a
+</code></pre></div>
+
+
+<p>You can see the names of classes and their fields and methods:</p>
+<ul>
+<li>The fields and methods are listed in ProGuard configuration format (javap
+  format), with descriptors that have return types and argument types but no
+  argument names. In the above example:<div class="codehilite"><pre><span></span><code>void &lt;init&gt;(java.lang.String[],java.io.File)
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>refers to a constructor with a <code>String</code> array argument and a <code>File</code>
+  argument.</p>
+<ul>
+<li>A method may have a leading line number range, if it is known from the
+  original source code (see <a href="../examples.html#stacktrace">Producing useful obfuscated stack
+  traces</a> in the Examples section). Unlike method
+  names, line numbers are unique within a class, so ReTrace can resolve lines
+  in a stack trace without ambiguities. For example:<div class="codehilite"><pre><span></span><code>74:228:void execute()
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>refers to a method <code>execute</code>, defined on lines 74 to 228.</p>
+<ul>
+<li>The obfuscated method name follows the arrow. For example:<div class="codehilite"><pre><span></span><code>74:228:void execute() -&gt; a
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>shows that method <code>execute</code> has been renamed to <code>a</code>. Multiple fields and
+  methods can get the same obfuscated names, as long as their descriptors
+  are different.</p>
+<h3 id="inlined-methods">Inlined methods<a class="headerlink" href="#inlined-methods" title="Permanent link">&para;</a></h3>
+<p>The mapping file accounts for the added complexity of inlined methods (as of
+ProGuard/ReTrace version 5.2). The optimization step may inline methods
+into other methods &mdash; recursively even. A single line in an obfuscated
+stack trace can then correspond to multiple lines in the original stack trace:
+the line that throws the exception followed by one or more nested method
+calls. In such cases, the mapping file repeats the leading line number range
+on subsequent lines. For example:</p>
+<div class="codehilite"><pre><span></span><code>3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+3040:3042:void printConfiguration():243 -&gt; a
+3040:3042:void execute():80 -&gt; a
+</code></pre></div>
+
+
+<ul>
+<li>The subsequent lines correspond to the subsequent lines of the original
+  stack trace. For example:<div class="codehilite"><pre><span></span><code>3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+3040:3042:void printConfiguration():243 -&gt; a
+3040:3042:void execute():80 -&gt; a
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>refers to method <code>createPrintWriterOut</code> called from and inlined in
+  <code>printConfiguration</code>, in turn called from and inlined in method <code>execute</code>.</p>
+<ul>
+<li>An original method name may have a preceding class name, if the method
+  originates from a different class. For example:<div class="codehilite"><pre><span></span><code>3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>shows that method <code>createPrintWriterOut</code> was originally defined in class
+  <code>PrintWriterUtil</code>.</p>
+<ul>
+<li>A single trailing line number corresponds to an inlined method call. For
+  example:<div class="codehilite"><pre><span></span><code>3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+3040:3042:void printConfiguration():243 -&gt; a
+3040:3042:void execute():80 -&gt; a
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>specifies that method <code>execute</code> called <code>printConfiguration</code> on line 80,
+  and <code>printconfiguration</code> called <code>createPrintWriterOut</code> on line 243.</p>
+<ul>
+<li>A traling line number range corresponds to the final inlined method body.
+  For example:<div class="codehilite"><pre><span></span><code>3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>shows that method <code>createPrintWriterOut</code> covered lines 40 to 42.</p>
+<ul>
+<li>The leading line number range is synthetic, to avoid ambiguities with other
+  code in the same class. DexGuard makes up the range, but tries to make it
+  similar-looking to the original code (by adding offsets that are multiples
+  of 1000), for convenience. For example:<div class="codehilite"><pre><span></span><code>3040:3042:java.io.PrintWriter com.example.application.util.PrintWriterUtil.createPrintWriterOut(java.io.File):40:42 -&gt; a
+</code></pre></div>
+
+
+</li>
+</ul>
+<p>created synthetic range 3040:3042 in the bytecode of class <code>Main</code> to be
+  unique but still resemble source code range 40:42 in class
+  <code>PrintWriterUtil</code>.</p>
+<p>Tools that don't account for these repeated line number ranges, like older
+versions of ReTrace, may still degrade gracefully by outputting the subsequent
+lines without interpreting them.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="libraryrulesgenerator.html" title="Library Rules Generator" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Library Rules Generator
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../troubleshooting.html" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Overview
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

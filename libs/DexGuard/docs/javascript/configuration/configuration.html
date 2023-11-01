@@ -1,0 +1,1173 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the JSGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Basic Configuration Options - JSGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#basic-configuration-options" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="JSGuard" aria-label="JSGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              JSGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Basic Configuration Options
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="JSGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../img/logo.png" width="48" height="48">
+      
+    </a>
+    JSGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Quick Start
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Quick Start
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart/dexguardintegration.html" title="DexGuard Integration" class="md-nav__link">
+      DexGuard Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart/bestpractices.html" title="Best Practices" class="md-nav__link">
+      Best Practices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Basic Configuration Options
+      </label>
+    
+    <a href="configuration.html" title="Basic Configuration Options" class="md-nav__link md-nav__link--active">
+      Basic Configuration Options
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paths" class="md-nav__link">
+    Paths
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prettify" class="md-nav__link">
+    prettify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    encoding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-strings" class="md-nav__link">
+    escape-strings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    Processing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    Assumptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shrinking" class="md-nav__link">
+    Shrinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection" class="md-nav__link">
+    Protection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-html-files" class="md-nav__link">
+    Processing HTML files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-debugging" class="md-nav__link">
+    Configuration Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="filters.html" title="Filters" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="assumptions.html" title="Assumptions" class="md-nav__link">
+      Assumptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/shrinking.html" title="Shrinking" class="md-nav__link">
+      Shrinking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Protection
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Protection
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1">
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-1-1" type="checkbox" id="nav-4-2-1-1">
+    
+    <label class="md-nav__link" for="nav-4-2-1-1">
+      Strings
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-1">
+        Strings
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/stringencryption.html" title="Encryption" class="md-nav__link">
+      Encryption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/stringarray.html" title="Array Transformation" class="md-nav__link">
+      Array Transformation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2">
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      Code
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/nameobfuscation.html" title="Name Obfuscation" class="md-nav__link">
+      Name Obfuscation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/functionencryption.html" title="Function Encryption" class="md-nav__link">
+      Function Encryption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/numberobfuscation.html" title="Number Obfuscation" class="md-nav__link">
+      Number Obfuscation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/arithmeticobfuscation.html" title="Arithmetic Obfuscation" class="md-nav__link">
+      Arithmetic Obfuscation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/controlflowobfuscation.html" title="Control Flow Obfuscation" class="md-nav__link">
+      Control Flow Obfuscation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/propertydeclarationobfuscation.html" title="Property Declaration Obfuscation" class="md-nav__link">
+      Property Declaration Obfuscation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/propertyaccessobfuscation.html" title="Property Access Obfuscation" class="md-nav__link">
+      Property Access Obfuscation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/shuffling.html" title="Shuffling" class="md-nav__link">
+      Shuffling
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-3" type="checkbox" id="nav-4-2-3">
+    
+    <label class="md-nav__link" for="nav-4-2-3">
+      Environment
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-3">
+        Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/debuggerobstruction.html" title="Debugger Obstruction" class="md-nav__link">
+      Debugger Obstruction
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trouble-shooting/knownlimitations.html" title="Known Issues and Limitations" class="md-nav__link">
+      Known Issues and Limitations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/release-notes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paths" class="md-nav__link">
+    Paths
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prettify" class="md-nav__link">
+    prettify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    encoding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-strings" class="md-nav__link">
+    escape-strings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing" class="md-nav__link">
+    Processing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    Assumptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shrinking" class="md-nav__link">
+    Shrinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection" class="md-nav__link">
+    Protection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-html-files" class="md-nav__link">
+    Processing HTML files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-debugging" class="md-nav__link">
+    Configuration Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="basic-configuration-options">Basic Configuration Options</h1>
+<p>Configuring the JavaScript obfuscator is done through a YAML file that is configured in your DexGuard
+configuration file using the <code>-javascriptconfiguration</code> option.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Be reminded that in the YAML format, <strong>indentation has meaning</strong> (similar to e.g. the Python
+language).</p>
+</div>
+<h2 id="paths">Paths</h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>As DexGuard automatically takes care of inputs and outputs, it is not allowed to specify the <code>paths</code> block
+when using the JavaScript obfuscator with DexGuard. This section is therefore not relevant for that use case.</p>
+</div>
+<p>Within the <code>paths</code> block you can configure the input and output directories. It may contain one or more subblocks.
+Each subblock has an <code>inputs</code> and <code>outputs</code> entry, specifying one or more input directories and exactly one output
+directory.</p>
+<p>The paths listed under <code>inputs</code> can be followed by a file name filter specified between brackets. The JavaScript
+obfuscator will recursively scan all input directories for all files that match the given filter and,
+after processing, write them to their corresponding output directory.</p>
+<p>If no file filter is specified between brackets, all files inside the input directory (and all of its subdirectories)
+will be processed.</p>
+<pre><code class="yaml">paths:
+  - inputs:
+      - myInputDir1a/(**.js)
+      - myInputDir1b/(**.html)
+    outputs:
+      - myOutputDir1
+  - inputs:
+      - myInputDir2
+    outputs:
+      - myOutputDir2
+</code></pre>
+
+<p>Alternatively, single JavaScripts files can be processed individually by specifying the path to the input file under <code>inputs</code>
+and the path to the processed output file under <code>outputs</code>.</p>
+<pre><code class="yaml">paths:
+  - inputs:
+      - myInputDir/myInputFile1.js
+    outputs:
+      - myOutputDir/myOutputFile1.js
+  - inputs:
+      - myInputDir/myInputFile2.js
+    outputs:
+      - myOutputDir/myOutputFile2.js
+</code></pre>
+
+<h2 id="output">Output</h2>
+<p>In the <code>output</code> block, you can specify how the processed JavaScript files should be written.</p>
+<pre><code class="yaml">output:
+</code></pre>
+
+<h3 id="prettify">prettify</h3>
+<p>Use the <code>prettify</code> option to control whether the written JavaScript files should be formatted with proper
+indentation.</p>
+<p><em>Default:</em> <code>false</code></p>
+<pre><code class="yaml">output:
+  prettify: true
+</code></pre>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You should only enable <code>prettify</code> when debugging, as it significantly increases program size and makes code more
+readable.</p>
+</div>
+<h3 id="encoding">encoding</h3>
+<p>Use the <code>encoding</code> option to specify in which encoding the JavaScript files will be written. The possible encodings
+are the ones specified by the java.nio.charset.Charset class.</p>
+<p><em>Default:</em> <code>"UTF-8"</code></p>
+<pre><code class="yaml">output:
+  encoding: &quot;UTF-16&quot;
+</code></pre>
+
+<h3 id="escape-strings">escape-strings</h3>
+<p>This option escapes all non-ASCII characters in strings, writing them out in their hexadecimal representation instead.
+Use this when your deployment target does not handle non-ASCII characters correctly.</p>
+<p><em>Default:</em> <code>false</code></p>
+<pre><code class="yaml">output:
+  escape-strings: true
+</code></pre>
+
+<p><strong>Original program</strong>:</p>
+<pre><code class="javascript">  translations = {
+    &quot;Hello, world!&quot;: &quot;你好, 世界!&quot;
+  }
+</code></pre>
+
+<p><strong>Processed program</strong>:</p>
+<pre><code class="javascript">  translations = {
+    &quot;Hello, world!&quot;: &quot;\u4F60\u597D, \u4E16\u754C!&quot;
+  }
+</code></pre>
+
+<h2 id="processing">Processing</h2>
+<p>The <code>processing</code> block defines all transformations to be applied to the processed JavaScript programs.</p>
+<pre><code class="yaml">processing:
+</code></pre>
+
+<p>The processing block and each of its sub-blocks can define a set of filters. The
+ <a href="filters.html">filters documentation</a> provides more details on how filters work.</p>
+<h3 id="assumptions">Assumptions</h3>
+<p>The <code>assumptions</code> sections defines a set of assumptions that the JavaScript obfuscator may rely upon to perform
+its shrinking and obfuscation. See the <a href="assumptions.html">assumptions documentation</a> for more details.</p>
+<pre><code class="yaml">processing:
+  assumptions:
+</code></pre>
+
+<h3 id="shrinking">Shrinking</h3>
+<p>Shrinking removes code that will never be executed (because it is not called from any other active code).
+See the <a href="../features/shrinking.html">shrinking documentation</a> for more details.</p>
+<pre><code class="yaml">processing:
+  shrinking:
+</code></pre>
+
+<h3 id="protection">Protection</h3>
+<p>The <code>protection</code> block defines all obfuscation techniques and integrity protections to be applied to the processed
+JavaScript programs.</p>
+<pre><code class="yaml">processing:
+  protection:
+</code></pre>
+
+<p>See the pages of the individual features for more details:</p>
+<ul>
+<li><a href="../features/stringencryption.html">String Encryption</a></li>
+<li><a href="../features/stringarray.html">String Array Conversion</a></li>
+<li><a href="../features/nameobfuscation.html">Name Obfuscation</a></li>
+<li><a href="../features/numberobfuscation.html">Number Obfuscation</a></li>
+<li><a href="../features/arithmeticobfuscation.html">Arithmetic Obfuscation</a></li>
+<li><a href="../features/controlflowobfuscation.html">Control Flow Obfuscation</a></li>
+<li><a href="../features/propertyaccessobfuscation.html">Property Access Obfuscation</a></li>
+<li><a href="../features/shuffling.html">Shuffling</a></li>
+<li><a href="../features/debuggerobstruction.html">Debugger Obstruction</a></li>
+</ul>
+<h3 id="processing-html-files">Processing HTML files</h3>
+<p>By default, HTML files that are specified as <code>inputs</code> are left untouched. The JavaScript contained in these HTML
+files will still be used to automatically blacklist global variables declared in the embedded JavaScript.</p>
+<p>The JavaScript that is embedded in HTML files can also be processed by explicitly enabling <code>process-html</code>:</p>
+<pre><code class="yaml">processing:
+  process-html: true
+</code></pre>
+
+<p>The JavaScript obfuscator will now apply all configured obfuscation techniques to the JavaScript inside the HTML files
+that are specified as <code>inputs</code>. </p>
+<h3 id="configuration-debugging">Configuration Debugging</h3>
+<p>The <code>configuration-debugging</code> flag enables printing blacklist suggestions to
+the console at runtime, both for <a href="../features/shrinking.html">shrinking</a> and <a href="../features/nameobfuscation.html">name
+obfuscation</a>.</p>
+<pre><code class="yaml">processing:
+  configuration-debugging: true
+</code></pre>
+
+<p><strong>Example output:</strong></p>
+<blockquote>
+<p>Shrunk property eventTitle has been accessed. Blacklist this property (under
+shrinking &gt; properties): - eventTitle</p>
+</blockquote>
+<p><strong>Corresponding configuration:</strong></p>
+<pre><code class="yaml">processing:
+  shrinking:
+    properties:
+      blacklist:
+        - eventTitle
+</code></pre>
+
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This option will include debug information in your application. Never use it
+in release builds.</p>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../quickstart/bestpractices.html" title="Best Practices" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Best Practices
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="filters.html" title="Filters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Filters
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

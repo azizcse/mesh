@@ -1,0 +1,1968 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Upgrading - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/extra2.css">
+    
+      <link rel="stylesheet" href="../css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#from-dexguard-8x" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Upgrading
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Upgrading
+      </label>
+    
+    <a href="upgrading.html" title="Upgrading" class="md-nav__link md-nav__link--active">
+      Upgrading
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-dexguard-8x" class="md-nav__link">
+    From DexGuard 8.x
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-gradle-configuration" class="md-nav__link">
+    Upgrading Your Gradle Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-check-plugin" class="md-nav__link">
+    Version Check Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-system-properties-or-arguments-for-the-jvm-running-dexguard" class="md-nav__link">
+    Setting system properties or arguments for the JVM running DexGuard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-dexguard" class="md-nav__link">
+    Executing DexGuard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserving-runtime-invisible-annotations" class="md-nav__link">
+    Preserving runtime-invisible annotations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-proguard" class="md-nav__link">
+    From ProGuard
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-gradle-configuration_1" class="md-nav__link">
+    Upgrading Your Gradle Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-dexguard_1" class="md-nav__link">
+    Executing DexGuard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-proguard-configuration" class="md-nav__link">
+    Upgrading Your ProGuard Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-dexguard-8x" class="md-nav__link">
+    From DexGuard 8.x
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-gradle-configuration" class="md-nav__link">
+    Upgrading Your Gradle Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-check-plugin" class="md-nav__link">
+    Version Check Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-system-properties-or-arguments-for-the-jvm-running-dexguard" class="md-nav__link">
+    Setting system properties or arguments for the JVM running DexGuard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-dexguard" class="md-nav__link">
+    Executing DexGuard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserving-runtime-invisible-annotations" class="md-nav__link">
+    Preserving runtime-invisible annotations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-proguard" class="md-nav__link">
+    From ProGuard
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-gradle-configuration_1" class="md-nav__link">
+    Upgrading Your Gradle Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-dexguard_1" class="md-nav__link">
+    Executing DexGuard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-your-proguard-configuration" class="md-nav__link">
+    Upgrading Your ProGuard Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Upgrading</h1>
+                
+                <h2 id="from-dexguard-8x">From DexGuard 8.x<a class="headerlink" href="#from-dexguard-8x" title="Permanent link">&para;</a></h2>
+<p>The main difference in DexGuard 9.1 is that DexGuard now
+ post-processes your application or library, rather than integrating itself into the build process.
+This means that the DexGuard input is now the <strong>unobfuscated</strong> application, app bundle or library
+produced by the standard Android build process.</p>
+<p>This section explains how you can upgrade your DexGuard 8.x setup to DexGuard 9.1 in a
+few quick steps using the <a href="gradle-plugin.html">DexGuard Gradle plugin</a>.</p>
+<h3 id="upgrading-your-gradle-configuration">Upgrading Your Gradle Configuration<a class="headerlink" href="#upgrading-your-gradle-configuration" title="Permanent link">&para;</a></h3>
+<p>Your app module <code>build.gradle(.kts)</code> file might look something like this:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="n">maven</span> <span class="o">{</span> <span class="c1">// For the DexGuard plugin.</span>
+            <span class="n">url</span> <span class="s1">&#39;/path/to/dexguard/lib&#39;</span>     
+        <span class="o">}</span>
+        <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android plugin.</span>
+        <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For anything else.</span>
+    <span class="o">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:x.y.z&#39;</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.guardsquare.dexguard:dexguard-gradle-plugin:+&#39;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.application&#39;</span>
+<span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;dexguard&#39;</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">proguardFile</span> <span class="nf">getDefaultDexGuardFile</span><span class="o">(</span><span class="s1">&#39;dexguard-debug.pro&#39;</span><span class="o">)</span>
+            <span class="n">proguardFile</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">proguardFile</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">proguardFile</span> <span class="nf">getDefaultDexGuardFile</span><span class="o">(</span><span class="s1">&#39;dexguard-release.pro&#39;</span><span class="o">)</span>
+            <span class="n">proguardFile</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">proguardFile</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="p">{</span>
+    <span class="n">repositories</span> <span class="p">{</span>
+        <span class="n">maven</span> <span class="p">{</span> <span class="c1">// For the DexGuard plugin.</span>
+            <span class="n">url</span> <span class="p">=</span> <span class="n">uri</span><span class="p">(</span><span class="s">&quot;/path/to/dexguard/lib&quot;</span><span class="p">)</span> 
+        <span class="p">}</span>
+        <span class="n">google</span><span class="p">()</span>  <span class="c1">// For the Android plugin.</span>
+        <span class="n">mavenCentral</span><span class="p">()</span> <span class="c1">// For anything else.</span>
+    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="p">{</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.android.tools.build:gradle:x.y.z&quot;</span><span class="p">)</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.guardsquare.dexguard:dexguard-gradle-plugin:+&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">plugins</span> <span class="p">{</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;dexguard&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">android</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">buildTypes</span> <span class="p">{</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="n">extraDexGuardMethods</span><span class="p">.</span><span class="n">getDefaultDexGuardFile</span><span class="p">(</span><span class="s">&quot;dexguard-debug.pro&quot;</span><span class="p">))</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="s">&quot;proguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="n">extraDexGuardMethods</span><span class="p">.</span><span class="n">getDefaultDexGuardFile</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">))</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="s">&quot;proguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You should update the buildscript dependency to the new plugin:
+<div class="codehilite"><pre><span></span><code>// Old plugin
+&quot;com.guardsquare.dexguard:dexguard-gradle-plugin:+&quot;
+// New plugin
+&quot;com.guardsquare:dexguard-gradle-plugin:+&quot;
+</code></pre></div></p>
+<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Manual download (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="o">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">url</span> <span class="s1">&#39;/path/to/DexGuard/lib&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:x.y.z&#39;</span>     <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.guardsquare:dexguard-gradle-plugin:+&#39;</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Manual download (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="p">{</span>
+    <span class="n">repositories</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="n">google</span><span class="p">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="p">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="p">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">url</span> <span class="p">=</span> <span class="n">uri</span><span class="p">(</span><span class="s">&quot;/path/to/DexGuard/lib&quot;</span><span class="p">)</span> 
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="p">{</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.android.tools.build:gradle:x.y.z&quot;</span><span class="p">)</span>     <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.guardsquare:dexguard-gradle-plugin:+&quot;</span><span class="p">)</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Maven (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="o">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">credentials</span>  <span class="o">{</span>
+                <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;${dexguardMavenUser}&quot;</span>
+                <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;${dexguardMavenPassword}&quot;</span>
+            <span class="o">}</span>
+            <span class="n">url</span> <span class="s2">&quot;https://maven.guardsquare.com&quot;</span>
+            <span class="c1">// Only search for artifacts with groupId &quot;com.guardsquare.*&quot;,</span>
+            <span class="c1">// supported since gradle 5.1.</span>
+            <span class="n">content</span> <span class="o">{</span>
+                <span class="n">includeGroupByRegex</span> <span class="s2">&quot;com\\.guardsquare.*&quot;</span>
+            <span class="o">}</span>
+            <span class="n">authentication</span> <span class="o">{</span>
+                <span class="n">basic</span><span class="o">(</span><span class="n">BasicAuthentication</span><span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:x.y.z&#39;</span> <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.guardsquare:dexguard-gradle-plugin:1.1.9&#39;</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Maven (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="p">{</span>
+    <span class="n">repositories</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="n">google</span><span class="p">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="p">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="p">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">credentials</span>  <span class="p">{</span>
+                <span class="n">username</span> <span class="p">=</span> <span class="s">&quot;${dexguardMavenUser}&quot;</span>
+                <span class="n">password</span> <span class="p">=</span> <span class="s">&quot;${dexguardMavenPassword}&quot;</span>
+            <span class="p">}</span>
+            <span class="n">url</span> <span class="p">=</span> <span class="n">uri</span><span class="p">(</span><span class="s">&quot;https://maven.guardsquare.com&quot;</span><span class="p">)</span>
+            <span class="c1">// Only search for artifacts with groupId &quot;com.guardsquare.*&quot;,</span>
+            <span class="c1">// supported since gradle 5.1.</span>
+            <span class="n">content</span> <span class="p">{</span>
+                <span class="n">includeGroupByRegex</span><span class="p">(</span><span class="s">&quot;com\\.guardsquare.*&quot;</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="n">authentication</span> <span class="p">{</span>
+                <span class="n">basic</span><span class="p">(</span><span class="n">BasicAuthentication</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="p">{</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.android.tools.build:gradle:x.y.z&quot;</span><span class="p">)</span> <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.guardsquare:dexguard-gradle-plugin:1.1.9&quot;</span><span class="p">)</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You should remove the <code>proguardFile</code> configurations and set <code>minifyEnabled</code> and <code>shrinkResources</code> to
+<code>false</code>.</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.application&#39;</span>
+<span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;dexguard&#39;</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">plugins</span> <span class="p">{</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;dexguard&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">android</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">buildTypes</span> <span class="p">{</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You can specify your DexGuard configurations in a new <code>dexguard</code> block:</p>
+<div class="tabbed-set" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Manual download (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span>  <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>                
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/dexguard&#39;</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-debug.pro&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>            
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Manual download (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span>  <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">buildTypes</span> <span class="p">{</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>                
+        <span class="p">}</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">path</span> <span class="p">=</span> <span class="s">&quot;/path/to/dexguard&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-debug.pro&quot;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;proguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>            
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;proguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Maven (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span>  <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;9.1.+&#39;</span> <span class="c1">// the DexGuard version to automatically download</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-debug.pro&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><label for="__tabbed_4_4">Maven (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span>  <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">getByName</span><span class="o">(</span><span class="s2">&quot;debug&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">isMinifyEnabled</span> <span class="o">=</span> <span class="kc">false</span>
+            <span class="n">isShrinkResources</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="o">}</span>
+        <span class="n">getByName</span><span class="o">(</span><span class="s2">&quot;release&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">isMinifyEnabled</span> <span class="o">=</span> <span class="kc">false</span>
+            <span class="n">isShrinkResources</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;9.1.+&quot;</span> <span class="c1">// the DexGuard version to automatically download</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">register</span><span class="o">(</span><span class="s2">&quot;debug&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span><span class="o">(</span><span class="s2">&quot;dexguard-debug.pro&quot;</span><span class="o">)</span>
+            <span class="n">configuration</span><span class="o">(</span><span class="s2">&quot;dexguard-project.txt&quot;</span><span class="o">)</span>
+            <span class="n">configuration</span><span class="o">(</span><span class="s2">&quot;proguard-project.txt&quot;</span><span class="o">)</span>
+        <span class="o">}</span>
+        <span class="n">register</span><span class="o">(</span><span class="s2">&quot;release&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span><span class="o">(</span><span class="s2">&quot;dexguard-release.pro&quot;</span><span class="o">)</span>
+            <span class="n">configuration</span><span class="o">(</span><span class="s2">&quot;dexguard-project.txt&quot;</span><span class="o">)</span>
+            <span class="n">configuration</span><span class="o">(</span><span class="s2">&quot;proguard-project.txt&quot;</span><span class="o">)</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>See the <a href="gradle-plugin.html">Gradle plugin</a> page for more details on configuring the DexGuard plugin.</p>
+<h3 id="version-check-plugin">Version Check Plugin<a class="headerlink" href="#version-check-plugin" title="Permanent link">&para;</a></h3>
+<p>DexGuard 8.x came with a Gradle plugin, 'dexguard-versioncheck', which checks if you are using the latest available DexGuard version.
+In DexGuard 9 this plugin has been removed, so you can simply remove the plugin from your build.gradle file</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Maven (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;dexguard-versioncheck&#39;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Maven (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="n">plugin</span><span class="p">:</span> <span class="err">&#39;</span><span class="n">dexguard</span><span class="p">-</span><span class="n">versioncheck</span><span class="err">&#39;</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You can use the following replacements of the 'dexguard-versioncheck' plugin to ensure you always use an up-to-date version of DexGuard:</p>
+<ul>
+<li>Automatic updates through maven.</li>
+<li>Warnings in console and protection report.</li>
+</ul>
+<p>To automatically upgrade DexGuard you can configure DexGuard's plugin to fetch the latest release through maven by providing the <a href="gradle-plugin.html#version"><code>version</code></a> option in the <code>dexguard</code> block.
+Additionally, you will need to configure your buildscript to use <a href="repository.html#configuring-the-secure-maven-repository-dependencies">Guardsquare's maven repository</a>.</p>
+<p>DexGuard will print out a warning to it's console output when  a newer version is available.
+The protection report will contain a banner when a newer version is available.</p>
+<h3 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h3>
+<p>Previously, the DexGuard license file could be set via a system property by adding the following
+in the <code>gradle.properties</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="na">systemProp.dexguard.license</span><span class="o">=</span><span class="s">/path/to/dexguard-license.txt</span>
+</code></pre></div>
+
+<p>This has been replaced with a <code>license</code> option in the <code>dexguard</code> block:</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;/path/to/dexguard-license.txt&quot;</span>
+<span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">license</span> <span class="p">=</span> <span class="s">&quot;/path/to/dexguard-license.txt&quot;</span>
+<span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>DexGuard will also still look for your license in your home folder and in the environment
+variable <code>DEXGUARD_LICENSE</code>; see the <a href="../quickstart.html#setting-up-your-license-file">quick start page</a> for more details.</p>
+<h3 id="setting-system-properties-or-arguments-for-the-jvm-running-dexguard">Setting system properties or arguments for the JVM running DexGuard<a class="headerlink" href="#setting-system-properties-or-arguments-for-the-jvm-running-dexguard" title="Permanent link">&para;</a></h3>
+<p>Previously, the <code>gradle.properties</code> file could be used to specify system properties that 
+should be taken into account by DexGuard, or to specify arguments to the JVM that 
+runs DexGuard.</p>
+<p>As of DexGuard 9.0, such options should be provided via the new <a href="gradle-plugin.html#jvmargs"><code>jvmArgs</code></a> 
+property of the DexGuard block instead. An exception to this rule is the <code>dexguard.license</code> system
+property, which has been promoted to a standalone property of the DexGuard block instead, as described in 
+the <a href="#license">previous section</a>.</p>
+<p>For example, you may have a <code>gradle.properties</code> file as follows:</p>
+<div class="codehilite"><pre><span></span><code><span class="c"># Set the JVM heap size</span>
+<span class="na">org.gradle.jvmargs</span><span class="o">=</span><span class="s">-Xmx2048M</span>
+
+<span class="c"># Set a system property for DexGuard</span>
+<span class="na">systemProp.allow.incomplete.class.hierarchy</span><span class="o">=</span><span class="s">true</span>
+</code></pre></div>
+
+<p>These options should then be migrated to the <code>jvmArgs</code> property of the DexGuard block:</p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">jvmArgs</span> <span class="s1">&#39;-Xmx2048M&#39;</span><span class="o">,</span> <span class="s1">&#39;-Dallow.incomplete.class.hierarchy=true&#39;</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">jvmArgs</span><span class="p">(</span><span class="s">&quot;-Xmx2048M&quot;</span><span class="p">,</span> <span class="s">&quot;-Dallow.incomplete.class.hierarchy=true&quot;</span><span class="p">)</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="executing-dexguard">Executing DexGuard<a class="headerlink" href="#executing-dexguard" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">DexGuard outputs location</p>
+<p>The protected artefact is placed alongisde the unprotected one and has 
+a <strong><code>-protected</code></strong> suffix in the name.</p>
+<p>All other output files are collected in the <strong><code>build/outputs/dexguard</code></strong> directory. </p>
+</div>
+<p>A major difference between executing DexGuard 8.x and DexGuard 9.1 is that
+the protected application or library is built separately from the original. This means that the original
+will still be in the standard Android build location e.g. for a release application variant in <code>build/outputs/apk/release/</code> 
+DexGuard will produce the corresponding protected application in the same location and add a <strong><code>-protected</code></strong> suffix 
+to the name.</p>
+<p>DexGuard will still be executed when you run the <code>assemble</code> task. For example, <code>./gradlew assembleRelease</code> will
+build the unobfuscated application and then execute DexGuard to build the protected application.</p>
+<div class="admonition note">
+<p class="admonition-title"><code>install</code> task</p>
+<p>You can no longer use the <code>install</code> task to install an application as this will install the unprotected application,
+instead you can use <code>adb</code> e.g. <code>adb install build/outputs/apk/release/MyApp-release-protected.apk</code>.</p>
+</div>
+<p>You can choose to run DexGuard in <a href="standalone.html">standalone mode</a> or use the <a href="gradle-plugin.html">DexGuard Gradle plugin</a>.
+See the <a href="../quickstart.html#running-dexguard">quickstart section</a> to continue setting up DexGuard.</p>
+<h3 id="preserving-runtime-invisible-annotations">Preserving runtime-invisible annotations<a class="headerlink" href="#preserving-runtime-invisible-annotations" title="Permanent link">&para;</a></h3>
+<p>By default, R8/D8 will strip runtime-invisible annotations when building a release configuration.
+Since DexGuard now post-processes the binaries produced by R8/D8, this can cause problems if
+you rely on those annotations being visible to DexGuard. This may be the case if you use Espresso 
+annotations, or annotation based DexGuard configuration.</p>
+<p>For a workaround, please visit <a href="../troubleshooting.html#preserveruntimeinvisibleannotations">this page</a></p>
+<h2 id="from-proguard">From ProGuard<a class="headerlink" href="#from-proguard" title="Permanent link">&para;</a></h2>
+<p>Many developers already optimize the code in their projects with ProGuard or
+with R8. DexGuard is backward compatible with ProGuard:</p>
+<ul>
+<li>It understands all ProGuard configuration, plus additional options.</li>
+<li>It provides the same functionality, plus more optimizations and protection
+  techniques.</li>
+</ul>
+<p>The main difference in execution is that DexGuard post-processes your
+application or library, rather than integrating itself into the build process.
+A <a href="gradle-plugin.html">Gradle plugin</a> is provided to perform this step during
+the Gradle build.</p>
+<p>This section explains how you can upgrade your ProGuard setup to DexGuard in a
+few quick steps using the <a href="gradle-plugin.html">DexGuard Gradle plugin</a>.</p>
+<h3 id="upgrading-your-gradle-configuration_1">Upgrading Your Gradle Configuration<a class="headerlink" href="#upgrading-your-gradle-configuration_1" title="Permanent link">&para;</a></h3>
+<p>If your project already has ProGuard enabled, you should first disable it. The
+Android build process should produce an <strong>unobfuscated</strong> application or library
+that DexGuard can process.</p>
+<p>Your app module <code>build.gradle(.kts)</code> file might look something like this:</p>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.application&#39;</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">shrinkResources</span> <span class="kc">true</span>
+            <span class="n">proguardFile</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android.txt&#39;</span><span class="o">)</span>
+            <span class="n">proguardFile</span> <span class="s1">&#39;proguard-project.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">plugins</span> <span class="p">{</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">android</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">buildTypes</span> <span class="p">{</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">true</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">true</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="n">getDefaultProguardFile</span><span class="p">(</span><span class="s">&quot;proguard-android.txt&quot;</span><span class="p">))</span>
+            <span class="n">proguardFile</span><span class="p">(</span><span class="s">&quot;proguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You should remove the <code>proguardFile</code> configurations and set <code>minifyEnabled</code> and <code>shrinkResources</code> to
+<code>false</code>.</p>
+<div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.application&#39;</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">shrinkResources</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">plugins</span> <span class="p">{</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
+<span class="p">}</span> 
+
+<span class="n">android</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">buildTypes</span> <span class="p">{</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+        <span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">isMinifyEnabled</span>   <span class="p">=</span> <span class="k">false</span>
+            <span class="n">isShrinkResources</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>After that, you can follow the
+<a href="../quickstart.html#running-dexguard">quickstart section</a> to configure the
+<a href="gradle-plugin.html">DexGuard Gradle plugin</a>.</p>
+<h3 id="executing-dexguard_1">Executing DexGuard<a class="headerlink" href="#executing-dexguard_1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">DexGuard outputs location</p>
+<p>The protected artefact is placed alongisde the unprotected one and has 
+a <strong><code>-protected</code></strong> suffix in the name.</p>
+<p>All other output files are collected in the <strong><code>build/outputs/dexguard</code></strong> directory. </p>
+</div>
+<p>A major difference between executing ProGuard and DexGuard 9.1 is that
+the protected application or library is built separately from the original. This means that the original
+will still be in the standard Android build location e.g. for a release application variant in <code>build/outputs/apk/release/</code> 
+DexGuard will produce the corresponding protected application in the same location and add a <strong><code>-protected</code></strong> suffix 
+to the name.</p>
+<p>DexGuard will still be executed when you run the <code>assemble</code> task. For example, <code>./gradlew assembleRelease</code> will
+build the unobfuscated application and then execute DexGuard to build the protected application.</p>
+<div class="admonition note">
+<p class="admonition-title"><code>install</code> task</p>
+<p>You can no longer use the <code>install</code> task to install an application as this will install the unprotected application,
+instead you can use <code>adb</code> e.g. <code>adb install build/outputs/apk/release/MyApp-release-protected.apk</code>.</p>
+</div>
+<h3 id="upgrading-your-proguard-configuration">Upgrading Your ProGuard Configuration<a class="headerlink" href="#upgrading-your-proguard-configuration" title="Permanent link">&para;</a></h3>
+<p>Since DexGuard understands and needs the same fundamental options to make sure
+your app or library works (<code>-keep</code>, <code>-keepattributes</code>,...), your existing
+ProGuard configuration is a great start.</p>
+<ol>
+<li>
+<p><strong>Make sure the application still works.</strong> You can test your processed
+   application right away. Since DexGuard not only processes the bytecode, but
+   also the Android manifest, resources, resource files, asset files, and
+   native libraries, it may need a few additional <code>-keep</code> options:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>... may be necessary for Java construct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../usage.html#keepoverview"><code>-keep</code></a></td>
+<td><code>Class.forName</code></td>
+</tr>
+<tr>
+<td><a href="../usage.html#keepoverview"><code>-keepresources</code></a></td>
+<td><code>Resources#getIdentifier</code></td>
+</tr>
+<tr>
+<td><a href="../usage.html#keepresourcefiles"><code>-keepresourcefiles</code></a></td>
+<td><code>System.loadLibrary</code>,...</td>
+</tr>
+<tr>
+<td><a href="../usage.html#keepresourcexmlattributenames"><code>-keepresourcexmlattributenames</code></a></td>
+<td><code>AttributeSet#getAttributeName</code>, <code>AttributeSet#getAttributeValue</code></td>
+</tr>
+<tr>
+<td><a href="../usage.html#keepresourcexmlelements"><code>-keepresourcexmlelements</code></a></td>
+<td><code>ApplicationInfo#metaData</code>, <code>Bundle#getString</code>,...</td>
+</tr>
+</tbody>
+</table>
+<p>Without the proper options, you may still see ResourceNotFoundExceptions,
+NullPointerExceptions, etc., if DexGuard unwittingly removes some expected
+resources. The option
+<a href="../usage.html#addconfigurationdebugging"><code>-addconfigurationdebugging</code></a> can
+help to quickly find any missing options. It lets DexGuard instrument the
+code so the application prints out suggestions in the logcat, which you
+can just copy and paste into your configuration.</p>
+</li>
+<li>
+<p><strong>Tune the initial configuration.</strong> DexGuard comes with tuned default
+   configuration for the Android runtime and for common libraries, such as the
+   Android support library, Dagger, and GSON. These libraries are listed in
+   the <a href="../examples.html">Examples</a> section. Chances are that you can simplify your
+   own project-specific configuration accordingly. If you still have <code>-keep</code>
+   options for the Android runtime or for any of the listed libraries, try
+   removing them or commenting them out. DexGuard's tuned configuration
+   generally allows for more optimizations and better obfuscation.</p>
+</li>
+<li>
+<p><strong>Add options to further harden the application.</strong> DexGuard by default
+   applies basic name obfuscation to the code and resources, but is only the
+   start. You should still identify sensitive parts in your application and
+   further harden those. The <a href="../protection.html">Protection Overview section</a>
+   provides a useful checklist. The following options may be relevant:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../usage.html#encryptassetfiles"><code>-encryptassetfiles</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#encryptclasses"><code>-encryptclasses</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#encryptmetadata"><code>-encryptmetadata</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#encryptnativelibraries"><code>-encryptnativelibraries</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#encryptresourcefiles"><code>-encryptresourcefiles</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#encryptresources"><code>-encryptresources</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#encryptstrings"><code>-encryptstrings</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#ofuscatecode"><code>-obfuscatecode</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#virtualizecode"><code>-virtualizecode</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#obfuscatejavascript"><code>-obfuscatejavascript</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#accessthroughreflection"><code>-accessthroughreflection</code></a></td>
+</tr>
+<tr>
+<td><a href="../usage.html#assumenosideeffects"><code>-assumenosideeffects</code></a></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>The <a href="../usage.html">Usage section</a> provides more details, with the new options
+compared to ProGuard <em class="new">highlighted</em>. For more information on where to
+specify these rules and how to organise them, refer to the
+<a href="standalone.html#configuration-file">DexGuard standalone</a> page.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="standalone.html" title="DexGuard" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                DexGuard
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="gradle-plugin.html" title="Gradle Plugin" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Gradle Plugin
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

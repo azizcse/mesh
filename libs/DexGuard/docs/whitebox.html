@@ -1,0 +1,1377 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Whitebox Cryptography - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+      <link rel="stylesheet" href="css/extra2.css">
+    
+      <link rel="stylesheet" href="css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#dependencies-for-whitebox-cryptography" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Whitebox Cryptography
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Whitebox Cryptography
+      </label>
+    
+    <a href="whitebox.html" title="Whitebox Cryptography" class="md-nav__link md-nav__link--active">
+      Whitebox Cryptography
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-for-whitebox-cryptography" class="md-nav__link">
+    Dependencies for whitebox cryptography
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-whitebox-cryptography-api" class="md-nav__link">
+    The whitebox cryptography API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-encryption-keys" class="md-nav__link">
+    Specifying encryption keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption-parameters" class="md-nav__link">
+    Encryption parameters
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aes-algorithm-parameters" class="md-nav__link">
+    AES algorithm parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disabling-obfuscation" class="md-nav__link">
+    Disabling obfuscation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whitebox-cryptography-for-static-data" class="md-nav__link">
+    Whitebox cryptography for static data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-for-whitebox-cryptography" class="md-nav__link">
+    Dependencies for whitebox cryptography
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-whitebox-cryptography-api" class="md-nav__link">
+    The whitebox cryptography API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-encryption-keys" class="md-nav__link">
+    Specifying encryption keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption-parameters" class="md-nav__link">
+    Encryption parameters
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aes-algorithm-parameters" class="md-nav__link">
+    AES algorithm parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disabling-obfuscation" class="md-nav__link">
+    Disabling obfuscation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whitebox-cryptography-for-static-data" class="md-nav__link">
+    Whitebox cryptography for static data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Whitebox Cryptography</h1>
+                
+                <p>DexGuard’s optional addon for whitebox cryptography offers a small API for
+encrypting and decrypting <em>dynamic application data</em> with a whitebox
+implementation of the AES algorithm.  This can be useful in those cases
+where an encryption key needs to be hardcoded into the application. DexGuard
+transforms and weaves the key into the code, in such a way that it can't be
+extracted. For example, the application can then securely download encrypted
+data from a remote server, without exposing the key.</p>
+<h2 id="dependencies-for-whitebox-cryptography">Dependencies for whitebox cryptography<a class="headerlink" href="#dependencies-for-whitebox-cryptography" title="Permanent link">&para;</a></h2>
+<p>The addon contains a Java API for whitebox encryption and decryption. You
+can find the library in the DexGuard distribution at</p>
+<div class="codehilite"><pre><span></span><code>lib/whiteboxcrypto-runtime.jar
+</code></pre></div>
+
+
+<p>It is self-contained and does not depend on any libraries, other than the
+standard Java/Android runtime library. Note that the library only works
+properly when DexGuard has processed the application. While processing,
+DexGuard weaves the necessary cryptographic routines and the specified
+encryption keys into the code.</p>
+<h2 id="the-whitebox-cryptography-api">The whitebox cryptography API<a class="headerlink" href="#the-whitebox-cryptography-api" title="Permanent link">&para;</a></h2>
+<p>The <a href="whiteboxcrypto/index.html">whitebox cryptography API</a> contains a single
+class, <code>WhiteBoxCipher</code>. It provides two straightforward methods for encrypting
+and decrypting input streams:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhiteBoxCipher</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">OutputStream</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">OutputStream</span> <span class="n">outputStream</span><span class="p">,</span>
+                                       <span class="n">String</span>       <span class="n">keyId</span><span class="p">);</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">InputStream</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">InputStream</span> <span class="n">inputStream</span><span class="p">,</span>
+                                      <span class="n">String</span>      <span class="n">keyId</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>For <strong>encrypting data</strong>, use <code>WhiteBoxCipher.encrypt</code>. It wraps a given
+<code>OutputStream</code> in an encrypting <code>OutputStream</code>. The wrapper stream encrypts
+all data that you write to it, and writes the resulting encrypted bytes to
+the wrapped stream:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">OutputStream</span> <span class="n">outputStream</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="n">OutputStream</span> <span class="n">encryptingOutputStream</span> <span class="o">=</span> <span class="n">WhiteBoxCipher</span><span class="p">.</span><span class="na">encrypt</span><span class="p">(</span><span class="n">outputStream</span><span class="p">,</span> <span class="s">&quot;key1&quot;</span><span class="p">);</span>
+
+<span class="c1">// You can now write unencrypted data to encryptingOutputStream.</span>
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">unencryptedData</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="n">encryptingOutputStream</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">unencryptedData</span><span class="p">);</span>
+<span class="c1">// outputStream now contains the encrypted data.</span>
+</code></pre></div>
+
+<p>For <strong>decrypting data</strong>, use <code>WhiteBoxCipher.decrypt</code>. It wraps a given
+encrypted <code>InputStream</code> in a decrypting <code>InputStream</code>. The wrapper decrypts
+all bytes that it reads from the wrapped stream, and returns the resulting
+decrypted data to the consumer of the stream.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">InputStream</span> <span class="n">encryptedInputStream</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="n">InputStream</span> <span class="n">decryptingInputStream</span> <span class="o">=</span> <span class="n">WhiteBoxCipher</span><span class="p">.</span><span class="na">decrypt</span><span class="p">(</span><span class="n">encryptedInputStream</span><span class="p">,</span> <span class="s">&quot;key1&quot;</span><span class="p">);</span>
+
+<span class="c1">// You can now read decrypted data from decryptingInputStream.</span>
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">decryptedData</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="p">...</span><span class="o">]</span><span class="p">;</span>
+<span class="n">decryptingInputStream</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">decryptedData</span><span class="p">);</span>
+</code></pre></div>
+
+<p>The <code>encrypt</code> and <code>decrypt</code> methods both take a <code>keyId</code> parameter. This is
+an identifier for a particular encryption key. You can freely pick any
+identifier, or multiple identifiers if you have multiple keys. You should
+then use the same identifier to specify the cryptographic key and other
+parameters in your DexGuard configuration. The next section discusses the
+corresponding options.</p>
+<h2 id="specifying-encryption-keys">Specifying encryption keys<a class="headerlink" href="#specifying-encryption-keys" title="Permanent link">&para;</a></h2>
+<p>You need to specify your whitebox encryption keys in your DexGuard
+configuration.  This approach ensures that the (sensitive) encryption keys
+remain strictly separated from the code.</p>
+<p>You can specify an encryption key with the following option:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-whiteboxencryptionkeys</span> <span class="kt">key_id</span> <span class="kt">algorithm_parameters</span>
+</code></pre></div>
+
+<p>where the parameters are:</p>
+<dl>
+<dt><em>key_id</em></dt>
+<dd>a unique, alphanumeric identifier for the specified key.</dd>
+<dt><em>algorithm_id</em></dt>
+<dd>the unique identifier of the encryption algorithm.</dd>
+<dt><em>algorithm_parameters</em></dt>
+<dd>algorithm-specific parameters, separated by spaces (see below for
+  details).</dd>
+</dl>
+<p>If you don’t want to check in the encryption keys in your version control
+system, you can keep them separate from the rest of the DexGuard configuration
+by storing them in a separate configuration file. You can include this file from the main configuration file with the directive</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-include </span><span class="err">filename</span>
+</code></pre></div>
+
+<p>Finally, you can also define the keys in environment properties and use
+those in your DexGuard configuration. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-whiteboxencryptionkeys</span> <span class="kt">MyKey</span> <span class="err">&lt;</span><span class="kt">my.key.parameters</span><span class="err">&gt;</span>
+</code></pre></div>
+
+<h2 id="encryption-parameters">Encryption parameters<a class="headerlink" href="#encryption-parameters" title="Permanent link">&para;</a></h2>
+<p>The whitebox library currently supports 128-bits AES encryption in ECB mode
+or in CBC mode.</p>
+<h3 id="aes-algorithm-parameters">AES algorithm parameters<a class="headerlink" href="#aes-algorithm-parameters" title="Permanent link">&para;</a></h3>
+<p>The AES implementation expects an encryption key and an optional
+initialization vector:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-whiteboxencryptionkeys</span> <span class="kt">key_id</span> <span class="kt">AES</span> <span class="kt">encryption_key</span> <span class="o">[</span><span class="kt">initialization_vector</span><span class="o">]</span>
+</code></pre></div>
+
+<p>If you specify just the encryption key, the mode of operation is ECB
+(Electronic Code Book).</p>
+<p>If you provide the encryption key and the initialization vector, the mode is
+CBC (Cipher Block Chaining).</p>
+<dl>
+<dt><em>AES</em></dt>
+<dd>The identifier of the encryption algorithm.</dd>
+<dt><em>encryption_key</em></dt>
+<dd>The hexadecimal representation of the key. The implementation uses 16-byte
+  keys. If the provided parameter is too short, it is padded with leading
+  zeros; if it is too long, only the 16 least significant bytes are used.</dd>
+<dt><em>initialization_vector</em></dt>
+<dd>The hexadecimal representation of the optional AES initialization
+  vector. The initialization vector is 16 bytes long. If the provided
+  parameter is too short, it is padded with leading zeros. If it is too
+  long, only the 16 least significant bytes are used.</dd>
+</dl>
+<p>The following example specifies an AES encryption key with key identifier
+"key1", encryption key 1234567890abcdef1234567890abcdef and no
+initialization vector:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-whiteboxencryptionkeys</span> <span class="kt">key1</span> <span class="kt">1234567890abcdef1234567890abcdef</span>
+</code></pre></div>
+
+<h2 id="disabling-obfuscation">Disabling obfuscation<a class="headerlink" href="#disabling-obfuscation" title="Permanent link">&para;</a></h2>
+<p>When obfuscation is disabled (in debug builds or explicitly with the option
+<code>-dontobfuscate</code>), whitebox cryptography is disabled as well. Calls to
+<code>WhiteBoxCipher</code>'s encryption and decryption methods still work in the
+processed application, but they use a traditional, non-whitebox
+implementation. DexGuard then injects the encryption keys as plain strings
+in the application. You should therefore be careful not to distribute debug
+builds or other builds that are not obfuscated.</p>
+<h2 id="whitebox-cryptography-for-static-data">Whitebox cryptography for static data<a class="headerlink" href="#whitebox-cryptography-for-static-data" title="Permanent link">&para;</a></h2>
+<p>DexGuard also provides encryption plugins that implement whitebox AES
+encryption for the protection of <em>static content</em>, such as classes, native
+libraries, Android assets, and resources. The plugins transparently encrypt
+the contents with generated AES keys while processing the application. The
+encryption keys are different for each version of the application. The
+plugins weave the decryption algorithms and the keys into the application,
+so it can decrypt the content at runtime.</p>
+<p>The plugins are located in the lib folder:</p>
+<p>For standalone processing / ant / maven integration:</p>
+<div class="codehilite"><pre><span></span><code>lib/whiteboxcrypto-asset-plugin.jar
+lib/whiteboxcrypto-class-plugin.jar
+lib/whiteboxcrypto-nativelibrary-plugin.jar
+lib/whiteboxcrypto-resource-plugin.jar
+</code></pre></div>
+
+
+<p>For gradle integration:</p>
+<div class="codehilite"><pre><span></span><code>lib/whiteboxcrypto-asset-plugin-gradle.jar
+lib/whiteboxcrypto-class-plugin-gradle.jar
+lib/whiteboxcrypto-nativelibrary-plugin-gradle.jar
+lib/whiteboxcrypto-resource-plugin-gradle.jar
+</code></pre></div>
+
+
+<p>You can enable any of them with the <code>-pluginjars</code> option. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-pluginjars </span><span class="err">lib/whiteboxcrypto-asset-plugin.jar</span>
+</code></pre></div>
+
+<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<p>Whitebox encryption is computationally more expensive and has a larger code
+footprint than the default encryption plugins that come with DexGuard.  It
+is therefore recommended to only use the static whitebox encryption plugins
+for a small number of resources, and for resources which are not
+time-critical.</p>
+<p>For example, applying the asset whitebox plugin to a large number of assets
+would probably expand the application code footprint too much. On the other
+hand, the overhead of protecting a single sensitive class or native library
+with a whitebox encryption plugin is generally acceptable in most cases.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ndk.html" title="NDK" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                NDK
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="fingerprinting.html" title="Device Fingerprinting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Device Fingerprinting
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

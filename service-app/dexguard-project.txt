@@ -1,0 +1,284 @@
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+#
+# This file is no longer maintained and is not used by new (2.2+) versions of the
+# Android plugin for Gradle. Instead, the Android plugin for Gradle generates the
+# default rules at build time and stores them in the build directory.
+
+# Optimizations: If you don't want to optimize, use the
+# proguard-android.txt configuration file instead of this one, which
+# turns off the optimization flags.  Adding optimization introduces
+# certain risks, since for example not all optimizations performed by
+# ProGuard works on all versions of Dalvik.  The following flags turn
+# off various optimizations known to have issues, but the list may not
+# be complete or up to date. (The "arithmetic" optimization can be
+# used if you are only targeting Android 2.0 or later.)  Make sure you
+# test thoroughly if you go this route.
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+-optimizationpasses 5
+-allowaccessmodification
+-dontpreverify
+
+# The remainder of this file is identical to the non-optimized version
+# of the Proguard configuration file (except that the other file has
+# flags to turn off optimization).
+
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+
+-keepattributes *Annotation*
+#-keep public class com.google.vending.licensing.ILicensingService
+#-keep public class com.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+#-keepclasseswithmembernames class * {
+#    native <methods>;
+#}
+
+# keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+#-keepclassmembers public class * extends android.view.View {
+#   void set*(***);
+#   *** get*();
+#}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick
+#-keepclassmembers class * extends android.app.Activity {
+#   public void *(android.view.View);
+#}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#-keepclassmembers class * implements android.os.Parcelable {
+#  public static final android.os.Parcelable$Creator CREATOR;
+#}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+-dontwarn android.support.**
+
+# Understand the @Keep support annotation.
+#-keep class android.support.annotation.Keep
+
+#-keep @android.support.annotation.Keep class * {*;}
+
+#-keepclasseswithmembers class * {
+#    @android.support.annotation.Keep <methods>;
+#}
+
+#-keepclasseswithmembers class * {
+#    @android.support.annotation.Keep <fields>;
+#}
+
+#-keepclasseswithmembers class * {
+#    @android.support.annotation.Keep <init>(...);
+#}
+
+#--------------------- RASP related rule start ----------------------#
+#-raspchecks *
+-raspcontinueon *
+
+-raspcallback class com.w3engineers.meshrnd.TeleMeshService {
+    public static void raspCallback(com.guardsquare.dexguard.rasp.callback.DetectionReport);
+}
+-encryptclasses com.w3engineers.meshrnd.TeleMeshService$Delegate
+-encryptclasses com.w3engineers.mesh.ui.TeleMeshServiceMainActivity$Delegate
+
+#Debug sha256
+-raspcertificatehash "65:99:3F:C9:07:E8:F5:23:EF:AE:9C:4F:12:88:CC:39:37:DA:F6:E0:1D:54:0B:B8:16:1E:A2:69:72:4C:39:0E"
+#Release sha256
+-raspcertificatehash "66:2A:B9:6A:5A:EC:48:11:17:89:4C:9F:79:01:A4:AE:E5:63:6A:3E:BA:02:9E:A2:2E:BE:62:79:83:B1:41:93"
+#---------------------------- RASP END --------------------------------#
+
+#-------------------- Code obfuscation Start --------------------------#
+-obfuscatecode,high class com.w3engineers.**
+-obfuscatecode,high class javax.jmdns.**
+-obfuscatecode,high class com.letbyte.core.meshfilesharing.**
+-obfuscatecode,high class com.jcraft.jsch.**
+#---------------------- Code obfuscation End -------------------------------------------#
+
+#-keepresourcefiles res/**
+#-keepresourcexmlattributenames res/**
+#-keepresources res/**
+
+#-keep class com.w3engineers.meshrnd.TeleMeshService { *; }
+
+-dontwarn com.fasterxml.jackson.databind.**
+#-keep class org.** { *; }
+#-keep class com.fasterxml.jackson.core.** { *; }
+#-keep interface com.fasterxml.jackson.core { *; }
+#-keep public class * extends com.fasterxml.jackson.core.*
+#-keep class com.fasterxml.jackson.databind.introspect.VisibilityChecker$Std.
+#-keep class com.fasterxml.jackson.databind.ObjectMapper.
+#-keep class com.fasterxml.jackson.databind.** { *; }
+#-keep class com.fasterxml.jackson.databind.introspect.VisibilityChecker${ *; }
+#-keep interface com.fasterxml.jackson.databind { *; }
+#-keep public class * extends com.fasterxml.jackson.databind.*
+#-keep class com.fasterxml.jackson.annotation.** { *; }
+#-keep interface com.fasterxml.jackson.annotation.** { *; }
+
+-keep class org.web3j.** { *; }
+-keep class org.bouncycastle.** { *; }
+-keep class com.jcraft.jsch.** { *; }
+
+-keep class androidx.** { *; }
+-keep class com.w3engineers.ext.** { *; }
+-keep class com.w3engineers.mesh.util.BoxPassword { *; }
+-keep class com.w3engineers.purchase.helper.CustomStatusbar { *; }
+-keep class com.w3engineers.purchase.ui.util.ExpandableButton { *; }
+#-keep class * extends android.app.Activity
+
+#-------------------------- Encryption ------------------------------#
+
+# MeshLib module class
+-encryptclasses com.w3engineers.mesh.ble.message.BleMessageDriver
+-encryptclasses com.w3engineers.mesh.ble.message.BleMessageManager
+-encryptclasses com.w3engineers.mesh.ble.BleManager
+-encryptclasses com.w3engineers.mesh.ble.BleTransport
+-encryptclasses com.w3engineers.mesh.ble.GattClient
+-encryptclasses com.w3engineers.mesh.ble.GattServer
+-encryptclasses com.w3engineers.mesh.bluetooth.BleLink
+-encryptclasses com.w3engineers.mesh.bluetooth.BluetoothClient
+-encryptclasses com.w3engineers.mesh.bluetooth.BluetoothServer
+-encryptclasses com.w3engineers.mesh.bluetooth.BTManager
+-encryptclasses com.w3engineers.mesh.controller.DriverManager
+-encryptclasses com.w3engineers.mesh.httpservices.nanohttpd.protocols.http.response.Response
+-encryptclasses com.w3engineers.mesh.httpservices.nanohttpd.protocols.http.NanoHTTPD
+-encryptclasses com.w3engineers.mesh.httpservices.MeshHttpServer
+-encryptclasses com.w3engineers.mesh.libmeshx.wifi.WiFiClient,
+                com.w3engineers.mesh.libmeshx.wifi.WiFiClient$*
+-encryptclasses com.w3engineers.mesh.libmeshx.wifi.WiFiConnectionHelper
+-encryptclasses com.w3engineers.mesh.queue.MeshLibMessageEventQueue
+-encryptclasses com.w3engineers.mesh.route.RouteManager
+-encryptclasses com.w3engineers.mesh.tunnel.RemoteManager
+-encryptclasses com.w3engineers.mesh.tunnel.RemoteTransport
+-encryptclasses com.w3engineers.mesh.tunnel.TelemeshTunnel
+-encryptclasses com.w3engineers.mesh.wifi.WifiTransPort
+-encryptclasses com.w3engineers.mesh.wifi.WiFiUtil
+-encryptclasses com.w3engineers.mesh.wifiap.BluetoothDiscoveryReceiver
+-encryptclasses com.w3engineers.mesh.wifidirect.connector.WiFiConnector
+-encryptclasses com.w3engineers.mesh.wifidirect.WiFiDirectClient
+-encryptclasses com.w3engineers.mesh.wifidirect.WiFiDirectService
+-encryptclasses com.w3engineers.mesh.wifidirect.WiFiDirectController
+-encryptclasses com.w3engineers.mesh.TransportManager
+-encryptclasses com.w3engineers.mesh.TransportManagerX
+-encryptclasses com.w3engineers.mesh.util.JsonDataBuilder
+
+# meshfile sharing module
+-encryptclasses com.letbyte.core.meshfilesharing.api.support.mesh.SupportTransportManager
+-encryptclasses com.letbyte.core.meshfilesharing.comm.ble.BleFileManager
+-encryptclasses com.letbyte.core.meshfilesharing.comm.fileserver.webserver.FileResponse
+-encryptclasses com.letbyte.core.meshfilesharing.comm.fileserver.webserver.HttpFileClient
+-encryptclasses com.letbyte.core.meshfilesharing.comm.fileserver.webserver.SimpleWebServer
+-encryptclasses com.letbyte.core.meshfilesharing.comm.fileserver.FileServer
+-encryptclasses com.letbyte.core.meshfilesharing.core.BuyerFileManager
+-encryptclasses com.letbyte.core.meshfilesharing.core.MeshFileManager
+-encryptclasses com.letbyte.core.meshfilesharing.core.MultihopFileManager
+-encryptclasses com.letbyte.core.meshfilesharing.data.MessageProcessor
+-encryptclasses com.letbyte.core.meshfilesharing.data.FilePacket
+-encryptclasses com.letbyte.core.meshfilesharing.data.FileMessage
+
+#paylib module
+-encryptclasses com.w3engineers.eth.data.remote.parse.ParseManager
+-encryptclasses com.w3engineers.eth.data.remote.EthereumService
+
+#wallet_gen module
+-encryptclasses com.w3engineers.walleter.wallet.WalletCreateManager
+-encryptclasses com.w3engineers.walleter.wallet.WalletService
+
+#Service-app module
+#-encryptclasses com.w3engineers.meshrnd.TeleMeshService
+-encryptclasses com.w3engineers.purchase.dataplan.DataPlanManager
+-encryptclasses com.w3engineers.purchase.manager.PayController
+-encryptclasses com.w3engineers.purchase.manager.PurchaseManager
+-encryptclasses com.w3engineers.purchase.manager.PurchaseManagerBuyer
+-encryptclasses com.w3engineers.purchase.manager.PurchaseManagerSeller
+-encryptclasses com.w3engineers.purchase.util.PurchaseManagerUtil
+-encryptclasses com.w3engineers.purchase.wallet.WalletManager
+
+
+
+#String encryptiopn
+
+-encryptstrings class com.w3engineers.mesh.util.CredentialUtils
+-encryptstrings class com.w3engineers.mesh.ble.BleConstant
+-encryptstrings class com.w3engineers.**
+
+#-encryptstrings class com.w3engineers.**
+#-encryptstrings class javax.jmdns.**
+#-encryptstrings class com.letbyte.core.meshfilesharing.**
+
+#Resource
+-encryptresourcefiles res/layout/**
+#-encryptresourcefiles res/menu/**
+#-encryptresourcefiles res/xml/**
+
+#-encryptassetfiles assets/**
+#-encryptresources string/**
+-encryptassetfiles assets/MeshControlConfig.json
+-encryptassetfiles assets/Configuration.json
+
+# resource file encryption
+#-encryptresourcefiles res/layout*/activity_wallet.xml
+
+
+#-encryptresourcefiles res/xml
+
+# resources string encryption
+#-encryptresources string/network_ssid
+-encryptresources string/**
+
+# Meta-data encryption
+-encryptmetadata message
+
+-keep class com.w3engineers.purchase.model.** { *; }
+#--------------------------------- Encryption end --------------------------#
+
+#-------------------- Code virtualization Start --------------------------#
+
+# We are virtualized code only wifi and ble related task
+
+-virtualizecode class com.w3engineers.meshrnd.TeleMeshService
+#-virtualizecode class com.w3engineers.mesh.wifidirect.**
+#-virtualizecode class com.w3engineers.mesh.ble.**
+
+#-virtualizecode class com.w3engineers.**
+
+#-------------------- Code virtualization End --------------------------#
+
+-keep class com.w3engineers.meshrnd.TeleMeshService
+-keep public class com.w3engineers.mesh.App { *; }
+-keep class com.w3engineers.mesh.MeshApp { *; }
+-keep class com.w3engineers.mesh.ui.TeleMeshServiceMainActivity
+
+#--------------------- Reflection Start ----------------------------
+-accessthroughreflection class com.w3engineers.**
+-accessthroughreflection class javax.jmdns.**
+-accessthroughreflection class com.letbyte.core.meshfilesharing.**
+
+#--------------------- Reflection End ------------------------------
+
+#--------------- Native library encryption Start ----------------------#
+-encryptnativelibraries lib/**
+#-------------- Native library encryption End --------------------------#
+
+#-addconfigurationdebugging
+#-printmapping mapping.txt
+#
+#-renamesourcefileattribute MyApplication
+#-keepattributes SourceFile,LineNumberTable
+
+-threatcastapikey "eyJrZXkiOiJmNjcwMTI4MWE5YjEwZmFkOTNkNDRiNWI0MDUwZjBkYTAwZjg2YjJiMWY5YjQwZTkiLCJmbGFncyI6eyJoZWFydGJlYXRzIjp0cnVlfSwiZW5kcG9pbnQiOiJ3M2VuZ2luZWVycy50aHJlYXRjYXN0Lmd1YXJkc3F1YXJlLmNvbSJ9"
+-threatcastappuseridgetter class com.w3engineers.meshrnd.TeleMeshService {
+    public static java.lang.String getAuid();
+}

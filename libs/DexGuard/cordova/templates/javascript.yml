@@ -1,0 +1,58 @@
+processing:
+
+  assumptions:
+    false-variables:
+      whitelist:
+        - DEBUG
+    no-side-effect-methods:
+      whitelist:
+        - console.log
+
+  shrinking:
+    # The obfuscator is not always able to detect references to global
+    # variables or properties. You can leave them disabled, or add an extra
+    # blacklist that excludes problematic globals/properties.
+    # globals:
+    # properties:
+    code:
+
+  protection:
+    data:
+      strings:
+        # Encryption of strings may introduce an excessive overhead for certain
+        # performance-critical functions. You can define a whitelist (to
+        # encrypt specific sensitive strings) or a structured blacklist (to
+        # encrypt all strings, except strings in performance-critical
+        # functions).
+        # encrypt:
+        arrayize:
+    code:
+      names:
+        # The obfuscator is not always able to detect references to global
+        # variables or properties. You can leave them disabled, or add an extra
+        # blacklist that excludes problematic globals/properties.
+        # globals:
+        # properties:
+      property-access:
+        # Encryption of property access obfuscation may introduce an excessive
+        # overhead for certain performance-critical functions. You can leave it
+        # disabled or enable it but add an extra structured blacklist to
+        # exclude performance-critical functions.
+        # encrypt:
+      control-flow:
+      numbers:
+      arithmetic-operations:
+      shuffle:
+    environment-integrity:
+      debugger:
+        obstruction:
+          # Encryption of debugger obstruction may introduce an excessive overhead
+          # for certain performance-critical functions. You can leave it disabled
+          # or enable it but add an extra structured blacklist filter to exclude
+          # performance-critical functions.
+          # encrypt:
+
+# Use the prettify option to control whether the written JavaScript files should be 
+# formatted with proper indentation. Only use this for debugging.
+# output:
+#   prettify: true

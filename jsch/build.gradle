@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation group: 'com.jcraft', name: 'jzlib', version: '1.0.7'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

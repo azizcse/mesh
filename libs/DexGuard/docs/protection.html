@@ -1,0 +1,3455 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Overview - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+      <link rel="stylesheet" href="css/extra2.css">
+    
+      <link rel="stylesheet" href="css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#core-design" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Overview
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
+    
+    <a href="protection.html" title="Overview" class="md-nav__link md-nav__link--active">
+      Overview
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-design" class="md-nav__link">
+    Core design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-communication" class="md-nav__link">
+    Secure communication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_1" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_1" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name-obfuscation" class="md-nav__link">
+    Name obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_2" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_1" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_2" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-encryption" class="md-nav__link">
+    String encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_3" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_2" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obfuscate-the-specified-string-constant" class="md-nav__link">
+    Obfuscate the specified string constant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obfuscate-all-string-constants-actually-used-in-the-specified-class" class="md-nav__link">
+    Obfuscate all string constants actually used in the specified class
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_2" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_3" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_4" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_3" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_3" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_4" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeobfuscation" class="md-nav__link">
+    Code obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_5" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_4" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_4" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_5" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codevirtualization" class="md-nav__link">
+    Code virtualization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_6" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_5" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_5" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_6" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-logging-code-and-stack-traces" class="md-nav__link">
+    Removing logging code and stack traces
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_7" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_6" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_6" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_7" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tamper-detection" class="md-nav__link">
+    Tamper detection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_8" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_7" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_7" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_8" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-checks" class="md-nav__link">
+    Environment checks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_9" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_8" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_8" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_9" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-encryption" class="md-nav__link">
+    Asset encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_10" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_9" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_9" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_10" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-file-encryption" class="md-nav__link">
+    Resource file encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_11" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_10" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_10" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_11" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascriptobfuscation" class="md-nav__link">
+    Javascript obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_12" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_11" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_11" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_12" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-string-encryption" class="md-nav__link">
+    Resource string encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_13" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_12" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_12" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_13" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-encryption" class="md-nav__link">
+    Metadata encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_14" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_13" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_13" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_14" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-library-encryption" class="md-nav__link">
+    Native library encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_15" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_14" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_14" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_15" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classencryption" class="md-nav__link">
+    Class encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_16" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_15" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_15" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_16" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-tuning-obfuscation" class="md-nav__link">
+    Summary: tuning obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#more-information_17" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-design" class="md-nav__link">
+    Core design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-communication" class="md-nav__link">
+    Secure communication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_1" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_1" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name-obfuscation" class="md-nav__link">
+    Name obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_2" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_1" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_2" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-encryption" class="md-nav__link">
+    String encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_3" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_2" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obfuscate-the-specified-string-constant" class="md-nav__link">
+    Obfuscate the specified string constant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obfuscate-all-string-constants-actually-used-in-the-specified-class" class="md-nav__link">
+    Obfuscate all string constants actually used in the specified class
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_2" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_3" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_4" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_3" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_3" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_4" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeobfuscation" class="md-nav__link">
+    Code obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_5" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_4" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_4" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_5" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codevirtualization" class="md-nav__link">
+    Code virtualization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_6" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_5" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_5" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_6" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-logging-code-and-stack-traces" class="md-nav__link">
+    Removing logging code and stack traces
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_7" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_6" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_6" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_7" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tamper-detection" class="md-nav__link">
+    Tamper detection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_8" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_7" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_7" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_8" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-checks" class="md-nav__link">
+    Environment checks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_9" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_8" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_8" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_9" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-encryption" class="md-nav__link">
+    Asset encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_10" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_9" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_9" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_10" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-file-encryption" class="md-nav__link">
+    Resource file encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_11" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_10" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_10" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_11" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascriptobfuscation" class="md-nav__link">
+    Javascript obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_12" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_11" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_11" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_12" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-string-encryption" class="md-nav__link">
+    Resource string encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_13" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_12" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_12" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_13" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-encryption" class="md-nav__link">
+    Metadata encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_14" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_13" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_13" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_14" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-library-encryption" class="md-nav__link">
+    Native library encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_15" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_14" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_14" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_15" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classencryption" class="md-nav__link">
+    Class encryption
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion_16" class="md-nav__link">
+    Discussion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_15" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification_15" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information_16" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-tuning-obfuscation" class="md-nav__link">
+    Summary: tuning obfuscation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#more-information_17" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Overview</h1>
+                
+                <p>In this section, we describe recommended steps to harden code against
+reverse engineering. The idea is to apply different techniques to create
+multiple layers of obfuscation. Although no single technique is
+unbreakable, each layer further raises the bar for attackers. The
+different techniques protect the application code, but they also protect
+one another. We go over each of the techniques, explaining why they are
+useful, how you can apply them, and how you can verify their effects.</p>
+<h2 id="core-design">Core design<a class="headerlink" href="#core-design" title="Permanent link">&para;</a></h2>
+<h3 id="discussion">Discussion<a class="headerlink" href="#discussion" title="Permanent link">&para;</a></h3>
+<p>The essential basis for a hardened application is a sound design and a
+robust implementation. Even if you will obfuscate your code, you should
+look at it as if it is open source and consider the worst-case
+scenarios. The details are application-specific and lie outside the
+scope of this guide, but you can find a lot of basic principles in
+books, blogs, and online presentations.</p>
+<h3 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Android Security Cookbook</em>, by Keith Makan and
+  Scott Alexander-Bown.</li>
+<li><em>Android Security Internals</em>, by Nikolay Elenkov.</li>
+<li><em>Android Hacker's Handbook</em>, by Joshua J. Drake, Zach Lanier, Collin
+  Mulliner, Pau Oliva Fora, Stephen A. Ridley, and Georg Wicherski.</li>
+</ul>
+<h2 id="secure-communication">Secure communication<a class="headerlink" href="#secure-communication" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_1">Discussion<a class="headerlink" href="#discussion_1" title="Permanent link">&para;</a></h3>
+<p>If your application communicates with a server, you should encrypt the
+communication with SSL (Secure Sockets Layer) or the more recent TLS
+(Transport Layer Security). These protocols have been developed for
+secure communication between a web browser and a server. In a web
+browser, a user can see the padlock icon when the communication is
+secure. In an Android application, the user doesn't see a padlock icon,
+so the developer shouldn't forget to use SSL when appropriate.</p>
+<p>The server contains a chain of certificates with public keys and
+certified names. You can obtain a certificate from a Certificate
+Authority (CA). With the standard Android API, the Android runtime
+checks such a chain with its database of root certificates.
+Alternatively, you can create a self-signed certificate. You then need
+to check the certificate yourself in your application.</p>
+<p>Occasionally, a Certificate Authority is compromised (as happened with
+Comodo and DigiNotar). New releases of Android then typically update the
+database of root certificates. However, if your application always
+communicates with the same server, it should <em>pin</em> the certificate or
+its public key, i.e. only accept a minimal, fixed list of trusted
+certificates or keys. This technique ensures that the application is
+always talking to the right server and blocks man-in-the-middle attacks.
+You should be aware that some large websites update their certificates
+and keys regularly.</p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<p>You can find the code to create connections with certificate pinning or
+public key pinning for different Android APIs in the sample
+<code>samples/basic/SSLPinning</code>.</p>
+<h3 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Certificate pinning: remove your trust store from the assets. The
+  server requests should no longer work.</li>
+<li>Public key pinning: change your list of trusted hashes. The server
+  requests should no longer work.</li>
+</ul>
+<h3 id="more-information_1">More information<a class="headerlink" href="#more-information_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Working sample project: <code>samples/basic/SSLPinning</code></li>
+</ul>
+<h2 id="name-obfuscation">Name obfuscation<a class="headerlink" href="#name-obfuscation" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_2">Discussion<a class="headerlink" href="#discussion_2" title="Permanent link">&para;</a></h3>
+<p>DexGuard obfuscates the names of identifiers in the applications that it
+processes. This means that it renames resource files, resources,
+classes, fields, and methods using meaningless names, where possible.
+This obfuscation step makes the code base smaller and harder to
+reverse-engineer.</p>
+<h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">&para;</a></h3>
+<p>In release builds, DexGuard automatically applies name obfuscation.
+DexGuard's default configuration already takes care of common entry
+points like the Android manifest, with all depending activities,
+intentions, resources, etc.</p>
+<p>Any code or third-party frameworks that rely on reflection may be
+confused by changing the names of classes, fields, methods, and even
+resources. If the code requires that they keep their original names, you
+should specify the proper <a href="usage.html#keep"><code>-keep</code></a> options and <a href="usage.html#keepresourcefiles"><code>-keepresourcefiles</code></a>
+options. DexGuard's default configuration helps by already providing
+tuned configuration for a number of <a href="examples.html">common libraries and
+frameworks</a>.</p>
+<h3 id="verification_1">Verification<a class="headerlink" href="#verification_1" title="Permanent link">&para;</a></h3>
+<p>DexGuard will write the mapping of original names to obfuscated names to a file
+with the option <a href="usage.html#printmapping"><code>-printmapping</code></a>.</p>
+<p>Such a mapping file may look like this:</p>
+<div class="codehilite"><pre><span></span><code>com.example.HelloWorldActivity -&gt; com.example.HelloWorldActivity:
+    39:42:void onCreate(android.os.Bundle) -&gt; onCreate
+com.example.Util -&gt; o.･:
+    byte[] values -&gt; ･
+    int doSomething(android.content.Context) -&gt; ･
+    java.lang.String compute(android.content.Context) -&gt; ˊ
+</code></pre></div>
+
+
+<p>Note that names from the Android runtime are not obfuscated, since
+obfuscating them would break the application.</p>
+<p>You can also see the obfuscated names if you disassemble the code with a
+tool like dexdump (<code>build-tools/20.0.0/dexdump</code> in the Android SDK), or
+baksmali (free and open-source:
+<a href="http://code.google.com/p/smali/">code.google.com/p/smali/</a>).</p>
+<p>In the debug version of the application, the names are still readable:</p>
+<div class="codehilite"><pre><span></span><code>  Class descriptor  : &#39;Lcom/example/Util;
+  ...
+    #0              : (in Lcom/example/Util;)
+      name          : &#39;values&#39;
+      ...
+</code></pre></div>
+
+
+<p>In the hardened release version of the application, the names are
+obfuscated:</p>
+<div class="codehilite"><pre><span></span><code>  Class descriptor  : &#39;Lo/･;&#39;
+  ...
+    #0              : (in Lo/･;)
+      name          : &#39;･&#39;
+      ...
+</code></pre></div>
+
+
+<h3 id="more-information_2">More information<a class="headerlink" href="#more-information_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#keepcodeoptions">Keep Options for Code</a></li>
+<li><a href="usage.html#keepresourcesoptions">Keep Options for Resources</a></li>
+<li><a href="usage.html#keepoverview">Overview of Keep Options</a></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="string-encryption">String encryption<a class="headerlink" href="#string-encryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_3">Discussion<a class="headerlink" href="#discussion_3" title="Permanent link">&para;</a></h3>
+<p>String constants in the source code are still readable in the compiled
+application, with a disassembler like dexdump or baksmali, or a
+decompiler for Dalvik bytecode. You should let DexGuard encrypt
+sensitive string constants, so they become invisible to static analysis.
+Keys, tokens, communication-related strings, and log messages are all
+good candidates for encryption. Note that string encryption is actually
+a form of obfuscation, since the strings necessarily have to be
+decrypted at runtime.</p>
+<h3 id="configuration_2">Configuration<a class="headerlink" href="#configuration_2" title="Permanent link">&para;</a></h3>
+<p>You can apply string encryption with the option <a href="usage.html#encryptstrings"><code>-encryptstrings</code></a>. It
+offers a number of ways to specify the strings to be encrypted. The most
+common ones:</p>
+<h4 id="obfuscate-the-specified-string-constant">Obfuscate the specified string constant<a class="headerlink" href="#obfuscate-the-specified-string-constant" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="kd">class </span><span class="nc">com.example.MyConstants </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">final</span> <span class="kt">java.lang.String</span> <span class="kt">SECRET_KEY</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Be aware that the Java compiler already inlines final string
+constants wherever they are used in the code, which may be in
+other classes. They may have spread throughout the code before
+DexGuard processes it. With the above configuration, DexGuard
+encrypts these constants throughout the code, to provide the
+expected results.</p>
+<h4 id="obfuscate-all-string-constants-actually-used-in-the-specified-class">Obfuscate all string constants actually used in the specified class<a class="headerlink" href="#obfuscate-all-string-constants-actually-used-in-the-specified-class" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="kd">class </span><span class="nc">com.example.MySecretClass</span>
+</code></pre></div>
+
+<p>This configuration is convenient if you can identify one or more
+sensitive classes.</p>
+<p>All options accept wildcards. Technically, it is possible to encrypt all
+strings in all classes in the code, but this is generally not advisable
+for performance reasons.</p>
+<p><em>Note</em>: When using companion objects in Kotlin, be aware that the Kotlin
+compiler stores any defined final string constants on the enclosing class
+and not on the generated <code>MySecretClass$Companion</code> class.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MySecretClass</span> <span class="p">{</span>
+    <span class="k">companion</span> <span class="k">object</span> <span class="p">{</span>
+        <span class="k">val</span> <span class="py">SECRET_KEY</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">&quot;...&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>DexGuard can still encrypt these Strings just fine:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="kd">class </span><span class="nc">com.example.MySecretClass </span><span class="p">{</span>
+    <span class="k">private</span> <span class="k">final</span> <span class="kt">java.lang.String</span> <span class="kt">SECRET_KEY</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="verification_2">Verification<a class="headerlink" href="#verification_2" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how many strings it has
+encrypted.</p>
+<p>In the debug version of the application, you'll easily find the original
+strings with a disassembler. For instance:</p>
+<div class="codehilite"><pre><span></span><code>... const-string v0, &quot;Hello world!&quot;
+</code></pre></div>
+
+
+<p>In the release version of the application, encrypted strings should no
+longer be visible.</p>
+<p>DexGuard will write the list of strings it encrypted, grouped per class, to a
+file with the <a href="usage.html#printstringencryption"><code>-printstringencryption</code></a>
+option.</p>
+<h3 id="more-information_3">More information<a class="headerlink" href="#more-information_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptstrings"><code>-encryptstrings</code></a></li>
+<li><a href="examples.html#encryptstrings">Examples: Encrypting strings</a></li>
+<li>Working sample project: <code>samples/basic/StringEncryption</code></li>
+<li><a href="verification.html">Verification</a></li>
+<li>Implement an <a href="plugins.html">encryption plugin</a> to use your own
+  encryption algorithm.</li>
+</ul>
+<h2 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_4">Discussion<a class="headerlink" href="#discussion_4" title="Permanent link">&para;</a></h3>
+<p>Name obfuscation can't change invocations of runtime classes, methods,
+and fields, since that would break the application's code. These
+invocations therefore remain conveniently readable in the disassembled
+or decompiled code. This provides attackers a lot of information about
+the structure and execution flow of the application. Especially for
+sensitive APIs, such as encryption and secure communication, you may
+want to make the code less readable by replacing the direct invocations
+by reflection.</p>
+<p>You can let DexGuard replace invocations by reflection and then encrypt
+the resulting strings. They then become difficult to find with static
+analysis.</p>
+<h3 id="configuration_3">Configuration<a class="headerlink" href="#configuration_3" title="Permanent link">&para;</a></h3>
+<p>For example, encrypt some invocations of the <code>SecureRandom</code> with the
+option <a href="usage.html#accessthroughreflection"><code>-accessthroughreflection</code></a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-accessthroughreflection</span> <span class="kd">class </span><span class="nc">java.security.SecureRandom </span><span class="p">{</span>
+    <span class="nf">&lt;init&gt;</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="nf">nextInt</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>You should combine reflection with string encryption. By adding the
+<code>encryptstrings</code> modifier:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-accessthroughreflection</span><span class="p">,</span><span class="kt">encryptstrings</span> <span class="kd">class </span><span class="nc">java.security.SecureRandom </span><span class="p">{</span>
+    <span class="nf">&lt;init&gt;</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="nf">nextInt</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>you can additionally encrypt the strings that are created for the reflection.</p>
+<p>Alternatively, you can explicitly list the strings you want to encrypt:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="err">&quot;</span><span class="kt">java.security.SecureRandom</span><span class="err">&quot;</span><span class="p">,</span> <span class="err">&quot;</span><span class="kt">nextInt</span><span class="err">&quot;</span>
+</code></pre></div>
+
+<p>or encrypt all strings in a particular class:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="kd">class </span><span class="nc">com.example.MySecretClass</span>
+</code></pre></div>
+
+<h3 id="verification_3">Verification<a class="headerlink" href="#verification_3" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how much reflection it
+has added.</p>
+<p>In the debug version of the application, you'll easily find the original
+method invocation with a disassembler. For instance:</p>
+<div class="codehilite"><pre><span></span><code>... new-instance v0, Ljava/security/SecureRandom;
+... invoke-direct {v0}, Ljava/security/SecureRandom;.&lt;init&gt;:()V
+...
+... invoke-virtual {v0}, Ljava/security/SecureRandom;.nextInt:()I
+</code></pre></div>
+
+
+<p>In the hardened release version of the application, you can check that
+any invocations that you have specified are no longer visible.</p>
+<h3 id="more-information_4">More information<a class="headerlink" href="#more-information_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#accessthroughreflection"><code>-accessthroughreflection</code></a></li>
+<li><a href="examples.html#accessthroughreflection">Examples: Adding reflection for sensitive
+  APIs</a></li>
+<li>Working sample project: <code>samples/basic/Reflection</code></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="codeobfuscation">Code obfuscation<a class="headerlink" href="#codeobfuscation" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_5">Discussion<a class="headerlink" href="#discussion_5" title="Permanent link">&para;</a></h3>
+<p>The previously outlined obfuscation techniques do not change the
+execution flow of the application. This allows an attacker to quite
+easily reconstruct java source code using a decompiler to further
+analyze or modify the application.</p>
+<p>You can let DexGuard obfuscate the application's code, which then
+becomes more difficult to reverse-engineer using decompilers or
+disassemblers.</p>
+<h3 id="configuration_4">Configuration<a class="headerlink" href="#configuration_4" title="Permanent link">&para;</a></h3>
+<p>You can apply code obfuscation with the option <a href="usage.html#obfuscatecode"><code>-obfuscatecode</code></a>. It
+allows to specify a <a href="usage.html#strengthmodifiers">strength modifier</a>
+which controls how aggressive the methods will be obfuscated.</p>
+<p>For example, obfuscate all methods of <code>MyActivity</code> with 'low' strength:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-obfuscatecode</span><span class="p">,</span><span class="kt">low</span> <span class="kd">class </span><span class="nc">com.example.MyActivity</span>
+</code></pre></div>
+
+<p>The option accepts wildcards as well. For example, obfuscate all methods
+of all classes inside package <code>com.example.secure</code> with 'high' strength:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-obfuscatecode</span><span class="p">,</span><span class="kt">high</span> <span class="kd">class </span><span class="nc">com.example.secure.**</span>
+</code></pre></div>
+
+<h3 id="verification_4">Verification<a class="headerlink" href="#verification_4" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out for how many methods it
+has obfuscated the code.</p>
+<p>Applying a decompiler to the debug version of your application will show
+java code that closely matches the original source code of the method.</p>
+<p>In the hardened release version of the application, decompilers will
+either completely fail to show corresponding source code, or display a
+highly obfuscated version which doesn't match the original execution
+flow anymore.</p>
+<h3 id="more-information_5">More information<a class="headerlink" href="#more-information_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#obfuscatecode">-obfuscatecode</a></li>
+<li><a href="usage.html#strengthmodifiers">Strength modifiers</a></li>
+<li>Working sample project: <code>samples/basic/CodeObfuscation</code></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="codevirtualization">Code virtualization<a class="headerlink" href="#codevirtualization" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_6">Discussion<a class="headerlink" href="#discussion_6" title="Permanent link">&para;</a></h3>
+<p>There are cases where <a href="#classencryption">Class Encryption</a> cannot be used due to technical
+constraints (e.g. Activities referenced by the AndroidManifest) or when it is too
+heavy to efficiently use as a final protection layer, code obfuscation goes a long
+way to protect sensitive code from being decompiled. However some chunks of code are
+still readable and therefore vulnerable to both static and dynamic analysis.</p>
+<p>As a powerful final layer around method bodies, DexGuard can perform code virtualization.
+This technique injects an inlined virtual machine with a randomized instruction set
+into your application code and re-implements your methods with those instructions.
+Even though virtualized code can sometimes be decompiled successfully, the resulting
+method body bares no resemblance to your source code anymore.</p>
+<p>Note that Exceptions work fine with code virtualization, but line numbers in exception
+messages are not supported. When interpreting stacktraces passing through methods that
+have code virtualization applied, there are two possibilities. Either no numbers are
+displayed, or the device chooses to instead display the byte offset of the instruction
+that failed. In the latter case, the number will not correspond to any source code line
+number.</p>
+<h3 id="configuration_5">Configuration<a class="headerlink" href="#configuration_5" title="Permanent link">&para;</a></h3>
+<p>You can apply code virtualization with the option <a href="usage.html#virtualizecode"><code>-virtualizecode</code></a>.
+The code is first obfuscated with the <code>low</code> setting and then completely virtualized.</p>
+<p>For example, virtualize a proprietary algorithm in a method of class <code>com.example.MyRecommender</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-virtualizecode</span> <span class="kd">class </span><span class="nc">com.example.MyRecommender </span><span class="p">{</span>
+    <span class="k">public</span> <span class="kt">java.lang.String</span><span class="o">[]</span> <span class="nf">recommendPopular</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Due to technical constraints it is currently not possible to virtualize initializers (constructors,
+static initializers) or methods that use explicit synchronization blocks (however methods marked <code>synchronized</code>
+are supported).</p>
+<h3 id="verification_5">Verification<a class="headerlink" href="#verification_5" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out for how many methods it
+has applied code virtualization.</p>
+<p>Applying a decompiler to the debug version of your application will show
+java code that closely matches the original source code of the method.</p>
+<p>In the hardened release version of the application, decompilers will
+either completely fail to show the method's code, or display a code
+array followed by a partial interpreter in the form of a loop over a
+switch.</p>
+<h3 id="more-information_6">More information<a class="headerlink" href="#more-information_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#virtualizecode">-virtualizecode</a></li>
+<li>Working sample project: <code>samples/basic/CodeVirtualization</code></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="removing-logging-code-and-stack-traces">Removing logging code and stack traces<a class="headerlink" href="#removing-logging-code-and-stack-traces" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_7">Discussion<a class="headerlink" href="#discussion_7" title="Permanent link">&para;</a></h3>
+<p>Logging code provides attackers information about the structure and
+execution flow of the application. From the perspective of thwarting
+reverse engineering, you should not leave logging code in released
+applications. If your logging code (or the logging code in your external
+libraries) does not depend on compile-time flags like <code>Build.DEBUG</code>, you
+can let DexGuard remove logging calls for you.</p>
+<h3 id="configuration_6">Configuration<a class="headerlink" href="#configuration_6" title="Permanent link">&para;</a></h3>
+<p>Remove all standard Android logging invocations:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-assumenosideeffects</span><span class="w"> </span><span class="kd">class </span><span class="nc">android.util.Log </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">boolean</span> <span class="nf">isLoggable</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">v</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">w</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">d</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">e</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">java.lang.String</span>
+                    <span class="nf">getStackTraceString</span><span class="p">(</span><span class="kt">java.lang.Throwable</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Remove all printing of stack traces:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-assumenosideeffects</span><span class="w"> </span><span class="kd">class </span><span class="nc">java.lang.Exception </span><span class="p">{</span>
+    <span class="k">public</span> <span class="kt">void</span> <span class="nf">printStackTrace</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="verification_6">Verification<a class="headerlink" href="#verification_6" title="Permanent link">&para;</a></h3>
+<p>In the debug version of the application, you may find many logging
+invocations with a disassembler. For instance:</p>
+<div class="codehilite"><pre><span></span><code>... invoke-static {v0, v1}, Landroid/util/Log;.d:(Ljava/lang/String;Ljava/lang/String;)I
+</code></pre></div>
+
+
+<p>In the release version of the application, all of these invocation
+should be gone.</p>
+<h3 id="more-information_7">More information<a class="headerlink" href="#more-information_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#assumenosideeffects"><code>-assumenosideeffects</code></a></li>
+<li><a href="examples.html#logging">Examples: Removing logging code</a></li>
+<li>Working sample project: <code>samples/basic/LoggingRemoval</code></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="tamper-detection">Tamper detection<a class="headerlink" href="#tamper-detection" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_8">Discussion<a class="headerlink" href="#discussion_8" title="Permanent link">&para;</a></h3>
+<p>Attackers can extract information like encryption and decryption keys by
+injecting logging code into an application. They disassemble the
+application, insert logging code, and run the application again. Their
+logging code can print out decrypted strings, which include the keys.</p>
+<p>You can fight this type of dynamic analysis by adding tamper detection
+to your application. Tamper detection actively checks the integrity of
+the application at runtime and acts suitably if the application has been
+modified.</p>
+<h3 id="configuration_7">Configuration<a class="headerlink" href="#configuration_7" title="Permanent link">&para;</a></h3>
+<p>DexGuard offers tamper detection with simple methods that you can call from
+your application. You first need to add the library <code>lib/dexguard-runtime.jar</code>
+to your application. You can then invoke the tamper detection methods in the
+application and act based on their return values.</p>
+<ul>
+<li>Check the integrity of the entire apk file:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">TamperDetector</span><span class="p">.</span><span class="na">checkApk</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Tampering detected.</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether the application is still signed with the original
+  certificate:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">CertificateChecker</span><span class="p">.</span><span class="na">checkCertificate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Different certificate detected.</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether one or more specific files of the apk file have been modified:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="n">FileChecker</span> <span class="n">fileChecker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileChecker</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">check</span> <span class="o">^=</span> <span class="n">fileChecker</span><span class="p">.</span><span class="na">checkFile</span><span class="p">(</span><span class="n">file1</span><span class="p">);</span>
+<span class="n">check</span> <span class="o">^=</span> <span class="n">fileChecker</span><span class="p">.</span><span class="na">checkFile</span><span class="p">(</span><span class="n">file2</span><span class="p">);</span>
+<span class="c1">// ...</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Different files detected.</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>All methods accept an optional additional integer parameter, which they
+return instead of 0 if the checks are ok. You can pick such a parameter
+to make the code less predictable.</p>
+<p>You should weave the tamper detection code into your regular code,
+making it more difficult to simply disable it. For instance, you could
+use the return value to affect the computation of a key, so the computed
+key is wrong if the application has been tampered with. A simplistic
+example:</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">checkedKey</span> <span class="o">=</span> <span class="n">TamperDetector</span><span class="p">.</span><span class="na">checkApk</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+</code></pre></div>
+
+<p>If the code detects tampering, the application should fail quietly,
+possibly with a delay, without giving away any further information.</p>
+<p>Once you have added your tamper detection code, you should further
+harden it by encrypting its class, together with the tamper detection
+library (<code>com.guardsquare.dexguard.runtime.**</code>).</p>
+<h3 id="verification_7">Verification<a class="headerlink" href="#verification_7" title="Permanent link">&para;</a></h3>
+<p>You can check if the tamper detection works by unpacking the application
+and repackaging it, for instance with unzip and zip. You can also tamper
+with the application simply by applying the standard tool zipalign:</p>
+<div class="codehilite"><pre><span></span><code>zipalign -f <span class="m">4</span> myapplication.apk
+</code></pre></div>
+
+<p>The tool repackages the application without fundamentally changing it.
+This will trigger the tamper detection at runtime.</p>
+<p>You can check the certificate verification by re-signing the application
+with a different certificate:</p>
+<div class="codehilite"><pre><span></span><code>zip -d MyApp.apk META-INF/*
+jarsigner -keystore debug.keystore -storepass android -keypass android -signedjar <span class="se">\</span>
+    MyApp_signed.apk MyApp.apk AndroidDebugKey
+</code></pre></div>
+
+<p>This will trigger the certificate check at runtime.</p>
+<h3 id="more-information_8">More information<a class="headerlink" href="#more-information_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Working sample project: <code>samples/basic/TamperDetection</code></li>
+<li>Javadoc of the API:
+  <a href="runtime.html">com.guardsquare.dexguard.runtime.detection</a>.</li>
+</ul>
+<h2 id="environment-checks">Environment checks<a class="headerlink" href="#environment-checks" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_9">Discussion<a class="headerlink" href="#discussion_9" title="Permanent link">&para;</a></h3>
+<p>Even if the application is unaltered, the underlying runtime may be
+subverted. The application calls into the Android runtime in good faith,
+but the runtime code may have been compromised. It may for instance
+intercept method calls that communicate or decrypt sensitive data, and
+pass the results to an attacker.</p>
+<p>You may therefore want to check the environment in which the application
+is running. This is tricky, since the subverted environment may be
+constructed to look as ordinary and inconspicuous as possible.
+Nevertheless, you can perform some basic sanity checks:</p>
+<ul>
+<li>Check whether the application is debuggable or is being debugged.</li>
+<li>Check whether the application is running in an emulator.</li>
+<li>Check whether the application is running on a rooted device.</li>
+<li>Check whether the application is being hooked with specialized tools like
+  Xposed, Substrate or Frida.</li>
+</ul>
+<p>Like tamper detection, these techniques actively check the integrity of
+the application and its environment at runtime. You can then act
+suitably if the environment is not the standard intended environment.</p>
+<h3 id="configuration_8">Configuration<a class="headerlink" href="#configuration_8" title="Permanent link">&para;</a></h3>
+<p>DexGuard offers environment checks as simple methods that you can call
+from your application. You first need to add the library
+<code>samples/basic/EnvironmentCheck/libs/dexguard-runtime.jar</code> to your
+application. You can then invoke the environment checking methods in the
+application and act based on their return values.</p>
+<ul>
+<li>Check whether the application is debuggable:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">DebugDetector</span><span class="p">.</span><span class="na">isDebuggable</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Application is debuggable.</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether the application is being debugged:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">DebugDetector</span><span class="p">.</span><span class="na">isDebuggerConnected</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Application is being debugged.</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether the application has been signed with a debug key:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">DebugDetector</span><span class="p">.</span><span class="na">isSignedWithDebugKey</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Application has been signed with a debug key.</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether the application is running in an emulator:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">EmulatorDetector</span><span class="p">.</span><span class="na">isRunningInEmulator</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Application is running in an emulator.</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether the application is running on a rooted device:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">RootDetector</span><span class="p">.</span><span class="na">isDeviceRooted</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Application is running on a rooted device.</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>Check whether the application is being hooked:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="n">HookDetector</span><span class="p">.</span><span class="na">isApplicationHooked</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Application is being hooked.</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>All methods accept an optional additional integer parameter. which they
+return instead of 0 if the checks are ok. You can pick such a parameter
+to make the code less predictable.</p>
+<p>You should again weave the tamper detection code into your regular code
+and further harden it by encrypting the class together with the library
+(<code>com.guardsquare.dexguard.runtime.**</code>).</p>
+<h3 id="verification_8">Verification<a class="headerlink" href="#verification_8" title="Permanent link">&para;</a></h3>
+<p>If you have implemented these checks, you can try setting the debug
+flag, running the application in an emulator, or running the application
+on a rooted device.</p>
+<h3 id="more-information_9">More information<a class="headerlink" href="#more-information_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Working sample project: <code>samples/basic/EnvironmentCheck</code></li>
+<li><a href="runtime.html">Runtime Library</a></li>
+<li>Javadoc of the API:
+  <a href="runtime.html">com.guardsquare.dexguard.runtime.detection</a>.</li>
+</ul>
+<h2 id="asset-encryption">Asset encryption<a class="headerlink" href="#asset-encryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_10">Discussion<a class="headerlink" href="#discussion_10" title="Permanent link">&para;</a></h3>
+<p>By default, DexGuard leaves asset files untouched. You can explicitly
+specify to encrypt sensitive asset files. DexGuard then encrypts them
+and your application will decrypt them on the fly.</p>
+<h3 id="configuration_9">Configuration<a class="headerlink" href="#configuration_9" title="Permanent link">&para;</a></h3>
+<p>You can specify the asset files that you want to encrypt with the option
+<a href="usage.html#encryptassetfiles"><code>-encryptassetfiles</code></a>. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptassetfiles </span><span class="err">assets/secret.txt</span>
+</code></pre></div>
+
+<p>DexGuard only encrypts asset files that are read with an <code>AssetManager</code>
+and <code>open("secret.txt")</code>, with a literal string as argument..</p>
+<h3 id="verification_9">Verification<a class="headerlink" href="#verification_9" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how many asset files it
+has encrypted.</p>
+<p>If you unpack encrypted asset files from the hardened release version of
+the application, you'll see that they have the same lengths as the
+original files, but encrypted contents.</p>
+<h3 id="more-information_10">More information<a class="headerlink" href="#more-information_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptassetfiles"><code>-encryptassetfiles</code></a></li>
+<li>Working sample project: <code>samples/basic/AssetEncryption</code></li>
+<li><a href="verification.html">Verification</a></li>
+<li>Implement an <a href="plugins.html">encryption plugin</a> to use your own
+  encryption algorithm.</li>
+</ul>
+<h2 id="resource-file-encryption">Resource file encryption<a class="headerlink" href="#resource-file-encryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_11">Discussion<a class="headerlink" href="#discussion_11" title="Permanent link">&para;</a></h3>
+<p>By default, DexGuard leaves resource files untouched. You can explicitly
+specify to encrypt sensitive resource files. DexGuard then encrypts them
+and your application will decrypt them on the fly.</p>
+<p>Only applicable when processing Android applications.
+Only applicable to APKs, this feature is not supported for app bundles.</p>
+<h3 id="configuration_10">Configuration<a class="headerlink" href="#configuration_10" title="Permanent link">&para;</a></h3>
+<p>You can specify the resource files that you want to encrypt with the
+option <a href="usage.html#encryptresourcefiles"><code>-encryptresourcefiles</code></a>. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptresourcefiles </span><span class="err">res/layout*/secret.xml</span>
+</code></pre></div>
+
+<p>DexGuard can encrypt resources in <code>res/layout</code>, <code>res/menu</code> and
+<code>res/xml</code>.</p>
+<h3 id="verification_10">Verification<a class="headerlink" href="#verification_10" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how many resource files
+it has encrypted.</p>
+<p>If you unpack encrypted resource files from the hardened release version
+of the application, you'll see that they can no longer be viewed with an
+Android binary XML viewer like aapt.</p>
+<p>DexGuard will write the list of resources it encrypted to a file with the
+option <a href="usage.html#printresourceencryption"><code>-printresourceencryption</code></a>.</p>
+<h3 id="more-information_11">More information<a class="headerlink" href="#more-information_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptresourcefiles"><code>-encryptresourcefiles</code></a></li>
+<li>Working sample project: <code>samples/basic/ResourceEncryption</code></li>
+<li><a href="verification.html">Verification</a></li>
+<li>Implement an <a href="plugins.html">encryption plugin</a> to use your own
+  encryption algorithm.</li>
+</ul>
+<h2 id="javascriptobfuscation">Javascript obfuscation<a class="headerlink" href="#javascriptobfuscation" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_12">Discussion<a class="headerlink" href="#discussion_12" title="Permanent link">&para;</a></h3>
+<p>By default, DexGuard leaves JavaScript files largely untouched, and optionally
+adapts its contents with information about the obfuscated Java elements.
+You can explicitly specify to obfuscate JavaScript files using DexGuard's
+built-in JavaScript obfuscator.</p>
+<h3 id="configuration_11">Configuration<a class="headerlink" href="#configuration_11" title="Permanent link">&para;</a></h3>
+<p>You can specify the Javascript files that you want to obfuscate with the
+option <a href="usage.html#obfuscatejavascript"><code>-obfuscatejavascript</code></a>. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-obfuscatejavascript </span><span class="err">assets/www/secret/**.js</span>
+</code></pre></div>
+
+<p>You can specify a Javascript configuration with the option</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-javascriptconfiguration </span><span class="err">configuration.yml</span>
+</code></pre></div>
+
+<p>Please refer to the separate <a href="javascriptmd">Javascript obfuscator manual</a>
+for more details on obfuscation options.</p>
+<h3 id="verification_11">Verification<a class="headerlink" href="#verification_11" title="Permanent link">&para;</a></h3>
+<p>If you unpack the hardened release version of the application, you'll see that
+the JavaScript file contents are obfuscated according to the specified
+obfuscation configuration.</p>
+<h3 id="more-information_12">More information<a class="headerlink" href="#more-information_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="javascriptmd">Javascript obfuscator manual</a></li>
+<li>Working sample project: <code>samples/basic/JavaScript</code></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="resource-string-encryption">Resource string encryption<a class="headerlink" href="#resource-string-encryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_13">Discussion<a class="headerlink" href="#discussion_13" title="Permanent link">&para;</a></h3>
+<p>By default, DexGuard only inlines resource strings. You can explicitly
+specify to encrypt sensitive resource strings. DexGuard then encrypts them
+and your application will decrypt them on the fly.</p>
+<p>Only applicable when processing Android applications.</p>
+<h3 id="configuration_12">Configuration<a class="headerlink" href="#configuration_12" title="Permanent link">&para;</a></h3>
+<p>You can specify the resource strings that you want to encrypt with the
+option <a href="usage.html#encryptresources"><code>-encryptresources</code></a>. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptresources </span><span class="err">string/message</span>
+</code></pre></div>
+
+<p>will encrypt the resource string with resource name <code>message</code>.</p>
+<h3 id="verification_12">Verification<a class="headerlink" href="#verification_12" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how many
+resource strings it has encrypted.</p>
+<p>If you read resource strings from the hardened release version
+of the application using a tool like <code>aapt</code>, you'll see that they will be encrypted.</p>
+<p>DexGuard will write the list of resources it encrypted to a file with the
+option <a href="usage.html#printresourceencryption"><code>-printresourceencryption</code></a>.</p>
+<h3 id="more-information_13">More information<a class="headerlink" href="#more-information_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptresources"><code>-encryptresources</code></a></li>
+<li>Working sample project: <code>samples/basic/ResourceEncryption</code></li>
+<li><a href="verification.html">Verification</a></li>
+<li>Implement an <a href="plugins.html">encryption plugin</a> to use your own
+  encryption algorithm.</li>
+</ul>
+<h2 id="metadata-encryption">Metadata encryption<a class="headerlink" href="#metadata-encryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_14">Discussion<a class="headerlink" href="#discussion_14" title="Permanent link">&para;</a></h3>
+<p>By default, DexGuard only inlines metadata in the Android Manifest. You can explicitly
+specify to encrypt sensitive metadata. DexGuard then both inlines and encrypts them,
+and your application will decrypt them on the fly.</p>
+<p>Note that only String metadata are currently supported.</p>
+<h3 id="configuration_13">Configuration<a class="headerlink" href="#configuration_13" title="Permanent link">&para;</a></h3>
+<p>You can specify the metadata that you want to encrypt with the
+option <a href="usage.html#encryptmetadata"><code>-encryptmetadata</code></a>. For example, if your Android Manifest
+contains a meta-data element:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;myKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;sensitiveDataToBeEncrypted&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+<p>you can encrypt this metadata using:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptmetadata</span> <span class="kt">myKey</span>
+</code></pre></div>
+
+<h3 id="verification_13">Verification<a class="headerlink" href="#verification_13" title="Permanent link">&para;</a></h3>
+<p>If you inspect the Android Manifest in the hardened release version
+of the application, you'll see that the metadata is nog longer present.</p>
+<p>In the hardened application code, the metadata retrieval code will be
+replaced with an encrypted version of the metadata value.</p>
+<h3 id="more-information_14">More information<a class="headerlink" href="#more-information_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptmetadata"><code>-encryptmetadata</code></a></li>
+<li>Working sample project: <code>samples/basic/MetadataEncryption</code></li>
+<li><a href="verification.html">Verification</a></li>
+<li>Implement a string <a href="plugins.html">encryption plugin</a> to use your own
+  encryption algorithm.</li>
+</ul>
+<h2 id="native-library-encryption">Native library encryption<a class="headerlink" href="#native-library-encryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_15">Discussion<a class="headerlink" href="#discussion_15" title="Permanent link">&para;</a></h3>
+<p>By default, DexGuard already obfuscates the names of JNI functions
+inside native libraries. You can explicitly specify to further encrypt
+sensitive native libraries. DexGuard then encrypts them and your
+application will decrypt them on the fly. The encryption prevents static
+analysis of the native code and tampering with the libraries.</p>
+<h3 id="configuration_14">Configuration<a class="headerlink" href="#configuration_14" title="Permanent link">&para;</a></h3>
+<p>You can specify the native library files that you want to encrypt with
+the option <a href="usage.html#encryptnativelibraries"><code>-encryptnativelibraries</code></a>. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptnativelibraries </span><span class="err">lib/*/libsecret.so</span>
+</code></pre></div>
+
+<p>The encrypted native library must be loaded using either a call to
+<code>System.loadLibrary(string)</code> or as a dependency of another encrypted native library.</p>
+<p>You can also add the <code>lib/dexguard-nativeloader.aar</code> as a dependency to your project to use
+a more secure way of loading your encrypted native libraries.</p>
+<div class="admonition note">
+<p>If you include this dependency in an sdk you force your users who also use
+DexGuard to use this approach for their encrypted native libraries as well.</p>
+</div>
+<h3 id="verification_14">Verification<a class="headerlink" href="#verification_14" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how many native library
+files it has encrypted.</p>
+<p>If you unpack encrypted native library files from the hardened release
+version of the application, you'll see that they have the same lengths
+as the original files, but encrypted contents instead of the usual ELF
+format.</p>
+<p>DexGuard will write the list of native libraries it encrypted to a file with
+the option
+<a href="usage.html#printnativelibraryencryption"><code>-printnativelibraryencryption</code></a>.</p>
+<h3 id="more-information_15">More information<a class="headerlink" href="#more-information_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptnativelibraries"><code>-encryptnativelibraries</code></a></li>
+<li>Working sample project: <code>samples/basic/NativeLibraryEncryption</code></li>
+<li><a href="verification.html">Verification</a></li>
+<li>Implement an <a href="plugins.html">encryption plugin</a> to use your own
+  encryption algorithm.</li>
+</ul>
+<h2 id="classencryption">Class encryption<a class="headerlink" href="#classencryption" title="Permanent link">&para;</a></h2>
+<h3 id="discussion_16">Discussion<a class="headerlink" href="#discussion_16" title="Permanent link">&para;</a></h3>
+<p>Name obfuscation, string encryption, reflection, asset encryption,
+resource encryption and native library encryption harden the code and
+resources against static analysis. Tamper detection and environment
+checks harden against dynamic analysis. Class encryption can provide
+another powerful layer over these techniques. It can completely hide the
+decryption code and reflection code, hardening it against static
+analysis and against tampering.</p>
+<p>Encrypting all classes is not technically possible and would add an
+excessive overhead. You should identify a number of sensitive classes
+and encrypt those. Typically, these are the classes that you have
+already hardened with other techniques. For instance, you should include
+your tamper detection code and the associated library classes.</p>
+<h3 id="configuration_15">Configuration<a class="headerlink" href="#configuration_15" title="Permanent link">&para;</a></h3>
+<p>You can specify the classes that you want to encrypt with the option
+<a href="usage.html#encryptclasses"><code>-encryptclasses</code></a>:</p>
+<div class="codehilite"><pre><span></span><code>-encryptclasses com.example.MySecretClass,
+                com.example.MySecretClass$*
+</code></pre></div>
+
+
+<p>The second name in the list matches all inner classes of
+<code>MySecretClass</code>, since inner classes often also contain sensitive code.</p>
+<h3 id="verification_15">Verification<a class="headerlink" href="#verification_15" title="Permanent link">&para;</a></h3>
+<p>With the <a href="usage.html#verbose"><code>-verbose</code></a> option, DexGuard prints out how many classes it has
+encrypted.</p>
+<p>Applying a disassembler to the hardened release version of your
+application, you may find traces of string encryption, reflection,
+tamper detection, environment checks, and original code. After having
+added class encryption for classes that contain such code, it will no
+longer be visible or modifiable.</p>
+<p>DexGuard will write the list of classes it encrypted to a file with the option
+<a href="usage.html#printclassencryption"><code>-printclassencryption</code></a>.</p>
+<h3 id="more-information_16">More information<a class="headerlink" href="#more-information_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#encryptclasses"><code>-encryptclasses</code></a></li>
+<li><a href="examples.html#encryptclasses">Examples: Encrypting classes</a></li>
+<li>Working sample projects: <code>samples/basic/ClassEncryption</code>,
+  <code>samples/basic/TamperDetection</code>, <code>samples/basic/EnvironmentCheck</code></li>
+<li><a href="verification.html">Verification</a></li>
+</ul>
+<h2 id="summary-tuning-obfuscation">Summary: tuning obfuscation<a class="headerlink" href="#summary-tuning-obfuscation" title="Permanent link">&para;</a></h2>
+<p>In summary, when you're protecting an application or a library, you
+first need to make sure that the code still works (in the presence of
+any reflection) and then you should harden the sensitive parts of the
+code.</p>
+<ul>
+<li>To make sure that the code still works, you may need to reduce the
+  obfuscation of some code or resources. This generally means
+  preserving code and resources with their original names, so
+  reflective code can still access them by these names.</li>
+<li>
+<p>If the code no longer works after obfuscation, you can temporarily
+  add the option</p>
+<div class="codehilite"><pre><span></span><code>-addconfigurationdebugging
+</code></pre></div>
+
+
+<p>to your DexGuard configuration. This will add extra debugging code
+to the processed code. If an error occurs at runtime due to
+shrinking or obfuscation, the application may print out DexGuard
+configuration suggestions to solve the issue on the application log.
+<strong>Do not use this option in release versions, as it adds obfuscation
+information to the processed code.</strong></p>
+</li>
+<li>
+<p>To harden the application or library beyond the default name
+  obfuscation, you should identify the sensitive parts and apply the
+  various encryption options. These options aren't part of the default
+  settings, because they may have some impact on performance.</p>
+</li>
+</ul>
+<p>The following diagram summarizes the relevant options:</p>
+<div class="center">
+  <div class="diagram">
+    <div class="row">
+      <div class="col" style="width: 255px;">
+        <div class="title">Default obfuscation</div>
+        <div class="darkgreen box">Android manifest<br/>(binary .xml)
+          <div class="label">Name obfuscation</div>
+        </div>
+        <div class="darkgreen box">Java byte code<br/>(.class)
+          <div class="label">Name obfuscation</div>
+        </div>
+        <div class="darkgreen box">Native code<br/>(.so)
+          <div class="label">Name obfuscation</div>
+        </div>
+        <div class="darkgreen box">Resources<br/>(.arsc)
+          <div class="label">Name obfuscation</div>
+        </div>
+        <div class="darkgreen box">Resource files<br/>(binary .xml, .png,...)
+          <div class="label">Name obfuscation</div>
+        </div>
+        <div class="darkgreen box">Assets<br/>(.txt,...)
+          <div class="label">Name obfuscation</div>
+        </div>
+      </div>
+      <div class="col" style="width: 300px;">
+        <div class="title">Reducing obfuscation</div>
+        <div class="green box">Android manifest<br/>(binary .xml)
+          <div class="label">
+            <a href="usage.html#keepresourcexmlattributenames">-keepresourcexmlattributenames</a>
+          </div>
+        </div>
+        <div class="green box">Java byte code<br/>(.class)
+          <div class="label">
+            <a href="usage.html#keepoverview">-keep</a><br/>
+            <a href="usage.html#keepattributes">-keepattributes</a>
+          </div>
+        </div>
+        <div class="green box">Native code<br/>(.so)
+          <div class="label">
+            <a href="usage.html#keepoverview">-keep</a><br/>
+            <a href="usage.html#keepresourcefiles">-keepresourcefiles</a>
+          </div>
+        </div>
+        <div class="green box">Resources<br/>(.arsc)
+          <div class="label">
+            <a href="usage.html#keepresources">-keepresources</a><br/>
+          </div>
+        </div>
+        <div class="green box">Resource files<br/>(binary .xml, .png,...)
+          <div class="label">
+            <a href="usage.html#keepresourcefiles">-keepresourcefiles</a>
+          </div>
+        </div>
+        <div class="green box">Assets<br/>(.txt,...)
+          <div class="label">
+            <a href="usage.html#keepresourcefiles">-keepresourcefiles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" style="width: 300px;">
+        <div class="title">Adding obfuscation</div>
+        <div class="darkgreen box">Android manifest<br/>(binary .xml)</div>
+        <div class="blackgreen box">Java byte code<br/>(.class)
+          <div class="label">
+            <a href="usage.html#accessthroughreflection">-accessthroughreflection</a><br/>
+            <a href="usage.html#obfuscatecode">-obfuscatecode</a><br/>
+            <a href="usage.html#encryptclasses">-encryptclasses</a><br/>
+            <a href="usage.html#encryptstrings">-encryptstrings</a><br/>
+          </div>
+        </div>
+        <div class="blackgreen box">Native code<br/>(.so)
+          <div class="label">
+            <a href="usage.html#encryptnativelibraries">-encryptnativelibraries</a><br/>
+          </div>
+        </div>
+        <div class="darkgreen box">Resources<br/>(.arsc)</div>
+        <div class="blackgreen box">Resource files<br/>(binary .xml, .png,...)
+          <div class="label">
+            <a href="usage.html#encryptresourcefiles">-encryptresourcefiles</a><br/>
+          </div>
+        </div>
+        <div class="blackgreen box">Assets<br/>(.txt,...)
+          <div class="label">
+            <a href="usage.html#encryptassetfiles">-encryptassetfiles</a><br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>If you want to go a step further, you can also create your own
+encryption plugins for DexGuard. Such plugins increase the variation in
+obfuscated code, making it more difficult for attackers to detect
+patterns.</p>
+<h3 id="more-information_17">More information<a class="headerlink" href="#more-information_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="usage.html#pluginjars"><code>-pluginjars</code></a></li>
+<li>Working sample project: <code>samples/advanced/EncryptionPlugins</code></li>
+<li>Javadoc of the plugins API:
+  <a href="pluginsmd">com.guardsquare.dexguard.encrypt</a></li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="annotations.html" title="Annotations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Annotations
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="rasp.html" title="RASP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                RASP
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "config_version_name": "0.0.1",
+  "config_version_code": 1,
+  "token_per_mb": 1.0,
+  "default_network_type": 5,
+  "token_guide_version": 0,
+  "GIFT_DONATE_LINK": "https://airdrop.telemesh.net/request/gift",
+  "max_point_for_rmesh": 1000,
+  "rmesh_per_token": 1.0,
+  "wallet_rmesh_available": false,
+  "rmesh_info_text": "",
+  "rmesh_owner_address": "",
+  "GIFT_DONATE_PUBLIC_KEY": "0x041e93d914737d7bde071ba5cfd4eca550a59118170b7a73bc6c55650dd012bffd84f6073b9c6c8e7c440d4521f69359e0bcfbed171e682ec61275bef5bd673b3b",
+  "GIFT_DONATE_USER": "majorarif",
+  "GIFT_DONATE_PASS": "major1234admin",
+  "TX_HISTORY_URL_KOTTI": "https://explorer.anyblock.tools/ethereum/classic/kotti/address/",
+  "TX_URL_ROPSTEN": "https://ropsten.etherscan.io/address/",
+  "network": [
+    {
+      "network_type": 1,
+      "network_name": "Ropsten",
+      "network_url": "https://ropsten.telemesh.net",
+      "currency_symbol": "ETH",
+      "token_symbol": "TMESH",
+      "token_address": "0xC33836666a660A650E591e94Cf7288cB53CE6D83",
+      "channel_address": "0xdd5DFB72f67F2E5D87d9C23E5b8cD942a86E690f",
+      "gas_price": 50000000000,
+      "gas_limit": 800000,
+      "token_amount": 0,
+      "currency_amount": 0
+    },
+    {
+      "network_type": 2,
+      "network_name": "Kotti",
+      "network_url": "https://kotti.telemesh.net",
+      "currency_symbol": "ETC",
+      "token_symbol": "TMESH",
+      "token_address": "0x8259792406a2495D8A9579c84086B547D11B6Bf8",
+      "channel_address": "0x1Aa4fC16F496d7ab51B628F2589875F5E6052613",
+      "gas_price": 25000000000,
+      "gas_limit": 800000,
+      "token_amount": 0,
+      "currency_amount": 0
+    },
+    {
+      "network_type": 5,
+      "network_name": "Tiger",
+      "network_url": "https://tiger.telemesh.net",
+      "currency_symbol": "TETH",
+      "token_symbol": "TMESH",
+      "token_address": "0x93C142C90890724B3b39B28C45aE2C0e06544e78",
+      "channel_address": "0xE49CC2C6C955Bf603F7AA0D1C6584947beDcA1eD",
+      "gas_price": 25000000000,
+      "gas_limit": 800000,
+      "token_amount": 0,
+      "currency_amount": 0
+    }
+  ]
+}

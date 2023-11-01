@@ -1,0 +1,154 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">TeleService</string>
+    <string name="title_activity_create_user">CreateUser</string>
+
+    <!--Main Activity -->
+    <string name="btn_create_group">Create a group</string>
+    <string name="btn_join_group">Join to group</string>
+    <string name="prgrss_searching_groups">Searching available groups…</string>
+    <string name="prgrss_connecting_to_group">Connecting to the group…</string>
+    <string name="toast_not_found_groups">Sorry, there aren\'t any group nearby</string>
+
+    <!-- Group Creation Dialog -->
+    <string name="label_group_name">Group name:</string>
+    <string name="btn_accept">Accept</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- Group Chat Activiy -->
+    <string name="send_button">Send</string>
+    <string name="device_connected">%s device connected to the group</string>
+    <string name="device_disconnected">%s device disconnected from the group</string>
+    <string name="broadcast_notification">You have %d new broadcast message</string>
+    <string name="data_plan">Data Plan </string>
+
+
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="title_connecting">Connecting…</string>
+    <string name="title_connected_to">Connected to <xliff:g id="device_name">%1$s</xliff:g></string>
+    <string name="title_not_connected">Not connected</string>
+
+    <string name="scanning">Scanning for devices…</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+
+    <string name="network">Network</string>
+    <string name="people">People</string>
+    <string name="message">Device Log</string>
+    <string name="Database">History</string>
+
+    <string name="status_online">online</string>
+    <string name="status_offline">offline</string>
+    <string name="large_message">lrg msg</string>
+    <string name="continuous_msg">con msg</string>
+    <string name="diagram">Diagram</string>
+
+    <string name="app_update">App Update</string>
+
+    <string name="do_you_want_to_update">Do you want to update?</string>
+
+    <string name="ask_me_later">Ask me later</string>
+
+    <string name="update_app">Update App</string>
+    <string name="update">Update</string>
+
+    <string name="phone_storage_not_enough">Your phone space not enough</string>
+
+    <string name="a_new_version">A new version </string>
+
+    <string name="is_available_for_telemesh">is available for TeleService</string>
+
+    <string name="enabled">Enabled</string>
+    <string name="description">This Activity or Set of Activities will provide control of the
+            Service eventually. Apps will communicate with the service via AIDL, TCP or some other
+        IPC Mechanism
+    </string>
+
+
+    <string name="permission">Permission needed</string>
+    <string name="permission_message">Need to allow permission on TeleService app to work properly. You can give permission manually from settings</string>
+    <string name="noti_content_title">Telemesh Service is running</string>
+    <string name="stop_service">You can stop the service by clicking on Stop Service button</string>
+    <string name="service_back">Telemesh Service is running as background service</string>
+    <string name="expand_service">Expand to stop Telemesh service</string>
+    <string name="install_app">Please Install Telemesh App</string>
+    <string name="open_clientapp">Open Client App</string>
+    <string name="tel_service">Telemesh Service</string>
+
+    <!--    <string name="permission_xiaomi_header">Please allow permissions</string>
+        <string name="permission_xiomi">Need to allow permissions from setting for Xiaomi.\n\nPath : Settings -> Permissions -> Other Permissions -> TeleService</string>  -->
+
+    <string name="permission_xiaomi_header">Please allow permissions</string>
+    <string name="permission_xiomi">To deliver the best experience TeleService needs a few system permissions.\n\nPlease go to your device settings and search for Permissions.
+                          \nFrom Permissions screen tap “Other Permissions” then tap TeleService.
+                          \nAllow all the permissions from TeleService screen which are not marked as green.
+                          \n\nAlternatively, you can also go “Other Permissions” screen by Manage apps > TeleService > Other permissions. </string>
+
+    <string name="gps_alert">Turn on location</string>
+    <string name="for_better_performance">To get the best results please turn on your location service.</string>
+    <string name="title_text_copyright">COPYRIGHT© 2019 W3 ENGINEERS LTD. ALL RIGHTS RESERVED.</string>
+    <string name="title_text_telemesh_link"><a href="https://telemesh.net">https://telemesh.net</a></string>
+    <string name="text_title_app_updated">An updated version is available. Please tap here to upgrade to the latest version.</string>
+
+    <string name="network_ssid">check</string>
+
+    <string name="create_new_wallet">Create New Wallet</string>
+    <string name="import_wallet">Import Wallet</string>
+
+    <string name="welcome_back">Import Wallet</string>
+    <string name="import_successful">Import Successful</string>
+    <string name="pin_provide_instruction">Please provide your password to continue</string>
+    <string name="enter_password_here">Enter password here:</string>
+    <string name="continue_button">Continue</string>
+    <string name="show_password">Show Password</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="please_set_up_an_8_digit_pin_for_your_account_security">Please set up an 8 digit password for your account security. Password must contain at least 1 letter, number, and special character.</string>
+    <string name="pin_instruction">Please remember your password for you will need this in case of  account recovery.</string>
+    <string name="signup">Next</string>
+    <string name="skip">Skip</string>
+
+    <string name="wallet_directory_name">mesh_service</string>
+    <string name="file_exit">A user account already exists, would you like to continue with that? Your address is %s</string>
+    <string name="negative_button"><![CDATA[<font color=\'#083480\'>Create new one</font>]]></string>
+    <string name="button_postivive"><![CDATA[<font color=\'#083480\'>Continue</font>]]></string>
+    <string name="alert_title_text"><![CDATA[<font color=\'#ff5f25\'>WARNING!!</font>]]></string>
+    <string name="please_wait">Please Wait…</string>
+
+    <string name="enter_eight_digit_password">Please Enter at least 8 digit password</string>
+    <string name="sell_your_data_info">Sell your data to other local users and earn points. You need an active internet connection. Sell price %s point = 1MB.</string>
+    <string name="save">Save</string>
+    <string name="buy_data_info">Buy data from nearby sellers. Data cost is %s point = 1MB.</string>
+    <string name="refresh">Refresh</string>
+    <string name="points_title">POINTS</string>
+    <string name="pending_balance_point">PENDING BALANCE</string>
+    <string name="pending_balance">Pending Balance will be Deposited to Main balance after crossing <b>10</b> Points.</string>
+    <string name="token_balance">You will get <b>%s RMESH</b> tokens for every <b>%s Points</b></string>
+    <string name="view_transactions">VIEW TRANSACTIONS</string>
+    <string name="total_purchase">Total %sMB</string>
+    <string name="data_limit_warning">Data limit almost exceeded.</string>
+    <string name="data_limit_error">Data limit exceeded.</string>
+    <string name="data_limit_validation_text">Data limit must be greater then zero.</string>
+    <string name="data_limit_larger_needed">Data limit must be larger than used data</string>
+    <string name="token_guideline">Token Guideline</string>
+    <string name="image">Image</string>
+    <string name="export_my_profile">EXPORT MY PROFILE</string>
+    <string name="title_activity_data_plan">DataPlanActivity</string>
+    <string name="title_activity_wallet">WalletActivity</string>
+    <string name="app_update_error">An error occurred</string>
+    <string name="app_update_success">Service app downloaded successfully</string>
+    <string name="downloading_service_please_wait">Downloading service please wait..</string>
+    <string name="success_title">SUCCESS</string>
+    <string name="error_title">ERROR</string>
+    <string name="app_update_error_message">An error occurred while updating app</string>
+    <string name="app_update_success_message">App update successfully</string>
+    <string name="app_install">Install</string>
+</resources>

@@ -1,0 +1,81 @@
+.md-footer-nav {
+  visibility: hidden;
+}
+
+.md-typeset a {
+  color: #004F91;
+}
+
+.md-typeset a:hover {
+  color: #005dab;
+}
+
+.md-typeset a:active {
+  color: #004F91;
+}
+
+.md-header {
+  background-color: #004F91;
+}
+
+.md-hero {
+  background-color: #004F91;
+}
+
+.md-nav__link:active,
+.md-nav__link--active {
+  color: #004F91;
+}
+
+@media only screen and (max-width: 76.1875em) {
+  html .md-nav--primary .md-nav__title--site {
+    background-color: #004F91;
+  }
+}
+.md-typeset a:hover,
+.md-typeset a:active {
+  color: #005dab;
+}
+.md-typeset pre code::-webkit-scrollbar-thumb:hover,
+.md-typeset .codehilite pre::-webkit-scrollbar-thumb:hover {
+  background-color: #004F91;
+}
+.md-typeset .md-clipboard:hover::before,
+.md-typeset .md-clipboard:active::before {
+  color: #004F91;
+}
+.md-typeset .footnote li:hover .footnote-backref:hover,
+.md-typeset .footnote li:target .footnote-backref {
+  color: #004F91;
+}
+.md-typeset [id]:hover .headerlink:hover,
+.md-typeset [id]:target .headerlink,
+.md-typeset [id] .headerlink:focus {
+  color: #004F91;
+}
+
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: #004F91;
+}
+
+.md-search__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background-color: #004F91;
+}
+
+.md-search-result__link[data-md-state=active], .md-search-result__link:hover {
+  background-color: rgba(0, 79, 145, 0.1);
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background-color: #004F91;
+}
+
+.md-source-file:hover::before {
+  background-color: #004F91;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}

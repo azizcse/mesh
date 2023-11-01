@@ -1,0 +1,3 @@
+ropsten.infura.io
+faucet.ropsten.be
+ropsten.etherscan.io

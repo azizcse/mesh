@@ -1,0 +1,9 @@
+<ivy-module version="2.0">
+  <info organisation="com.guardsquare.dexguard"
+        module="dexguard-gradle-plugin"
+        revision="" />
+
+  <dependencies>
+    <dependency org="org.jetbrains.kotlinx" name="kotlinx-metadata-jvm" rev="0.1.0"/>
+  </dependencies>
+</ivy-module>

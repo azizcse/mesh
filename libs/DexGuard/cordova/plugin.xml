@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="dexguard-cordova-plugin" version="1.0.0">
+    <name>DexGuard</name>
+    <description>DexGuard Cordova Plugin</description>
+    <platform name="android">
+        <hook src="scripts/dexguard-setup.js" type="before_prepare"/>
+        <hook src="scripts/dexguard-cleanup.js" type="before_plugin_rm"/>
+    </platform>
+</plugin>

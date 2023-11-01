@@ -1,0 +1,2378 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Gradle Plugin - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/extra2.css">
+    
+      <link rel="stylesheet" href="../css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#getting-started" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Gradle Plugin
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Gradle Plugin
+      </label>
+    
+    <a href="gradle-plugin.html" title="Gradle Plugin" class="md-nav__link md-nav__link--active">
+      Gradle Plugin
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-plugin" class="md-nav__link">
+    Apply Plugin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-dexguard" class="md-nav__link">
+    Executing DexGuard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-dexguard-with-firebase-crashlytics" class="md-nav__link">
+    Use DexGuard with Firebase Crashlytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-dexguard-with-dynamic-features" class="md-nav__link">
+    Use DexGuard with dynamic features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fat-aar" class="md-nav__link">
+    Fat aar support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flavors-and-build-types" class="md-nav__link">
+    Flavors and build types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitive-local-dependency" class="md-nav__link">
+    Transitive local dependency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitive-remote-dependency" class="md-nav__link">
+    Transitive remote dependency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dexguard-block" class="md-nav__link">
+    The 'dexguard' block
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    license
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwriteunprotected" class="md-nav__link">
+    overwriteUnprotected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaultconfiguration" class="md-nav__link">
+    defaultConfiguration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaultconfigurations" class="md-nav__link">
+    defaultConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations_1" class="md-nav__link">
+    configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testconfiguration" class="md-nav__link">
+    testConfiguration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testconfigurations" class="md-nav__link">
+    testConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumerrulefilter" class="md-nav__link">
+    consumerRuleFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jvmargs" class="md-nav__link">
+    jvmArgs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploadcrashlyticsmappingfile" class="md-nav__link">
+    uploadCrashlyticsMappingFile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples.html" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-plugin" class="md-nav__link">
+    Apply Plugin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-dexguard" class="md-nav__link">
+    Executing DexGuard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-dexguard-with-firebase-crashlytics" class="md-nav__link">
+    Use DexGuard with Firebase Crashlytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-dexguard-with-dynamic-features" class="md-nav__link">
+    Use DexGuard with dynamic features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fat-aar" class="md-nav__link">
+    Fat aar support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flavors-and-build-types" class="md-nav__link">
+    Flavors and build types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitive-local-dependency" class="md-nav__link">
+    Transitive local dependency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitive-remote-dependency" class="md-nav__link">
+    Transitive remote dependency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dexguard-block" class="md-nav__link">
+    The 'dexguard' block
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    license
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwriteunprotected" class="md-nav__link">
+    overwriteUnprotected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaultconfiguration" class="md-nav__link">
+    defaultConfiguration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaultconfigurations" class="md-nav__link">
+    defaultConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations_1" class="md-nav__link">
+    configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testconfiguration" class="md-nav__link">
+    testConfiguration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testconfigurations" class="md-nav__link">
+    testConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumerrulefilter" class="md-nav__link">
+    consumerRuleFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jvmargs" class="md-nav__link">
+    jvmArgs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploadcrashlyticsmappingfile" class="md-nav__link">
+    uploadCrashlyticsMappingFile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Gradle Plugin</h1>
+                
+                <div class="admonition warning">
+<p class="admonition-title">Finding your protected APK</p>
+<p>DexGuard places your protected APK next to the original unprotected 
+APK, in the same directory: 
+<strong><code>build/outputs/apk/release/{app-name}-protected.apk</code></strong>. </p>
+<p>Note that <code>build/outputs/apk/release/{app-name}.apk</code>
+is the original, <strong>unprotected</strong> APK!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Runtime-invisible annotations</p>
+<p>By default D8/R8 strips runtime-invisible annotations when building release
+configurations. If you rely on these annotations being visible to DexGuard,
+please visit <strong><a href="../troubleshooting.html#preserveruntimeinvisibleannotations">this page</a></strong> 
+for a workaround.</p>
+</div>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>The DexGuard Gradle plugin is available in the <code>libs</code> folder of the DexGuard
+distribution or through the <a href="repository.html">secure Maven repository</a>.</p>
+<p>You can include the following in your root level <code>build.gradle(.kts)</code> file:</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Manual download (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="o">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">url</span> <span class="s1">&#39;/path/to/DexGuard/lib&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:x.y.z&#39;</span>     <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.guardsquare:dexguard-gradle-plugin:+&#39;</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Manual download (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="p">{</span>
+    <span class="n">repositories</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="n">google</span><span class="p">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="p">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="p">{</span>
+            <span class="n">url</span> <span class="p">=</span> <span class="n">uri</span><span class="p">(</span><span class="s">&quot;/path/to/DexGuard/lib&quot;</span><span class="p">)</span> <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="p">{</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.android.tools.build:gradle:x.y.z&quot;</span><span class="p">)</span> <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.guardsquare:dexguard-gradle-plugin:+&quot;</span><span class="p">)</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Maven (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">google</span><span class="o">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="o">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="o">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">credentials</span>  <span class="o">{</span>
+                <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;${dexguardMavenUser}&quot;</span>
+                <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;${dexguardMavenPassword}&quot;</span>
+            <span class="o">}</span>
+            <span class="n">url</span> <span class="s2">&quot;https://maven.guardsquare.com&quot;</span>
+            <span class="c1">// Only search for artifacts with groupId &quot;com.guardsquare.*&quot;,</span>
+            <span class="c1">// supported since gradle 5.1.</span>
+            <span class="n">content</span> <span class="o">{</span>
+                <span class="n">includeGroupByRegex</span> <span class="s2">&quot;com\\.guardsquare.*&quot;</span>
+            <span class="o">}</span>
+            <span class="n">authentication</span> <span class="o">{</span>
+                <span class="n">basic</span><span class="o">(</span><span class="n">BasicAuthentication</span><span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+    <span class="o">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:x.y.z&#39;</span> <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span> <span class="s1">&#39;com.guardsquare:dexguard-gradle-plugin:1.1.9&#39;</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Maven (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">buildscript</span> <span class="p">{</span>
+    <span class="n">repositories</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="n">google</span><span class="p">()</span>  <span class="c1">// For the Android Gradle plugin.</span>
+        <span class="n">mavenCentral</span><span class="p">()</span> <span class="c1">// For any dependencies.</span>
+        <span class="n">maven</span> <span class="p">{</span>   <span class="c1">// For the DexGuard Gradle plugin jar.</span>
+            <span class="n">credentials</span>  <span class="p">{</span>
+                <span class="n">username</span> <span class="p">=</span> <span class="s">&quot;${dexguardMavenUser}&quot;</span>
+                <span class="n">password</span> <span class="p">=</span> <span class="s">&quot;${dexguardMavenPassword}&quot;</span>
+            <span class="p">}</span>
+            <span class="n">url</span> <span class="p">=</span> <span class="n">uri</span><span class="p">(</span><span class="s">&quot;https://maven.guardsquare.com&quot;</span><span class="p">)</span>
+            <span class="c1">// Only search for artifacts with groupId &quot;com.guardsquare.*&quot;,</span>
+            <span class="c1">// supported since gradle 5.1.</span>
+            <span class="n">content</span> <span class="p">{</span>
+                <span class="n">includeGroupByRegex</span><span class="p">(</span><span class="s">&quot;com\\.guardsquare.*&quot;</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="n">authentication</span> <span class="p">{</span>
+                <span class="n">basic</span><span class="p">(</span><span class="n">BasicAuthentication</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="p">{</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.android.tools.build:gradle:x.y.z&quot;</span><span class="p">)</span> <span class="c1">// The Android Gradle plugin.</span>
+        <span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.guardsquare:dexguard-gradle-plugin:1.1.9&quot;</span><span class="p">)</span> <span class="c1">// The DexGuard Gradle plugin.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>In case you want to copy the DexGuard plugin to a different location you need to copy the whole
+directory structure located in '/path/to/DexGuard/lib'.</p>
+<h2 id="apply-plugin">Apply Plugin<a class="headerlink" href="#apply-plugin" title="Permanent link">&para;</a></h2>
+<p>To actually apply the plugin to your project, just add the line to your module
+level <code>build.gradle(.kts)</code> file after applying the Android Gradle plugin as shown
+below.</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;dexguard&#39;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">plugins</span> <span class="p">{</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;dexguard&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h2 id="executing-dexguard">Executing DexGuard<a class="headerlink" href="#executing-dexguard" title="Permanent link">&para;</a></h2>
+<p>DexGuard can be executed automatically whenever you build any of the configured
+variants. You can configure a variant using the <code>dexguard</code> block in your module
+level <code>build.gradle(.kts)</code> files. This is a top-level block and should be placed
+outside of the <code>android</code> block.</p>
+<div class="tabbed-set" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Manual download (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span> <span class="o">{</span> 
+    <span class="o">...</span> 
+<span class="o">}</span>
+
+<span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;path/to/dexguard/distribution&#39;</span>
+    <span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;/path/to/dexguard-license.txt&#39;</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+        <span class="o">}</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-debug.pro&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Manual download (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span> <span class="p">{</span> 
+    <span class="p">...</span> 
+<span class="p">}</span>
+
+<span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">path</span> <span class="p">=</span> <span class="s">&quot;path/to/dexguard/distribution&quot;</span>
+    <span class="n">license</span> <span class="p">=</span> <span class="s">&quot;/path/to/dexguard-license.txt&quot;</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-debug.pro&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">Maven (Groovy)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span> <span class="o">{</span> 
+    <span class="o">...</span> 
+<span class="o">}</span>
+
+<span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;9.1.9&#39;</span>
+    <span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;/path/to/dexguard-license.txt&#39;</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+        <span class="o">}</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-debug.pro&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><label for="__tabbed_3_4">Maven (Kotlin)</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">android</span> <span class="o">{</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+
+<span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;9.1.9&quot;</span>
+    <span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;/path/to/dexguard-license.txt&quot;</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">register</span><span class="o">(</span><span class="s2">&quot;release&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span><span class="o">(</span><span class="s2">&quot;dexguard-release.pro&quot;</span><span class="o">)</span>
+            <span class="n">configuration</span><span class="o">(</span><span class="s2">&quot;dexguard-project.txt&quot;</span><span class="o">)</span>
+        <span class="o">}</span>
+        <span class="n">register</span><span class="o">(</span><span class="s2">&quot;debug&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span><span class="o">(</span><span class="s2">&quot;dexguard-debug.pro&quot;</span><span class="o">)</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">minifyEnabled</p>
+<p>DexGuard expects its inputs to be <strong>unobfuscated</strong>, so make sure none of
+the variants you specify here have the <code>minifyEnabled</code> options set to
+<code>true</code>.</p>
+</div>
+<p>This will tell the DexGuard Gradle plugin the path to the DexGuard distribution
+it should use, which Android variants it should process and how these variants
+should be configured.</p>
+<p>The obfuscated apk/aab/aar is created alongside the unprotected artefact and is 
+given a <strong><code>-protected</code></strong> suffix in the name. The other outputs (mapping files, 
+reports, ...) can be found in the <code>build/outputs/dexguard</code> directory. The Gradle 
+plugin will automatically configure DexGuard to sign its output using the same 
+key that was used to sign its input. So you dont have to explicitly configure 
+DexGuard to sign the processed app.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Previous versions of the DexGuard Gradle plugin would replace the apk/aab/aar 
+originally produced by the Android build chain. <strong>This is no longer the case</strong>. 
+By default, the apk/aab/aar produced by the Android Gradle plugin will remain 
+where it is, unprotected. The obfuscated version is placed in the same directory 
+and is given a <strong><code>-protected</code></strong> suffix in the name. You can mimic the behavior 
+of previous versions of the plugin, overwriting the unprotected apk/aab/aar, by 
+specifying <code>overwriteUnprotected = true</code> in the <code>dexguard</code> block.</p>
+</div>
+<p>Below is a more elaborate explanation of all the options available in the
+<code>dexguard</code> configuration block.</p>
+<h2 id="use-dexguard-with-firebase-crashlytics" usedexguardwithcrashlytics="usedexguardwithcrashlytics">Use DexGuard with Firebase Crashlytics<a class="headerlink" href="#use-dexguard-with-firebase-crashlytics" title="Permanent link">&para;</a></h2>
+<p>The DexGuard gradle plugin has a built in Firebase Crashlytics integration,
+which allows it to automatically upload the correct mapping files.</p>
+<p>To enable this integration, please make sure to run through the following steps
+first</p>
+<ul>
+<li>Follow the Firebase Crashlytics guide to add the necessary plugins and 
+  dependencies to your project.</li>
+<li>Make sure your Crashlytics integration works <strong>without DexGuard</strong>.</li>
+<li>Make sure the DexGuard plugin is applied <strong>after</strong> the Firebase Crashlytics plugin.</li>
+<li><strong>Do not</strong> set the <code>mappingFileUploadEnabled</code> or <code>mappingFile</code> properties of the Firebase 
+  Crashlytics plugin on DexGuard-enabled build types or flavors.</li>
+<li>The DexGuard Gradle plugin will expect your mapping files to be in their 
+  default locations. Please make sure to not add any <code>-printmapping</code> rules
+  yourself when using this integration.</li>
+</ul>
+<p>Afterwards, you can use the <a href="#uploadcrashlyticsmappingfile"><code>uploadCrashlyticsMappingFile</code></a>
+option to enable mapping file uploads for the required build types and flavors.</p>
+<h2 id="use-dexguard-with-dynamic-features">Use DexGuard with dynamic features<a class="headerlink" href="#use-dexguard-with-dynamic-features" title="Permanent link">&para;</a></h2>
+<p>Dynamic feature projects can specify dependencies just like any other project.
+This means dynamic feature projects might have consumer rules or library jars
+associated with them. The Gradle plugin will need to collect these and pass
+them on to DexGuard to process your app bundle correctly. In order for the
+Gradle plugin to collect these inputs you must also apply the DexGuard Gradle
+plugin to your dynamic feature projects:</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.dynamic-feature&#39;</span>
+<span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;dexguard&#39;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">plugins</span> <span class="p">{</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.dynamic-feature&quot;</span><span class="p">)</span>
+    <span class="n">id</span><span class="p">(</span><span class="s">&quot;dexguard&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is all that is needed for the DexGuard Gradle plugin to correctly process
+app bundles with dynamic features.</p>
+<p>In case you need to specify a consumer rule filter for a dependency of a
+dynamic feature, you can do so in the dynamic feature project as shown below:</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">consumerRuleFilter</span> <span class="s1">&#39;myGroup:myModule&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">consumerRuleFilter</span><span class="p">(</span><span class="s">&quot;myGroup:myModule&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Only the <a href="#consumerrulefilter"><code>consumerRuleFilter</code></a> option is allowed for
+dynamic feature projects.</p>
+<h2 id="fat-aar">Fat aar support<a class="headerlink" href="#fat-aar" title="Permanent link">&para;</a></h2>
+<p>The DexGuard Gradle plugin can process and merge dependencies (local or remote) into the resulting aar file. 
+When an app includes the aar file, it can reference these dependencies and resources directly without the need 
+for the end user of the aar to import these again.</p>
+<p>You can use the keyword <code>embed</code> instead of <code>implementation</code> or <code>compile</code> to package a dependency inside of the resulting aar.</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">embed</span> <span class="s1">&#39;com.example:yourdependency:8.7.08&#39;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">embed</span><span class="p">(</span><span class="s">&quot;com.example:yourdependency:8.7.08&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>When referencing a project, </p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">embed</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:moduleA&#39;</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">embed</span><span class="p">(</span><span class="n">project</span><span class="p">(</span><span class="s">&quot;:moduleA&quot;</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>When referencing a local file, </p>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">repositories</span> <span class="o">{</span>
+    <span class="n">flatDir</span> <span class="o">{</span> <span class="n">dirs</span> <span class="s1">&#39;libs&#39;</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">embed</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;moduleA&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">repositories</span> <span class="p">{</span>
+    <span class="n">flatDir</span> <span class="p">{</span> <span class="n">dirs</span><span class="p">(</span><span class="s">&quot;libs&quot;</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">embed</span><span class="p">(</span><span class="n">mapOf</span><span class="p">(</span><span class="s">&quot;name&quot;</span> <span class="n">to</span> <span class="s">&quot;moduleA&quot;</span><span class="p">,</span>
+                <span class="s">&quot;ext&quot;</span>  <span class="n">to</span> <span class="s">&quot;aar&quot;</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>A specific usage of this could be the inclusion of the DexGuard runtime into an SDK.</p>
+<h3 id="flavors-and-build-types">Flavors and build types<a class="headerlink" href="#flavors-and-build-types" title="Permanent link">&para;</a></h3>
+<p>Embed dependencies also work for specific flavor and build type. You can specify such a dependency by appending <code>Embed</code> to the buildtype or flavor name.</p>
+<div class="tabbed-set" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">releaseEmbed</span> <span class="s1">&#39;com.example:yourdependency:8.7.08&#39;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">releaseEmbed</span><span class="p">(</span><span class="s">&quot;com.example:yourdependency:8.7.08&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><label for="__tabbed_9_3">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">flavor1Embed</span> <span class="s1">&#39;com.example:yourdependency:8.7.08&#39;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><label for="__tabbed_9_4">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">flavor1Embed</span><span class="p">(</span><span class="s">&quot;com.example:yourdependency:8.7.08&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="transitive-local-dependency">Transitive local dependency<a class="headerlink" href="#transitive-local-dependency" title="Permanent link">&para;</a></h3>
+<p>If you want to include local transitive dependencies in your final aar, you must explicitly add <code>embed</code> statements for these dependencies.</p>
+<p>For example, <code>mainLib</code> can depend on <code>subLib1</code>, and <code>subLib1</code> on <code>subLib2</code>, this results in a transitive dependency of <code>mainLib</code> on <code>subLib2</code>. 
+If you want to include all dependencies in your aar, you must add embed for <code>subLib1</code> and <code>subLib2</code> in your build.gradle file.</p>
+<h3 id="transitive-remote-dependency">Transitive remote dependency<a class="headerlink" href="#transitive-remote-dependency" title="Permanent link">&para;</a></h3>
+<p>If you want to include all remote transitive dependencies specified in the pom file of your dependency, you can set the transitive option 
+to true in your build.gradle file.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// the default value is false</span>
+<span class="c1">// this does not work for a local aar dependency</span>
+<span class="n">configurations</span><span class="o">.</span><span class="na">embed</span><span class="o">.</span><span class="na">transitive</span> <span class="o">=</span> <span class="kc">true</span>
+</code></pre></div>
+
+<h2 id="the-dexguard-block">The 'dexguard' block<a class="headerlink" href="#the-dexguard-block" title="Permanent link">&para;</a></h2>
+<p>The following options are available in the <code>dexguard</code> block:</p>
+<ul>
+<li><a href="#path"><code>path = &lt;path&gt;</code></a></li>
+<li><a href="#version"><code>version = &lt;version&gt;</code></a></li>
+<li><a href="#license"><code>license = &lt;license&gt;</code></a></li>
+<li><a href="#overwriteunprotected"><code>overwriteUnprotected = &lt;true/false&gt;</code></a></li>
+<li><a href="#configurations"><code>configurations &lt;variant configuration block&gt;</code></a></li>
+</ul>
+<h3 id="path">path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h3>
+<p>The <code>path</code> (or <code>version</code>) option is required when specifying the <code>dexguard</code> block and accepts
+a path, either as a String or a File object. The path should point to the
+<strong>DexGuard distribution directory</strong> you want the plugin to use.</p>
+<div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;path/to/dexguard/distribution&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">path</span> <span class="p">=</span> <span class="s">&quot;path/to/dexguard/distribution&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="version">version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<p>The <code>version</code> (or <code>path</code>) option is required when specifying the <code>dexguard</code> block and accepts
+a <a href="https://docs.gradle.org/current/userguide/single_versions.html">Gradle-style version string</a>.</p>
+<p>For example, you can keep up-to-date with patch releases for DexGuard version <code>9.1</code> 
+ using the following version string:</p>
+<div class="tabbed-set" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;9.1.+&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">version</span> <span class="p">=</span> <span class="s">&quot;9.1.+&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="license">license<a class="headerlink" href="#license" title="Permanent link">&para;</a></h3>
+<p>The <code>license</code> option can be used to set the path to your DexGuard license file or the
+directory containing the file. If you
+do not specify your license here DexGuard will search for your license in the <a href="../quickstart.html#setting-up-your-license-file">other
+standard locations</a>.</p>
+<div class="tabbed-set" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">license</span> <span class="o">=</span> <span class="s2">&quot;/path/to/dexguard-license.txt&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">license</span> <span class="p">=</span> <span class="s">&quot;/path/to/dexguard-license.txt&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="overwriteunprotected">overwriteUnprotected<a class="headerlink" href="#overwriteunprotected" title="Permanent link">&para;</a></h3>
+<p>The <code>overwriteUnprotected</code> option is optional and is by default set to <code>false</code>. When set to
+<code>true</code>, DexGuard mimics the behavior of previous versions of the plugin by overwriting
+the unprotected apk/aab/aar with its protected version and keeping the original name of the
+input apk/aab/aar, without the <code>-protected</code> suffix. It is <strong>not recommended</strong> to overwrite the
+unprotected artifacts, as this would invalidate the Gradle caches and trigger DexGuard processing
+each time the artifacts are built.</p>
+<div class="tabbed-set" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">overwriteUnprotected</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">overwriteUnprotected</span> <span class="p">=</span> <span class="k">true</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="configurations">configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
+<p>The <code>configurations</code> option is a block option of the <code>dexguard</code> block that can
+be used to specify DexGuard configurations for the Android variants you wish to
+obfuscate by using the name of that variant.</p>
+<p>For example, if you have a variant named <code>premiumRelease</code> you want to protect
+using DexGuard, you would write the following:</p>
+<div class="tabbed-set" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">premiumRelease</span> <span class="o">{</span>
+            <span class="o">...</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;premiumRelease&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>For convenience, you can also use the build type name to match all variants
+that have that build type. For example, if you have the variants
+<code>premiumRelease</code> and <code>freeRelease</code> you can match both of them by using
+<code>release</code>:</p>
+<div class="tabbed-set" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="o">...</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>The following options are available in these variant configuration blocks:</p>
+<ul>
+<li><a href="#defaultconfiguration"><code>defaultConfiguration &lt;name&gt;</code></a></li>
+<li><a href="#defaultconfigurations"><code>defaultConfigurations &lt;name&gt;, ...</code></a></li>
+<li><a href="#configuration"><code>configuration &lt;path&gt;</code></a></li>
+<li><a href="#configurations"><code>configurations &lt;path&gt;, ...</code></a></li>
+<li><a href="#testconfiguration"><code>testConfiguration &lt;path&gt;</code></a></li>
+<li><a href="#testconfigurations"><code>testConfigurations &lt;path&gt;, ...</code></a></li>
+<li><a href="#consumerrulefilter"><code>consumerRuleFilter &lt;dependency&gt;, ...</code></a></li>
+</ul>
+<h3 id="defaultconfiguration">defaultConfiguration<a class="headerlink" href="#defaultconfiguration" title="Permanent link">&para;</a></h3>
+<p>The <code>defaultConfiguration</code> option allows you to specify a default configuration
+file DexGuard should use. You can specify this option more than once, in which
+case all of the specified default configurations will be used.
+<strong>At least one default configuration must be specified.</strong></p>
+<p>A list of available default configurations can be found on the
+<a href="../defaultconfigurations.html">default configurations page</a>.</p>
+<div class="tabbed-set" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="defaultconfigurations">defaultConfigurations<a class="headerlink" href="#defaultconfigurations" title="Permanent link">&para;</a></h3>
+<p>This option is the same as <a href="#defaultconfiguration"><code>defaultConfiguration</code></a> but
+allows you to specify multiple default configurations at once.</p>
+<div class="tabbed-set" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfigurations</span> <span class="s1">&#39;dexguard-release.pro&#39;</span><span class="o">,</span> <span class="s1">&#39;dexguard-gson.pro&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfigurations</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">,</span> <span class="s">&quot;dexguard-gson.pro&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>is equivalent to</p>
+<div class="tabbed-set" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">defaultConfiguration</span> <span class="s1">&#39;dexguard-gson.pro&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-gson.pro&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="configuration">configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<p>The <code>configuration</code> option allows you to specify a custom DexGuard
+configuration file DexGuard should use. Specifying this option multiple times
+will pass all of the specified configuration files to DexGuard. The option
+accepts a path to the configuration file to use, this can be either a String or
+File object.</p>
+<div class="tabbed-set" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="configurations_1">configurations<a class="headerlink" href="#configurations_1" title="Permanent link">&para;</a></h3>
+<p>This option is the same as <a href="#configuration"><code>configuration</code></a> but
+allows you to specify multiple configuration files at once.</p>
+<p>For example, the following snippet</p>
+<div class="tabbed-set" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><label for="__tabbed_20_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">configurations</span> <span class="s1">&#39;dexguard-project.txt&#39;</span><span class="o">,</span> <span class="s1">&#39;dexguard-project-release.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><label for="__tabbed_20_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">configurations</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">,</span> <span class="s">&quot;dexguard-project-release.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>is equivalent to</p>
+<div class="tabbed-set" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><label for="__tabbed_21_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project.txt&#39;</span>
+            <span class="n">configuration</span> <span class="s1">&#39;dexguard-project-release.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><label for="__tabbed_21_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project.txt&quot;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">(</span><span class="s">&quot;dexguard-project-release.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="testconfiguration">testConfiguration<a class="headerlink" href="#testconfiguration" title="Permanent link">&para;</a></h3>
+<p>The <code>testConfiguration</code> option allows you to specify a custom DexGuard
+configuration file DexGuard should use when processing the test variant of the 
+configured variant. It has the same semantics as the
+<a href="#configuration"><code>configuration</code></a> option.</p>
+<p>In general, you won't need to configure the test variant as the DexGuard Gradle
+plugin will do this for you. This option is only useful in the rare cases
+where it is necessary to configure the test variant.</p>
+<div class="tabbed-set" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><label for="__tabbed_22_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">testConfiguration</span> <span class="s1">&#39;dexguard-test.txt&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><label for="__tabbed_22_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">testConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-test.txt&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="testconfigurations">testConfigurations<a class="headerlink" href="#testconfigurations" title="Permanent link">&para;</a></h3>
+<p>This option is the same as <a href="#testconfiguration"><code>testConfiguration</code></a> but
+allows you to specify multiple configuration files at once. Its semantics are
+the same as the ones for the <a href="#configurations"><code>configurations</code></a> option.</p>
+<h3 id="consumerrulefilter">consumerRuleFilter<a class="headerlink" href="#consumerrulefilter" title="Permanent link">&para;</a></h3>
+<p>The <code>consumerRuleFilter</code> option allows you to specify a list of maven group and
+module name pairs to filter out the ProGuard consumer rules of the dependencies
+that match the specified group and module pairs.</p>
+<p>A group and module name pair is very similar to the maven coordinates you write
+when specifying the dependencies in the <code>dependencies</code> block, but without the
+version part.</p>
+<div class="tabbed-set" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><label for="__tabbed_23_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">consumerRuleFilter</span> <span class="s1">&#39;groupName:moduleName&#39;</span><span class="o">,</span> <span class="s1">&#39;anotherGroupName:anotherModuleName&#39;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><label for="__tabbed_23_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">consumerRuleFilter</span><span class="p">(</span><span class="s">&quot;groupName:moduleName&quot;</span><span class="p">,</span> <span class="s">&quot;anotherGroupName:anotherModuleName&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="jvmargs">jvmArgs<a class="headerlink" href="#jvmargs" title="Permanent link">&para;</a></h3>
+<p>You can pass arguments to the JVM process in which DexGuard is executed using the <code>jvmArgs</code> option.
+This option takes list of strings, for example, you can set the initial and maximum heap sizes using the following:</p>
+<div class="tabbed-set" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><label for="__tabbed_24_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">jvmArgs</span> <span class="s2">&quot;-Xms512M&quot;</span><span class="o">,</span> <span class="s2">&quot;-Xmx2048M&quot;</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><label for="__tabbed_24_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">jvmArgs</span><span class="p">(</span><span class="s">&quot;-Xms512M&quot;</span><span class="p">,</span> <span class="s">&quot;-Xmx2048M&quot;</span><span class="p">)</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="uploadcrashlyticsmappingfile">uploadCrashlyticsMappingFile<a class="headerlink" href="#uploadcrashlyticsmappingfile" title="Permanent link">&para;</a></h3>
+<p>For this option to work correctly, please first follow the steps outlined in the
+<a href="#use-dexguard-with-firebase-crashlytics">"Use DexGuard with Firebase Crashlytics section"</a>.</p>
+<p>This option instructs the DexGuard gradle plugin to upload mapping files to Crashlytics for 
+the build types or flavors on which it is set to <code>true</code>. By default, it is set to <code>false</code>.</p>
+<p>For example, if you wish to upload mapping files for all release variants, you 
+could use the following:</p>
+<div class="tabbed-set" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><label for="__tabbed_25_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfigurations</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><label for="__tabbed_25_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="p">=</span> <span class="k">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>If you have multiple flavors of a certain build type, you can also enable or disable
+the uploading of mapping files independently for each individual flavor. </p>
+<p>For example, if you wish to enable the uploading of mapping files for all release 
+flavors, except <code>internal</code>, you could use the following:</p>
+<div class="tabbed-set" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><label for="__tabbed_26_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfigurations</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="o">}</span>
+        <span class="n">internalRelease</span> <span class="o">{</span>
+            <span class="n">defaultConfigurations</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="o">}</span>       
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><label for="__tabbed_26_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="p">=</span> <span class="k">true</span>
+        <span class="p">}</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;internalRelease&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>If you only wish to upload mapping files for one specific variant, e.g. <code>external</code>, you 
+could use the following:</p>
+<div class="tabbed-set" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><label for="__tabbed_27_1">Groovy</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="o">{</span>
+    <span class="n">configurations</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">defaultConfigurations</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+        <span class="o">}</span>
+        <span class="n">externalRelease</span> <span class="o">{</span>
+            <span class="n">defaultConfigurations</span> <span class="s1">&#39;dexguard-release.pro&#39;</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="o">}</span>       
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><label for="__tabbed_27_2">Kotlin</label><div class="tabbed-content">
+<div class="codehilite"><pre><span></span><code><span class="n">dexguard</span> <span class="p">{</span>
+    <span class="n">configurations</span> <span class="p">{</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">register</span><span class="p">(</span><span class="s">&quot;externalRelease&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">defaultConfiguration</span><span class="p">(</span><span class="s">&quot;dexguard-release.pro&quot;</span><span class="p">)</span>
+            <span class="n">uploadCrashlyticsMappingFile</span> <span class="p">=</span> <span class="k">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Disabling splits</p>
+<p>At this moment, it is not possible to enable splits when integrating with Crashlytics. 
+DexGuard only produces a single mapping file per build variant, and it is not valid 
+for every split APK that would be built.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Make sure to thoroughly test your Crashlytics integration before releasing.
+After enabling the uploading of mapping files, you should see two additional
+tasks being executed when assembling a variant. One will inject the necessary
+mapping file ID, a second one will upload your mapping file to Crashlytics.
+If you cause an intentional crash, a deobfuscated stack trace should show
+up in your Crashlytics console afterwards.</p>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="upgrading.html" title="Upgrading" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Upgrading
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="repository.html" title="Maven repository" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Maven repository
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

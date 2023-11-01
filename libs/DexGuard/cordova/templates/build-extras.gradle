@@ -1,0 +1,19 @@
+apply plugin: 'dexguard'
+
+// Only necessary for EncryptedSystemWebViewClient 
+dependencies {
+    implementation(name:'dexguard-runtime', ext:'aar')
+}
+
+dexguard {
+    path = 'DEXGUARD_PATH_PLACEHOLDER'
+    configurations {
+        release {
+            defaultConfiguration 'dexguard-release-aggressive.pro'
+            configuration 'dexguard-project.txt'
+        }
+        debug {
+            defaultConfiguration 'dexguard-debug.pro'
+        }
+    }
+}

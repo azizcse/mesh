@@ -1,0 +1,2658 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the DexGuard tool">
+      
+      
+      
+        <meta name="author" content="Guardsquare">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="img/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Examples - DexGuard</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+      <link rel="stylesheet" href="css/extra2.css">
+    
+      <link rel="stylesheet" href="css/tabs.css">
+    
+    
+      
+    
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMXSB9');</script>
+<!-- End Google Tag Manager -->
+
+
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#android" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMXSB9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="DexGuard" aria-label="DexGuard" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              DexGuard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Examples
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="DexGuard" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="img/logo.png" width="48" height="48">
+      
+    </a>
+    DexGuard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="quickstart.html" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/standalone.html" title="DexGuard" class="md-nav__link">
+      DexGuard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/upgrading.html" title="Upgrading" class="md-nav__link">
+      Upgrading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/gradle-plugin.html" title="Gradle Plugin" class="md-nav__link">
+      Gradle Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/repository.html" title="Maven repository" class="md-nav__link">
+      Maven repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/espresso.html" title="Espresso" class="md-nav__link">
+      Espresso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setup/cordovaplugin.html" title="Cordova Plugin" class="md-nav__link">
+      Cordova Plugin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="configuration.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="usage.html" title="Reference Guide" class="md-nav__link">
+      Reference Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defaultconfigurations.html" title="Default Configs" class="md-nav__link">
+      Default Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="annotations.html" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protection.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rasp.html" title="RASP" class="md-nav__link">
+      RASP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Languages & Platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Languages & Platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java.html" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="javascript.html" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ThreatCast
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ThreatCast
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="threatcast.html" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      In Depth
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        In Depth
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="protectionreport.html" title="Protection Report" class="md-nav__link">
+      Protection Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Examples
+      </label>
+    
+    <a href="examples.html" title="Examples" class="md-nav__link md-nav__link--active">
+      Examples
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    A simple Android application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala" class="md-nav__link">
+    Applications with the Scala runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library" class="md-nav__link">
+    A typical library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instantapp" class="md-nav__link">
+    Creating an Instant App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native" class="md-nav__link">
+    Processing native methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callback" class="md-nav__link">
+    Processing callback methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    Processing enumeration classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serializable" class="md-nav__link">
+    Processing serializable classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beans" class="md-nav__link">
+    Processing bean classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Processing annotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Processing database drivers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gson" class="md-nav__link">
+    Optimizing GSON code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#injection" class="md-nav__link">
+    Processing dependency injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dagger" class="md-nav__link">
+    Processing Dagger code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#butterknife" class="md-nav__link">
+    Processing Butterknife code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restring" class="md-nav__link">
+    Processing Restring code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Processing Android resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resourcefiles" class="md-nav__link">
+    Processing general resource files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manifestfiles" class="md-nav__link">
+    Processing manifest files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Adding reflection for sensitive APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classencryption" class="md-nav__link">
+    Encrypting classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stringencryption" class="md-nav__link">
+    Encrypting strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stacktrace" class="md-nav__link">
+    Producing useful obfuscated stack traces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repackaging" class="md-nav__link">
+    Obfuscating package names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samsungmarket" class="md-nav__link">
+    Publishing on the Samsung app market
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Removing logging code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restructuring" class="md-nav__link">
+    Restructuring the output archives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    Filtering the input and the output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadcode" class="md-nav__link">
+    Finding dead code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Using annotations to configure DexGuard
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="refcard.html" title="Reference Card" class="md-nav__link">
+      Reference Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="optimizations.html" title="Optimizations" class="md-nav__link">
+      Optimizations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="attributes.html" title="Attributes" class="md-nav__link">
+      Attributes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="loggingremoval.html" title="Logging Removal" class="md-nav__link">
+      Logging Removal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="verification.html" title="Verification" class="md-nav__link">
+      Verification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="runtime.html" title="Runtime Library" class="md-nav__link">
+      Runtime Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="plugins.html" title="Encryption Plugins" class="md-nav__link">
+      Encryption Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Addons
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Addons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="addons_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ndk.html" title="NDK" class="md-nav__link">
+      NDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="whitebox.html" title="Whitebox Cryptography" class="md-nav__link">
+      Whitebox Cryptography
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fingerprinting.html" title="Device Fingerprinting" class="md-nav__link">
+      Device Fingerprinting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="securekeyboard.html" title="Secure Keyboard" class="md-nav__link">
+      Secure Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/androidstudio.html" title="Android Studio Plugin" class="md-nav__link">
+      Android Studio Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/libraryrulesgenerator.html" title="Library Rules Generator" class="md-nav__link">
+      Library Rules Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tools/retrace.html" title="ReTrace" class="md-nav__link">
+      ReTrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="troubleshooting.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reportingissues.html" title="Reporting Issues" class="md-nav__link">
+      Reporting Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="releasenotes.html" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    A simple Android application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala" class="md-nav__link">
+    Applications with the Scala runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library" class="md-nav__link">
+    A typical library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instantapp" class="md-nav__link">
+    Creating an Instant App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native" class="md-nav__link">
+    Processing native methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callback" class="md-nav__link">
+    Processing callback methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    Processing enumeration classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serializable" class="md-nav__link">
+    Processing serializable classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beans" class="md-nav__link">
+    Processing bean classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Processing annotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Processing database drivers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gson" class="md-nav__link">
+    Optimizing GSON code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#injection" class="md-nav__link">
+    Processing dependency injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dagger" class="md-nav__link">
+    Processing Dagger code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#butterknife" class="md-nav__link">
+    Processing Butterknife code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restring" class="md-nav__link">
+    Processing Restring code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Processing Android resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resourcefiles" class="md-nav__link">
+    Processing general resource files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manifestfiles" class="md-nav__link">
+    Processing manifest files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Adding reflection for sensitive APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classencryption" class="md-nav__link">
+    Encrypting classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stringencryption" class="md-nav__link">
+    Encrypting strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stacktrace" class="md-nav__link">
+    Producing useful obfuscated stack traces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repackaging" class="md-nav__link">
+    Obfuscating package names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samsungmarket" class="md-nav__link">
+    Publishing on the Samsung app market
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Removing logging code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restructuring" class="md-nav__link">
+    Restructuring the output archives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    Filtering the input and the output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadcode" class="md-nav__link">
+    Finding dead code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Using annotations to configure DexGuard
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Examples</h1>
+                
+                <div class="admonition note">
+<p class="multicolumn">The DexGuard <a href="defaultconfigurations.html">default configurations</a> already provide support for the following libraries:</p>
+<ul>
+<li>ActionBarSherlock</li>
+<li>Amazon Ads</li>
+<li>Apache logging</li>
+<li>ButterKnife</li>
+<li>Cordova</li>
+<li>Cordova Crosswalk</li>
+<li>Couchbase Lite</li>
+<li>Crashlytics</li>
+<li>Dagger</li>
+<li>Droidsonroids Gif</li>
+<li>Ektorp</li>
+<li>Eyes-two</li>
+<li>Facebook API</li>
+<li>Facebook Conceal</li>
+<li>Facebook Fresco</li>
+<li>Glide</li>
+<li>Google API</li>
+<li>Google Cloud Messaging</li>
+<li>Google GData</li>
+<li>Google Play Services</li>
+<li>Google Play market LVL</li>
+<li>Google Play market expansion</li>
+<li>Greenrobot EventBus</li>
+<li>Guava</li>
+<li>IOCipher</li>
+<li>Jackson</li>
+<li>Java Mail</li>
+<li>JNA</li>
+<li>LibGDX</li>
+<li>LogBack</li>
+<li>MediaPlayerSDK</li>
+<li>MorphoSmart</li>
+<li>Nuance Vocalizer</li>
+<li>OkHttp</li>
+<li>OkIo</li>
+<li>OrmLite</li>
+<li>Otto</li>
+<li>Paypal card.io</li>
+<li>React Native</li>
+<li>Realm</li>
+<li>Retrofit</li>
+<li>RoboGuice</li>
+<li>RxJava</li>
+<li>SQLCipher</li>
+<li>Tapjoy</li>
+<li>Tess-two</li>
+<li>ZBar</li>
+</ul>
+</div>
+<p>You can browse through this section if you are creating a build process
+from scratch, or if your project requires further customization.</p>
+<h2 id="android">A simple Android application<a class="headerlink" href="#android" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>If you're constructing a build process <em>from scratch</em>: these options shrink,
+optimize, and obfuscate all public activities, services, broadcast receivers,
+and content providers from the compiled classes and external libraries:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars      </span><span class="err">bin/classes</span>
+<span class="nb">-injars      </span><span class="err">bin/resources.ap_</span>
+<span class="nb">-injars      </span><span class="err">libs</span>
+<span class="nb">-outjars     </span><span class="err">bin/application.apk</span>
+<span class="nb">-libraryjars </span><span class="err">/usr/local/android-sdk/platforms/android-28/android.jar</span>
+
+<span class="nb">-dalvik</span>
+<span class="nb">-repackageclasses</span> <span class="p">&#39;</span><span class="kt">x</span><span class="p">&#39;</span>
+<span class="nb">-allowaccessmodification</span>
+
+<span class="nb">-keepresourcefiles         </span><span class="err">AndroidManifest.xml</span>
+<span class="nb">-adaptresourcefilecontents </span><span class="err">AndroidManifest.xml,resources.arsc,</span>
+                           <span class="err">!</span><span class="kt">res</span><span class="err">/</span><span class="kt">raw**</span><span class="p">,</span><span class="kt">res</span><span class="err">/</span><span class="kt">**.xml</span>
+<span class="nb">-dontcompress </span><span class="err">resources.arsc,**.jpg,**.jpeg,**.png,**.gif</span>
+
+<span class="nb">-keepresourcexmlattributenames</span>
+<span class="nb">    </span><span class="err">manifest/installLocation,</span>
+    <span class="kt">manifest</span><span class="err">/</span><span class="kt">versionCode</span><span class="p">,</span>
+    <span class="kt">manifest</span><span class="err">/</span><span class="kt">application</span><span class="err">/</span><span class="kt">*</span><span class="err">/</span><span class="kt">intent</span><span class="err">-</span><span class="kt">filter</span><span class="err">/</span><span class="kt">*</span><span class="err">/</span><span class="kt">name</span>
+
+<span class="nb">-keepattributes</span> <span class="kt">*Annotation*</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="k">public</span> <span class="kd">class </span><span class="nc">* extends android.view.View </span><span class="p">{</span>
+    <span class="k">public</span> <span class="nf">&lt;init&gt;</span><span class="p">(</span><span class="kt">android.content.Context</span><span class="p">);</span>
+    <span class="k">public</span> <span class="nf">&lt;init&gt;</span><span class="p">(</span><span class="kt">android.content.Context</span><span class="p">,</span> <span class="kt">android.util.AttributeSet</span><span class="p">);</span>
+    <span class="k">public</span> <span class="nf">&lt;init&gt;</span><span class="p">(</span><span class="kt">android.content.Context</span><span class="p">,</span> <span class="kt">android.util.AttributeSet</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+    <span class="k">public</span> <span class="kt">void</span> <span class="nf">set*</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclasseswithmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">public</span> <span class="nf">&lt;init&gt;</span><span class="p">(</span><span class="kt">android.content.Context</span><span class="p">,</span> <span class="kt">android.util.AttributeSet</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclasseswithmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">public</span> <span class="nf">&lt;init&gt;</span><span class="p">(</span><span class="kt">android.content.Context</span><span class="p">,</span> <span class="kt">android.util.AttributeSet</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* extends android.content.Context </span><span class="p">{</span>
+   <span class="k">public</span> <span class="kt">void</span> <span class="nf">*</span><span class="p">(</span><span class="kt">android.view.View</span><span class="p">);</span>
+   <span class="k">public</span> <span class="kt">void</span> <span class="nf">*</span><span class="p">(</span><span class="kt">android.view.MenuItem</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements android.os.Parcelable </span><span class="p">{</span>
+    <span class="k">static</span> <span class="kt">**</span> <span class="nf">CREATOR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">**.R$* </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">android.webkit.JavascriptInterface</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>We're specifying the input, the output, and the underlying run-time. We're
+targeting the Android run-time and the Dalvik virtual machine, with the
+<a href="usage.html#dalvik"><code>-dalvik</code></a> option.</p>
+<p>With <a href="usage.html#keepresourcefiles"><code>-keepresourcefiles</code></a>, we're keeping the
+Android manifest file as the main entry point of the application. DexGuard can
+then determine which resources and which code are required and how they can be
+optimized and obfuscated.</p>
+<p>With <a href="usage.html#adaptresourcefilecontents"><code>-adaptresourcefilecontents</code></a>, we're
+adapting the obfuscated names inside the Android manifest file and the various
+binary resource files.</p>
+<p>The <a href="usage.html#dontcompress"><code>-dontcompress</code></a> option specifies which files
+should not be compressed inside apk files, typically because they are already
+compressed themselves. The DexGuard plugins provide a long list of such files.</p>
+<p>Inside the Android manifest file, we're keeping some attribute names. The
+Android runtime somewhat arbitrarily requires them to launch the application.
+Names of other attributes that have numeric identifiers can be discarded.</p>
+<p>We're keeping annotations, since they might be used by custom <code>RemoteViews</code>
+and by various frameworks.</p>
+<p>We're keeping any custom <code>View</code> extensions and other classes with typical
+constructors, since they might be referenced from XML layout files.</p>
+<p>We're also keeping possible <code>onClick</code> handlers in custom <code>Context</code> extensions,
+since they might be referenced from XML layout files.</p>
+<p>We're also keeping the required static fields in <code>Parcelable</code> implementations,
+since they are accessed by introspection.</p>
+<p>We're keeping the static fields of referenced inner classes of auto-generated
+<code>R</code> classes, just in case your code is accessing those fields by
+introspection. Note that the compiler already inlines primitive fields, so
+DexGuard can generally remove all these classes entirely anyway (because the
+classes are not referenced and therefore not required).</p>
+<p>Finally, we're keeping annotated Javascript interface methods, so they can be
+exported and accessed by their original names. Javascript interface methods
+that are not annotated (in code targeted at Android versions older than 4.2)
+still need to be preserved manually.</p>
+<p>If you're using additional Google APIs, you'll have to specify those as well,
+for instance:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-libraryjars </span><span class="err">/usr/local/java/android-sdk/extras/android/support/v4/android-support-v4.jar</span>
+<span class="nb">-libraryjars </span><span class="err">/usr/local/java/android-sdk/add-ons/addon-google_apis-google-21/libs/maps.jar</span>
+</code></pre></div>
+
+<p>If you're using Google's optional License Verification Library, you can
+obfuscate its code along with your own code. You do have to preserve its
+<code>ILicensingService</code> interface for the library to work:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="k">public</span> <span class="kd">interface </span><span class="nc">com.android.vending.licensing.ILicensingService</span>
+</code></pre></div>
+
+<p>If you're using the Android Compatibility library, you should add the
+following line, to let DexGuard know it's ok that the library references some
+classes that are not available in all versions of the API:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-dontwarn</span> <span class="kt">android.support.**</span>
+</code></pre></div>
+
+<p>If applicable, you should add options for processing <a href="#native">native
+methods</a>, <a href="#callback">callback methods</a>,
+<a href="#enumerations">enumerations</a>, <a href="#resources">Android resources</a>, and <a href="#resourcefiles">resource
+files</a>. You may also want to add options for producing <a href="#stacktrace">useful
+stack traces</a> and to <a href="#logging">remove logging</a>. You can find a
+complete sample configuration in <code>extras/android.pro</code> in the DexGuard
+distribution.</p>
+<p>Working sample project: <code>samples/basic/HelloWorld</code></p>
+<h2 id="scala">Applications with the Scala runtime<a class="headerlink" href="#scala" title="Permanent link">&para;</a></h2>
+<p>These additional options shrink, optimize, and obfuscate Scala applications in
+<code>bin/classes</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars      </span><span class="err">bin/classes</span>
+<span class="nb">-injars      </span><span class="err">bin/resources.ap_</span>
+<span class="nb">-injars      </span><span class="err">libs</span>
+<span class="nb">-injars      </span><span class="err">/usr/local/scala-2.9.1/lib/scala-library.jar</span>
+<span class="nb">-outjars     </span><span class="err">bin/application.apk</span>
+<span class="nb">-libraryjars </span><span class="err">/usr/local/android-sdk/platforms/android-28/android.jar</span>
+
+<span class="err">//</span> <span class="o">...</span> <span class="kt">Add</span> <span class="kt">the</span> <span class="kt">standard</span> <span class="kt">settings</span> <span class="kt">for</span> <span class="kt">Android</span> <span class="kt">applications</span> <span class="o">...</span>
+
+<span class="nb">-dontwarn</span> <span class="kt">scala.**</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements org.xml.sax.EntityResolver</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="kt">**</span> <span class="nf">MODULE$</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembernames</span><span class="w"> </span><span class="kd">class </span><span class="nc">scala.concurrent.forkjoin.ForkJoinPool </span><span class="p">{</span>
+    <span class="kt">long</span> <span class="nf">eventCount</span><span class="p">;</span>
+    <span class="kt">int</span>  <span class="nf">workerCounts</span><span class="p">;</span>
+    <span class="kt">int</span>  <span class="nf">runControl</span><span class="p">;</span>
+    <span class="kt">scala.concurrent.forkjoin.ForkJoinPool</span><span class="err">$</span><span class="kt">WaitQueueNode</span> <span class="nf">syncStack</span><span class="p">;</span>
+    <span class="kt">scala.concurrent.forkjoin.ForkJoinPool</span><span class="err">$</span><span class="kt">WaitQueueNode</span> <span class="nf">spareStack</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembernames</span><span class="w"> </span><span class="kd">class </span><span class="nc">scala.concurrent.forkjoin.ForkJoinWorkerThread </span><span class="p">{</span>
+    <span class="kt">int</span> <span class="nf">base</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="nf">sp</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="nf">runState</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembernames</span><span class="w"> </span><span class="kd">class </span><span class="nc">scala.concurrent.forkjoin.ForkJoinTask </span><span class="p">{</span>
+    <span class="kt">int</span> <span class="nf">status</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembernames</span><span class="w"> </span><span class="kd">class </span><span class="nc">scala.concurrent.forkjoin.LinkedTransferQueue </span><span class="p">{</span>
+    <span class="kt">scala.concurrent.forkjoin.LinkedTransferQueue</span><span class="err">$</span><span class="kt">PaddedAtomicReference</span> <span class="nf">head</span><span class="p">;</span>
+    <span class="kt">scala.concurrent.forkjoin.LinkedTransferQueue</span><span class="err">$</span><span class="kt">PaddedAtomicReference</span> <span class="nf">tail</span><span class="p">;</span>
+    <span class="kt">scala.concurrent.forkjoin.LinkedTransferQueue</span><span class="err">$</span><span class="kt">PaddedAtomicReference</span> <span class="nf">cleanMe</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The configuration is an extension of the configuration for <a href="#activities">processing
+activities</a>, because Scala is compiled to ordinary Java bytecode.
+However, the example processes the Scala runtime library as well. The
+processed jar can be an order of magnitude smaller and a few times faster than
+the original code (for the Scala code examples, for instance).</p>
+<p>The <a href="usage.html#dontwarn"><code>-dontwarn</code></a> option tells DexGuard not to complain
+about some artefacts in the Scala runtime, the way it is compiled by the
+<code>scalac</code> compiler (at least in Scala 2.9.1 and older). Note that this option
+should always be used with care.</p>
+<p>The additional <a href="usage.html#keepoverview"><code>-keep</code></a> options make sure that some
+classes and some fields that are accessed by means of introspection are not
+removed or renamed.</p>
+<p>If applicable, you should add options for processing <a href="#native">native
+methods</a>, <a href="#callback">callback methods</a>,
+<a href="#enumerations">enumerations</a>, <a href="#serializable">serializable classes</a>, <a href="#beans">bean
+classes</a>, <a href="#annotations">annotations</a>, and <a href="#resourcefiles">resource
+files</a>.</p>
+<h2 id="library">A typical library<a class="headerlink" href="#library" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>If you're constructing a build process from scratch: these options shrink,
+optimize, and obfuscate an entire library, keeping all public and protected
+classes and class members, native method names, and serialization code. The
+processed version of the library can then still be used as such, for
+developing code based on its public API.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars       </span><span class="err">in.jar</span>
+<span class="nb">-outjars      </span><span class="err">out.jar</span>
+<span class="nb">-libraryjars  </span><span class="err">/usr/local/android-sdk/platforms/android-28/android.jar</span>
+<span class="nb">-printmapping </span><span class="err">out.map</span>
+
+<span class="nb">-keepresourcefiles </span><span class="err">*</span><span class="k k-Filename">*</span>
+<span class="nb">-keepresources </span><span class="err">*/</span><span class="k k-Filename">*</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="k">public</span> <span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">protected</span> <span class="nf">*</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepparameternames</span>
+<span class="nb">-renamesourcefileattribute</span> <span class="kt">SourceFile</span>
+<span class="nb">-keepattributes</span> <span class="kt">Signature</span><span class="p">,</span><span class="kt">Exceptions</span><span class="p">,</span><span class="kt">*Annotation*</span><span class="p">,</span>
+                <span class="kt">InnerClasses</span><span class="p">,</span><span class="kt">PermittedSubclasses</span><span class="p">,</span><span class="kt">EnclosingMethod</span><span class="p">,</span>
+                <span class="kt">Deprecated</span><span class="p">,</span><span class="kt">SourceFile</span><span class="p">,</span><span class="kt">LineNumberTable</span>
+
+<span class="nb">-keepclasseswithmembernames</span><span class="p">,</span><span class="k">includedescriptorclasses</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">native</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="p">,</span><span class="k">allowoptimization</span><span class="w"> </span><span class="k">enum</span> <span class="kt">*</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">**</span><span class="o">[]</span> <span class="nf">values</span><span class="p">();</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">**</span> <span class="nf">valueOf</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.io.Serializable </span><span class="p">{</span>
+    <span class="k">static</span> <span class="k">final</span> <span class="kt">long</span> <span class="nf">serialVersionUID</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">final</span> <span class="kt">java.io.ObjectStreamField</span><span class="o">[]</span> <span class="nf">serialPersistentFields</span><span class="p">;</span>
+    <span class="k">private</span> <span class="kt">void</span> <span class="nf">writeObject</span><span class="p">(</span><span class="kt">java.io.ObjectOutputStream</span><span class="p">);</span>
+    <span class="k">private</span> <span class="kt">void</span> <span class="nf">readObject</span><span class="p">(</span><span class="kt">java.io.ObjectInputStream</span><span class="p">);</span>
+    <span class="kt">java.lang.Object</span> <span class="nf">writeReplace</span><span class="p">();</span>
+    <span class="kt">java.lang.Object</span> <span class="nf">readResolve</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This configuration should preserve everything a developer ever needs to access
+in the library: all Android resources and all public and protected classes,
+fields, and methods. We could refine the wildcards if we only want to include
+part of the resources (only one language, for instance) or part of the code
+(only a few packages, for instance).</p>
+<p>If there are any non-public classes, fields, or methods that are invoked
+dynamically, we should be specify them using additional
+<a href="usage.html#keep"><code>-keep</code></a> options.</p>
+<p>The "Signature" attribute is required to be able to access generic types.</p>
+<p>The "Exceptions" attribute has to be preserved, so the compiler knows which
+exceptions methods may throw.</p>
+<p>The "InnerClasses" attribute (or more precisely, its source name part) has to
+be preserved too, for any inner classes that can be referenced from outside
+the library. The <code>javac</code> compiler would be unable to find the inner classes
+otherwise.</p>
+<p>The "PermittedSubclasses" attribute defines sealed classes, which developers
+can't extend further.</p>
+<p>The "EnclosingMethod" attribute marks classes that are defined inside methods.</p>
+<p>The "Deprecated" attribute marks any deprecated classes, fields, or
+methods, which may be useful for developers to know.</p>
+<p>The <a href="usage.html#keepparameternames"><code>-keepparameternames</code></a> option keeps the
+parameter names in the "LocalVariableTable" and "LocalVariableTypeTable"
+attributes of public library methods. Some IDEs can present these names to the
+developers who use the library.</p>
+<p>Finally, we're keeping the "Deprecated" attribute and the attributes for
+producing <a href="#stacktrace">useful stack traces</a>.</p>
+<p>We've also added some options for for processing <a href="#native">native methods</a>,
+<a href="#enumerations">enumerations</a>, <a href="#serializable">serializable classes</a>, and
+<a href="#annotations">annotations</a>, which are all discussed in their respective
+examples.</p>
+<h2 id="instantapp">Creating an Instant App<a class="headerlink" href="#instantapp" title="Permanent link">&para;</a></h2>
+<p>DexGuard can automatically transform a traditional installed app into an
+Instant App. You only need to specify the Instant app features. For example,
+if your Android manifest specifies two activities, HelloActivity and
+GoodbyeActivity, you can create Instant app feature apks and a base apk for
+them:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-</span><span class="kt">instantappfeature</span> <span class="kt">hello</span> <span class="kt">com.example.HelloActivity</span>   <span class="kt">https</span><span class="p">:</span><span class="err">//</span><span class="kt">example.com</span><span class="err">/</span><span class="kt">hello</span>
+<span class="err">-</span><span class="kt">instantappfeature</span> <span class="kt">bye</span>   <span class="kt">com.example.GoodbyeActivity</span> <span class="kt">https</span><span class="p">:</span><span class="err">//</span><span class="kt">example.com</span><span class="err">/</span><span class="kt">bye</span>
+</code></pre></div>
+
+<p>You can freely choose the feature names. The activities should be present in
+the Android manifest. You can also freely choose the URLs through which you
+can access the features when they are installed.</p>
+<h2 id="native">Processing native methods<a class="headerlink" href="#native" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The default configuration of the DexGuard plugins already specifies these
+settings for you.</p>
+</div>
+<p>If your application contains native methods, you'll want to preserve
+their names and their classes' names, so they can still be linked to the
+native library. The following additional option will ensure that:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclasseswithmembernames</span><span class="p">,</span><span class="k">includedescriptorclasses</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">native</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Note the use of
+<a href="usage.html#keepclasseswithmembernames"><code>-keepclasseswithmembernames</code></a>. We don't
+want to preserve all classes or all native methods; we just want to keep the
+relevant names from being obfuscated. The modifier
+<a href="usage.html#includedescriptorclasses"><code>includedescriptorclasses</code></a> additionally
+makes sure that the return types and parameter types aren't renamed either, so
+the entire signatures remain compatible with the native libraries.</p>
+<p>DexGuard doesn't look at your native code, so it won't automatically preserve
+the classes or class members that are invoked by the native code. These are
+entry points, which you'll have to specify explicitly. <a href="callback">Callback
+methods</a> are discussed below as a typical example.</p>
+<p>Working sample project: <code>samples/basic/NativeLibraryEncryption</code></p>
+<h2 id="callback">Processing callback methods<a class="headerlink" href="#callback" title="Permanent link">&para;</a></h2>
+<p>If your application contains callback methods, which are called from external
+code (native code, scripts,...), you'll want to preserve them, and probably
+their classes too. They are just entry points to your code, much like, say,
+the main method of an application. If they aren't preserved by other
+<a href="usage.html#keep"><code>-keep</code></a> options, something like the following option will
+keep the callback class and method:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">com.example.MyCallbackClass </span><span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">myCallbackMethod</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This will preserve the given class and method from being removed or
+renamed.</p>
+<h2 id="enumerations">Processing enumeration classes<a class="headerlink" href="#enumerations" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>If your application contains enumeration classes, you'll have to preserve some
+special methods. Enumerations were introduced in Java 5. The java compiler
+translates enumerations into classes with a special structure. Notably, the
+classes contain implementations of some static methods that the run-time
+environment accesses by introspection (Isn't that just grand? Introspection is
+the self-modifying code of a new generation). You have to specify these
+explicitly, to make sure they aren't removed or obfuscated:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="p">,</span><span class="k">allowoptimization</span><span class="w"> </span><span class="k">enum</span> <span class="kt">*</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">**</span><span class="o">[]</span> <span class="nf">values</span><span class="p">();</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">**</span> <span class="nf">valueOf</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="serializable">Processing serializable classes<a class="headerlink" href="#serializable" title="Permanent link">&para;</a></h2>
+<p>More complex applications may contain classes that are serialized.
+Depending on the way in which they are used, they may require special
+attention:</p>
+<ul>
+<li>Often, serialization is simply a means of transporting data, without
+  long-term storage. Classes that are shrunk and obfuscated should then
+  continue to function fine with the following additional options:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.io.Serializable </span><span class="p">{</span>
+  <span class="k">private</span> <span class="k">static</span> <span class="k">final</span> <span class="kt">java.io.ObjectStreamField</span><span class="o">[]</span> <span class="nf">serialPersistentFields</span><span class="p">;</span>
+  <span class="k">private</span> <span class="kt">void</span> <span class="nf">writeObject</span><span class="p">(</span><span class="kt">java.io.ObjectOutputStream</span><span class="p">);</span>
+  <span class="k">private</span> <span class="kt">void</span> <span class="nf">readObject</span><span class="p">(</span><span class="kt">java.io.ObjectInputStream</span><span class="p">);</span>
+  <span class="kt">java.lang.Object</span> <span class="nf">writeReplace</span><span class="p">();</span>
+  <span class="kt">java.lang.Object</span> <span class="nf">readResolve</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The <a href="usage.html#keepclassmembers"><code>-keepclassmembers</code></a> option makes sure
+  that any serialization methods are kept. By using this option instead of
+  the basic <code>-keep</code> option, we're not forcing preservation of <em>all</em>
+  serializable classes, just preservation of the listed members of classes
+  that are actually used.</p>
+<ul>
+<li>Sometimes, the serialized data are stored, and read back later into newer
+  versions of the serializable classes. One then has to take care the classes
+  remain compatible with their unprocessed versions and with future processed
+  versions. In such cases, the relevant classes will most likely have
+  <code>serialVersionUID</code> fields. The following options should then be sufficient
+  to ensure compatibility over time:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepnames</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.io.Serializable</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.io.Serializable </span><span class="p">{</span>
+  <span class="k">static</span> <span class="k">final</span> <span class="kt">long</span> <span class="nf">serialVersionUID</span><span class="p">;</span>
+  <span class="k">private</span> <span class="k">static</span> <span class="k">final</span> <span class="kt">java.io.ObjectStreamField</span><span class="o">[]</span> <span class="nf">serialPersistentFields</span><span class="p">;</span>
+  <span class="k">!static</span> <span class="k">!transient</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+  <span class="k">private</span> <span class="kt">void</span> <span class="nf">writeObject</span><span class="p">(</span><span class="kt">java.io.ObjectOutputStream</span><span class="p">);</span>
+  <span class="k">private</span> <span class="kt">void</span> <span class="nf">readObject</span><span class="p">(</span><span class="kt">java.io.ObjectInputStream</span><span class="p">);</span>
+  <span class="kt">java.lang.Object</span> <span class="nf">writeReplace</span><span class="p">();</span>
+  <span class="kt">java.lang.Object</span> <span class="nf">readResolve</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The <code>serialVersionUID</code> and <code>serialPersistentFields</code> lines makes sure those
+  fields are preserved, if they are present. The <code>&lt;fields&gt;</code> line preserves
+  all non-static, non-transient fields, with their original names. The
+  introspection of the serialization process and the de-serialization
+  process will then find consistent names.</p>
+<ul>
+<li>Occasionally, the serialized data have to remain compatible, but the classes
+  involved lack <code>serialVersionUID</code> fields. I imagine the original code will
+  then be hard to maintain, since the serial version UID is then computed from
+  a list of features the serializable class. Changing the class ever so
+  slightly may change the computed serial version UID. The list of features is
+  specified in the section on <a href="http://docs.oracle.com/javase/8/docs/platform/serialization/spec/class.html#a4100">Stream Unique
+  Identifiers</a>
+  of Sun's <a href="http://docs.oracle.com/javase/8/docs/platform/serialization/spec/serialTOC.html">Java Object Serialization
+  Specification</a>.
+  The following directives should at least partially ensure compatibility with
+  the original classes:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepnames</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.io.Serializable</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.io.Serializable </span><span class="p">{</span>
+  <span class="k">static</span> <span class="k">final</span> <span class="kt">long</span> <span class="nf">serialVersionUID</span><span class="p">;</span>
+  <span class="k">private</span> <span class="k">static</span> <span class="k">final</span> <span class="kt">java.io.ObjectStreamField</span><span class="o">[]</span> <span class="nf">serialPersistentFields</span><span class="p">;</span>
+  <span class="k">!static</span> <span class="k">!transient</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+  <span class="k">!private</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+  <span class="k">!private</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+  <span class="k">private</span> <span class="kt">void</span> <span class="nf">writeObject</span><span class="p">(</span><span class="kt">java.io.ObjectOutputStream</span><span class="p">);</span>
+  <span class="k">private</span> <span class="kt">void</span> <span class="nf">readObject</span><span class="p">(</span><span class="kt">java.io.ObjectInputStream</span><span class="p">);</span>
+  <span class="kt">java.lang.Object</span> <span class="nf">writeReplace</span><span class="p">();</span>
+  <span class="kt">java.lang.Object</span> <span class="nf">readResolve</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The new options force preservation of the elements involved in the UID
+  computation. In addition, the user will have to manually specify all
+  interfaces of the serializable classes (using something like "<code>-keep
+  interface MyInterface</code>"), since these names are also used when computing
+  the UID. A fast but sub-optimal alternative would be simply keeping all
+  interfaces with "<code>-keep interface *</code>".</p>
+<ul>
+<li>In the rare event that you are serializing lambda expressions in Java 8 or
+  higher, you need to preserve some methods and adapt the hard-coded names of
+  the classes in which they occur:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+  <span class="k">private</span> <span class="k">static</span> <span class="kt">synthetic</span> <span class="kt">java.lang.Object</span> <span class="nf">$deserializeLambda$</span><span class="p">(</span><span class="kt">java.lang.invoke.SerializedLambda</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembernames</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+  <span class="k">private</span> <span class="k">static</span> <span class="kt">synthetic</span> <span class="o">***</span> <span class="nf">lambda$*</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-adaptclassstrings</span><span class="w"> </span><span class="kt">com.example.Test</span>
+</code></pre></div>
+
+<p>This should satisfy the reflection in the deserialization code of
+  the Java run-time.</p>
+<p>Note that the above options may preserve more classes and class members than
+strictly necessary. For instance, a large number of classes may implement the
+<code>Serialization</code> interface, yet only a small number may actually ever be
+serialized. Knowing your application and tuning the configuration often
+produces more compact results.</p>
+<h2 id="beans">Processing bean classes<a class="headerlink" href="#beans" title="Permanent link">&para;</a></h2>
+<p>If your application makes extensive use of introspection on bean classes
+to find bean editor classes, or getter and setter methods, then
+configuration may become painful. There's not much else you can do than
+making sure the bean class names, or the getter and setter names don't
+change. For instance:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="k">public</span> <span class="kd">class </span><span class="nc">com.example.MyBean </span><span class="p">{</span>
+    <span class="k">public</span> <span class="kt">void</span> <span class="nf">setMyProperty</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="nf">getMyProperty</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="k">public</span> <span class="kd">class </span><span class="nc">com.example.MyBeanEditor</span>
+</code></pre></div>
+
+<p>If there are too many elements to list explicitly, wildcards in class names
+and method signatures might be helpful. This example preserves all possible
+setters and getters in classes in the package <code>mybeans</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">mybeans.** </span><span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">set*</span><span class="p">(</span><span class="o">***</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="nf">set*</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="o">***</span><span class="p">);</span>
+
+    <span class="kt">boolean</span> <span class="nf">is*</span><span class="p">();</span>
+    <span class="kt">boolean</span> <span class="nf">is*</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+    <span class="o">***</span> <span class="nf">get*</span><span class="p">();</span>
+    <span class="o">***</span> <span class="nf">get*</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The '<code>***</code>' wildcard matches any type (primitive or non-primitive, array or
+non-array). The methods with the '<code>int</code>' arguments matches properties that are
+lists.</p>
+<h2 id="annotations">Processing annotations<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The default configuration of the DexGuard plugins already specifies these
+settings for you.</p>
+</div>
+<p>If your application uses annotations, you may want to preserve them in the
+processed output. Annotations are represented by attributes that have no
+direct effect on the execution of the code. However, their values can be
+retrieved through introspection, allowing developers to adapt the execution
+behavior accordingly. By default, DexGuard treats annotation attributes as
+optional, and removes them in the obfuscation step. If they are required,
+you'll have to specify this explicitly:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepattributes</span> <span class="kt">*Annotation*</span>
+</code></pre></div>
+
+<p>For brevity, we're specifying a wildcarded attribute name, which will match
+<code>RuntimeVisibleAnnotations</code>, <code>RuntimeInvisibleAnnotations</code>,
+<code>RuntimeVisibleParameterAnnotations</code>, <code>RuntimeInvisibleParameterAnnotations</code>,
+and <code>AnnotationDefault</code>. Depending on the purpose of the processed code, you
+could refine this selection, for instance not keeping the run-time invisible
+annotations (which are only used at compile-time).</p>
+<p>Some code may make further use of introspection to figure out the enclosing
+methods of anonymous inner classes. In that case, the corresponding attribute
+has to be preserved as well:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepattributes</span> <span class="kt">EnclosingMethod</span>
+</code></pre></div>
+
+<h2 id="database">Processing database drivers<a class="headerlink" href="#database" title="Permanent link">&para;</a></h2>
+<p>Database drivers are implementations of the <code>Driver</code> interface. Since they are
+often created dynamically, you may want to preserve any implementations that
+you are processing as entry points:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">* implements java.sql.Driver</span>
+</code></pre></div>
+
+<p>This option also gets rid of the note that DexGuard prints out about
+<code>(java.sql.Driver)Class.forName</code> constructs, if you are instantiating a driver
+in your code (without necessarily implementing any drivers yourself).</p>
+<h2 id="gson">Optimizing GSON code<a class="headerlink" href="#gson" title="Permanent link">&para;</a></h2>
+<p>DexGuard <a href="optimizations.html#gson">optimizes Gson code</a>, by detecting which
+domain classes are serialized using the Gson library, and then replacing the
+reflection-based implementation by more efficient hard-coded serialization.</p>
+<p>The GSON optimization is enabled by default and doesn't require any additional
+configuration. If you've disabled optimization, the GSON library still relies
+on reflection on the fields of the classes that it serializes. You then need
+to preserve the parameterless constructor and the serialized fields from being
+removed, optimized, or obfuscated. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">com.example.SerializedClass </span><span class="p">{</span>
+    <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+    <span class="nf">&lt;init&gt;</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>While creating the configuration, you can specify the option
+<a href="usage.html#addconfigurationdebugging"><code>-addconfigurationdebugging</code></a>, to get
+feedback on the necessary settings at run-time.</p>
+<p>Alternatively, you can make sure the fields are explicitly annotated with
+<code>@SerializedName</code>, so the names of the fields can be obfuscated. You can
+then keep all of them at the same time with:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclasseswithmembers</span><span class="p">,</span><span class="k">allowobfuscation</span><span class="p">,</span><span class="k">includedescriptorclasses</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">com.google.gson.annotations.SerializedName</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclassmembers</span><span class="w"> </span><span class="k">enum</span> <span class="kt">*</span> <span class="p">{</span>
+    <span class="o">@</span><span class="kt">com.google.gson.annotations.SerializedName</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Working sample project: <code>samples/advanced/Gson</code></p>
+<h2 id="injection">Processing dependency injection<a class="headerlink" href="#injection" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>Your application may be using a framework for dependency injection, such as
+Spring. Such frameworks automatically assign instances of resource classes to
+fields and method parameters. They heavily rely on annotations and
+introspection, even accessing private class members directly. We then have to
+avoid that such fields or methods are removed or renamed. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">javax.annotation.Resource</span> <span class="nf">*</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The Spring framework has another similar annotation <code>@Autowired</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">org.springframework.beans.factory.annotation.Autowired</span> <span class="nf">*</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="dagger">Processing Dagger code<a class="headerlink" href="#dagger" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>Your application may be using the Dagger library for its dependency injection.</p>
+<p><strong>Dagger 1</strong> relies heavily on reflection, so you may need some additional
+configuration to make sure it continues to work. DexGuard's default
+configuration already keeps some required classes:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="p">,</span><span class="k">allowobfuscation</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">dagger.**</span> <span class="nf">*</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">**$$ModuleAdapter</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">**$$InjectAdapter</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">**$$StaticInjection</span>
+
+<span class="nb">-if</span><span class="w">   </span><span class="kd">class </span><span class="nc">**$$ModuleAdapter</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="err">&lt;</span><span class="nc">1</span><span class="err">&gt;</span>
+
+<span class="nb">-if</span><span class="w">   </span><span class="kd">class </span><span class="nc">**$$InjectAdapter</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="err">&lt;</span><span class="nc">1</span><span class="err">&gt;</span>
+
+<span class="nb">-if</span><span class="w">   </span><span class="kd">class </span><span class="nc">**$$StaticInjection</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="err">&lt;</span><span class="nc">1</span><span class="err">&gt;</span>
+
+<span class="nb">-keepnames</span><span class="w"> </span><span class="kd">class </span><span class="nc">dagger.Lazy</span>
+</code></pre></div>
+
+<p>That way, Dagger can combine the corresponding pairs of classes, based on
+their names.</p>
+<p>Furthermore, if your code injects dependencies into some given classes with an
+annotation like <code>@Module(injects = { SomeClass.class }, ...)</code>, you need to
+preserve the specified names as well:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">com.example.SomeClass</span>
+</code></pre></div>
+
+<p><strong>Dagger 2</strong> no longer relies on reflection. You don't need to preserve any
+classes there.</p>
+<p>Working sample project: <code>samples/advanced/Dagger</code></p>
+<h2 id="butterknife">Processing Butterknife code<a class="headerlink" href="#butterknife" title="Permanent link">&para;</a></h2>
+<p>If your application includes Butterknife to inject views, you also need a few
+lines of configuration, since Butterknife relies on reflection to tie together
+the code at runtime:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keep</span><span class="w"> </span><span class="o">@</span><span class="kt">interface</span> <span class="kt">butterknife.*</span>
+
+<span class="nb">-keepclasseswithmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">butterknife.*</span> <span class="nf">&lt;fields&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclasseswithmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">butterknife.*</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keepclasseswithmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="o">@</span><span class="kt">butterknife.On*</span> <span class="nf">&lt;methods&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">**$$ViewInjector </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">inject</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">reset</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">**$$ViewBinder </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">bind</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">unbind</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-if</span><span class="w">   </span><span class="kd">class </span><span class="nc">**$$ViewBinder</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="err">&lt;</span><span class="nc">1</span><span class="err">&gt;</span>
+
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="nc">**</span><span class="kt">_ViewBinding</span> <span class="p">{</span>
+    <span class="nf">&lt;init&gt;</span><span class="p">(</span><span class="err">&lt;</span><span class="kt">1</span><span class="err">&gt;</span><span class="p">,</span> <span class="kt">android.view.View</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">-if</span><span class="w">   </span><span class="kd">class </span><span class="nc">**</span><span class="kt">_ViewBinding</span>
+<span class="nb">-keep</span><span class="w"> </span><span class="kd">class </span><span class="err">&lt;</span><span class="nc">1</span><span class="err">&gt;</span>
+</code></pre></div>
+
+<p>These settings preserve the Butterknife annotations, the annotated fields and
+methods, and the generated classes and methods that Butterknife accesses by
+reflection.</p>
+<h2 id="restring">Processing Restring code<a class="headerlink" href="#restring" title="Permanent link">&para;</a></h2>
+<p>If you application includes the Restring library to dynamically replace
+resource strings, you need some additional configuration. Restring relies on
+the names of resource strings (with <code>Resources#getResourceEntryName</code>) and the
+names of attributes in resource XML files (with
+<code>AttributeSet#getAttributeName</code>). Conservatively, you can keep all resource
+strings with their original names, and all attribute names:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresources </span><span class="err">string/*</span><span class="k k-Filename">*</span>
+<span class="nb">-keepresourcexmlattributenames </span><span class="err">*</span><span class="k k-Filename">*</span>
+</code></pre></div>
+
+<p>For more fine-tuned settings without the broad wildcards, you can inspect the
+<code>StringsLoader</code> implementation in your code or specify the option
+<a href="usage.html#addconfigurationdebugging"><code>-addconfigurationdebugging</code></a>, to get
+feedback on the necessary settings at run-time.</p>
+<h2 id="resources">Processing Android resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Your Android application typically contains resources and resource files. It
+will generally access them through their numeric IDs from <code>R</code> classes, for
+example <code>R.drawable.my_icon</code>. The shrinking, optimization, and obfuscation
+steps handle such use automatically. However, if your application accesses
+some resources by reflection, based on their name strings, you need to
+preserve these names from being obfuscated. For example, for
+<code>resources.getIdentifier("my_icon", "drawable", package)</code>, you need to
+preserve the corresponding resource with its original name:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresources </span><span class="err">drawable/my_icon</span>
+</code></pre></div>
+
+<p>The <a href="usage.html#keepresources"><code>-keepresources</code></a> option preserves the specified
+resources. You can use wildcards. For a quick test, you can preserve all
+resources with their original names:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresources </span><span class="err">*/</span><span class="k k-Filename">*</span>
+</code></pre></div>
+
+<p>In some rare cases, your application may be referring to the resource <em>files</em>
+directly, by their names. You then need to preserve them with their original
+names. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresourcefiles </span><span class="err">res/drawable*/my_icon.png</span>
+</code></pre></div>
+
+<p>The <a href="usage.html#keepresourcefiles"><code>-keepresourcefiles</code></a> option preserves the
+specified resource files, which are technically independent from the
+corresponding resources. With wild-cards:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresourcefiles </span><span class="err">res/*/</span><span class="k k-Filename">*</span>
+</code></pre></div>
+
+<h2 id="resourcefiles">Processing general resource files<a class="headerlink" href="#resourcefiles" title="Permanent link">&para;</a></h2>
+<p>If your application contains resource files, it may be necessary to adapt
+their names and/or their contents when the application is obfuscated. The
+following two options can achieve this automatically:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-adaptresourcefilenames</span>    <span class="kt">**.properties</span><span class="p">,</span><span class="kt">**.gif</span><span class="p">,</span><span class="kt">**.jpg</span>
+<span class="nb">-adaptresourcefilecontents </span><span class="err">**.properties,META-INF/MANIFEST.MF</span>
+</code></pre></div>
+
+<p>The <a href="usage.html#adaptresourcefilenames"><code>-adaptresourcefilenames</code></a> option in
+this case renames properties files and image files in the processed output,
+based on the obfuscated names of their corresponding class files (if any). The
+<a href="usage.html#adaptresourcefilecontents"><code>-adaptresourcefilecontents</code></a> option
+looks for class names in properties files and in the manifest file, and
+replaces these names by the obfuscated names (if any). You'll probably want to
+adapt the filters to suit your application.</p>
+<h2 id="manifestfiles">Processing manifest files<a class="headerlink" href="#manifestfiles" title="Permanent link">&para;</a></h2>
+<p>As illustrated in the previous section, manifest files can be treated like
+ordinary resource files. DexGuard can adapt obfuscated class names in the
+files, but it won't make any other changes. If you want anything else, you
+should apply an external tool. For instance, if a manifest file contains
+signing information, you should sign the jar again after it has been
+processed.</p>
+<p>If you're merging several input jars into a single output jar, you'll have to
+pick one, typically by specifying <a href="usage.html#filters">filters</a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in1.jar</span>
+<span class="nb">-injars  </span><span class="err">in2.jar(!META-INF/MANIFEST.MF)</span>
+<span class="nb">-injars  </span><span class="err">in3.jar(!META-INF/MANIFEST.MF)</span>
+<span class="nb">-outjars </span><span class="err">out.jar</span>
+</code></pre></div>
+
+<p>The filters will let DexGuard copy the manifest file from the first jar and
+ignore any manifest files in the second and third input jars. Note that
+DexGuard will leave the order of the files in the jars unchanged; manifest
+files are not necessarily put first.</p>
+<h2 id="reflection">Adding reflection for sensitive APIs<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h2>
+<p>You can add reflection to obfuscate access to sensitive APIs, with the option
+<a href="usage.html#accessthroughreflection"><code>-accessthroughreflection</code></a>. For instance,
+this option replaces access to the standard cryptographic <code>SecretKey</code> class by
+equivalent reflective code:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-accessthroughreflection</span> <span class="kd">class </span><span class="nc">javax.crypto.SecretKey </span><span class="p">{</span>
+    <span class="kt">byte</span><span class="o">]</span> <span class="nf">getEncoded</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>For better obfuscation, you'll typically want to encrypt the resulting
+strings:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="err">&quot;</span><span class="kt">javax.crypto.SecretKey</span><span class="err">&quot;</span><span class="p">,</span> <span class="err">&quot;</span><span class="kt">getEncoded</span><span class="err">&quot;</span>
+</code></pre></div>
+
+<p>or simply all strings in the class from which the cryptographic class is
+called:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="kd">class </span><span class="nc">com.example.MySecretClass</span>
+</code></pre></div>
+
+<p>Finally, you can add another layer of obfuscation by also encrypting the
+latter class:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptclasses</span><span class="w"> </span><span class="kt">com.example.MySecretClass</span>
+</code></pre></div>
+
+<p>Working sample project: <code>samples/basic/Reflection</code></p>
+<h2 id="classencryption">Encrypting classes<a class="headerlink" href="#classencryption" title="Permanent link">&para;</a></h2>
+<p>You can encrypt entire classes by specifying them with the option
+<a href="usage.html#encryptclasses"><code>-encryptclasses</code></a>. It accepts a
+<a href="usage.html#filters">filter</a>, which can contain wildcards and negators. For
+example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptclasses</span><span class="w"> </span><span class="kt">com.example.MySecretClass</span><span class="p">,</span> <span class="kt">com.example.MySecretClass</span><span class="err">$</span><span class="kt">*</span>
+</code></pre></div>
+
+<p>This option instructs to encrypt the specified class and all of its inner
+classes. The latter classes are easy to forget, because they are defined in
+the same source file, but they may be important too.</p>
+<p>Working sample project: <code>samples/basic/ClassEncryption</code></p>
+<h2 id="stringencryption">Encrypting strings<a class="headerlink" href="#stringencryption" title="Permanent link">&para;</a></h2>
+<p>There are a few alternative ways to specify which constant strings in the code
+should be encrypted, with the option
+<a href="usage.html#encryptstrings"><code>-encryptstrings</code></a>. The shortest way is to specify
+the strings literally:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="err">&quot;</span><span class="kt">Some</span> <span class="kt">secret</span> <span class="kt">string</span><span class="err">&quot;</span><span class="p">,</span> <span class="err">&quot;</span><span class="kt">Some</span> <span class="kt">other</span> <span class="kt">secret</span> <span class="kt">string</span><span class="err">&quot;</span>
+</code></pre></div>
+
+<p>In this case, the option has a <a href="usage.html#filters">filter</a>, which can contain
+wildcards and negators. Alternatively, you can specify <code>final String</code> fields,
+whose strings should be encrypted wherever they occur. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="k">public</span> <span class="kd">class </span><span class="nc">com.example.MyConstants </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">final</span> <span class="kt">java.lang.String</span> <span class="kt">SECRET_KEY</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Alternatively, you can specify methods whose constant strings should all be
+encrypted. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="k">public</span> <span class="kd">class </span><span class="nc">com.example.MySensitiveClass </span><span class="p">{</span>
+    <span class="k">public</span> <span class="kt">void</span> <span class="nf">mySecretMethod</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Finally, you can just specify classes whose constant strings should all be
+encrypted. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-encryptstrings</span> <span class="k">public</span> <span class="kd">class </span><span class="nc">com.example.MySecretClass</span>
+</code></pre></div>
+
+<p>In these last three cases, the options have <a href="usage.html#classspecification">class
+specifications</a> that specify one or more classes,
+fields, or methods. These specifications support multiple elements and various
+wildcards.</p>
+<p>Working sample project: <code>samples/basic/StringEncryption</code></p>
+<h2 id="stacktrace">Producing useful obfuscated stack traces<a class="headerlink" href="#stacktrace" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>These options let obfuscated applications or libraries produce stack traces
+that can still be deciphered later on:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-printmapping </span><span class="err">out.map</span>
+
+<span class="nb">-renamesourcefileattribute</span> <span class="kt">SourceFile</span>
+<span class="nb">-keepattributes</span> <span class="kt">SourceFile</span><span class="p">,</span><span class="kt">LineNumberTable</span>
+</code></pre></div>
+
+<p>We're keeping all source file attributes, but we're replacing their values by
+the string "SourceFile". We could use any string.</p>
+<p>We're also keeping the line number tables of all methods.</p>
+<p>Whenever both of these attributes are present, the Java run-time environment
+will include line number information when printing out exception stack traces.</p>
+<p>The information will only be useful if we can map the obfuscated names back to
+their original names, so we're saving the mapping to a file <code>out.map</code>. The
+information can then be used by the <a href="tools/retrace.html#examples">ReTrace</a> tool to
+restore the original stack trace.</p>
+<h2 id="repackaging">Obfuscating package names<a class="headerlink" href="#repackaging" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The DexGuard <a href="defaultconfigurations.html">default configurations</a> already specify these settings for you.</p>
+</div>
+<p>Package names can be obfuscated in various ways, with increasing levels of
+obfuscation and compactness. For example, consider the following classes:</p>
+<div class="codehilite"><pre><span></span><code>mycompany.myapplication.MyMain
+mycompany.myapplication.Foo
+mycompany.myapplication.Bar
+mycompany.myapplication.extra.FirstExtra
+mycompany.myapplication.extra.SecondExtra
+mycompany.util.FirstUtil
+mycompany.util.SecondUtil
+</code></pre></div>
+
+<p>Let's assume the class name <code>mycompany.myapplication.MyMain</code> is the main
+application class that is kept by the configuration. All other class names can
+be obfuscated.</p>
+<p>By default, packages that contain classes that can't be renamed aren't renamed
+either, and the package hierarchy is preserved. This results in obfuscated
+class names like these:</p>
+<div class="codehilite"><pre><span></span><code>mycompany.myapplication.MyMain
+mycompany.myapplication.a
+mycompany.myapplication.b
+mycompany.myapplication.a.a
+mycompany.myapplication.a.b
+mycompany.a.a
+mycompany.a.b
+</code></pre></div>
+
+<p>The <a href="usage.html#flattenpackagehierarchy"><code>-flattenpackagehierarchy</code></a> option
+obfuscates the package names further, by flattening the package hierarchy of
+obfuscated packages:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-flattenpackagehierarchy</span> <span class="p">&#39;</span><span class="kt">myobfuscated</span><span class="p">&#39;</span>
+</code></pre></div>
+
+<p>The obfuscated class names then look as follows:</p>
+<div class="codehilite"><pre><span></span><code>mycompany.myapplication.MyMain
+mycompany.myapplication.a
+mycompany.myapplication.b
+myobfuscated.a.a
+myobfuscated.a.b
+myobfuscated.b.a
+myobfuscated.b.b
+</code></pre></div>
+
+<p>Alternatively, the <a href="usage.html#repackageclasses"><code>-repackageclasses</code></a> option
+obfuscates the entire packaging, by combining obfuscated classes into a single
+package:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-repackageclasses</span> <span class="p">&#39;</span><span class="kt">myobfuscated</span><span class="p">&#39;</span>
+</code></pre></div>
+
+<p>The obfuscated class names then look as follows:</p>
+<div class="codehilite"><pre><span></span><code>mycompany.myapplication.MyMain
+mycompany.myapplication.a
+mycompany.myapplication.b
+myobfuscated.a
+myobfuscated.b
+myobfuscated.c
+myobfuscated.d
+</code></pre></div>
+
+<p>Additionally specifying the
+<a href="usage.html#allowaccessmodification"><code>-allowaccessmodification</code></a> option allows
+access permissions of classes and class members to be broadened, opening up
+the opportunity to repackage all obfuscated classes:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-repackageclasses</span> <span class="p">&#39;</span><span class="kt">myobfuscated</span><span class="p">&#39;</span>
+<span class="nb">-allowaccessmodification</span>
+</code></pre></div>
+
+<p>The obfuscated class names then look as follows:</p>
+<div class="codehilite"><pre><span></span><code>mycompany.myapplication.MyMain
+myobfuscated.a
+myobfuscated.b
+myobfuscated.c
+myobfuscated.d
+myobfuscated.e
+myobfuscated.f
+</code></pre></div>
+
+<p>The specified target package can always be the root package. For instance:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-repackageclasses</span> <span class="p">&#39;&#39;</span>
+<span class="nb">-allowaccessmodification</span>
+</code></pre></div>
+
+<p>The obfuscated class names are then the shortest possible names:</p>
+<div class="codehilite"><pre><span></span><code>mycompany.myapplication.MyMain
+a
+b
+c
+d
+e
+f
+</code></pre></div>
+
+<p>Note that not all levels of obfuscation of package names may be acceptable for
+all code. Notably, you may have to take into account that your application may
+contain <a href="#resourcefiles">resource files</a> that have to be adapted.</p>
+<h2 id="samsungmarket">Publishing on the Samsung app market<a class="headerlink" href="#samsungmarket" title="Permanent link">&para;</a></h2>
+<p>If you're publishing your Android application on the Samsung app market, and
+you get "File upload has failed. There is no application ID(PackageName) or
+Version information(VersionName) in the Android Manifest.xml file you have
+registered.", then you need to preserve the mentioned resource XML attribute
+names in the <code>AndroidManifest.xml</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresourcexmlattributenames </span><span class="err">manifest/package,manifest/versionName </span>
+</code></pre></div>
+
+<p>The Samsung market parses these attributes when you upload your application,
+and they can't handle obfuscated names.</p>
+<p>Other markets may try to read even more attributes. You could then refine your
+configuration experimentally, or just not obfuscate any attributes in the
+manifest at all:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepresourcexmlattributenames </span><span class="err">manifest/*</span><span class="k k-Filename">*</span>
+</code></pre></div>
+
+<h2 id="logging">Removing logging code<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<p>You can let DexGuard remove logging code. The trick is to specify that the
+logging methods don't have side-effects — even though they actually do, since
+they write to the console or to a log file. DexGuard will take your word for
+it and remove the invocations (in the optimization step) and if possible the
+logging classes and methods themselves (in the shrinking step). For example,
+this configuration removes invocations of the Android logging methods:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-assumenosideeffects</span><span class="w"> </span><span class="kd">class </span><span class="nc">android.util.Log </span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">boolean</span> <span class="nf">isLoggable</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">v</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">w</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">d</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">e</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The wildcards are a shortcut to match all versions of the methods. Be careful
+not to use a <code>*</code> wildcard to match all methods, because it would also match
+methods like <code>wait()</code>, higher up the hierarchy. Removing those invocations
+will generally break your code.</p>
+<p>Note that you generally can't remove logging code that uses
+<code>System.out.println</code>, since you would be removing all invocations of
+<code>java.io.PrintStream#println</code>, which could break your application. You can
+work around it by creating your own logging methods and let DexGuard remove
+those.</p>
+<p>Working sample project: <code>samples/basic/LoggingRemoval</code></p>
+<h2 id="restructuring">Restructuring the output archives<a class="headerlink" href="#restructuring" title="Permanent link">&para;</a></h2>
+<p>In simple applications, all output classes and resources files are
+merged into a single jar. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">classes</span>
+<span class="nb">-injars  </span><span class="err">in1.jar</span>
+<span class="nb">-injars  </span><span class="err">in2.jar</span>
+<span class="nb">-injars  </span><span class="err">in3.jar</span>
+<span class="nb">-outjars </span><span class="err">out.jar</span>
+</code></pre></div>
+
+<p>This configuration merges the processed versions of the files in the <code>classes</code>
+directory and the three jars into a single output jar <code>out.jar</code>.</p>
+<p>If you want to preserve the structure of your input jars (and/or apks, aars,
+aabs, wars, ears, jmods, zips, or directories), you can specify an output
+directory (or an apk, an aar, an aab, a war, an ear, a jmod, or a zip). For
+example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in1.jar</span>
+<span class="nb">-injars  </span><span class="err">in2.jar</span>
+<span class="nb">-injars  </span><span class="err">in3.jar</span>
+<span class="nb">-outjars </span><span class="err">out</span>
+</code></pre></div>
+
+<p>The input jars will then be reconstructed in the directory <code>out</code>, with their
+original names.</p>
+<p>You can also combine archives into higher level archives. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in1.jar</span>
+<span class="nb">-injars  </span><span class="err">in2.jar</span>
+<span class="nb">-injars  </span><span class="err">in3.jar</span>
+<span class="nb">-outjars </span><span class="err">out.war</span>
+</code></pre></div>
+
+<p>The other way around, you can flatten the archives inside higher level
+archives into simple archives:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in.war</span>
+<span class="nb">-outjars </span><span class="err">out.jar</span>
+</code></pre></div>
+
+<p>This configuration puts the processed contents of all jars inside <code>in.war</code>
+(plus any other contents of <code>in.war</code>) into <code>out.jar</code>.</p>
+<p>If you want to combine input jars (and/or apks, aabs, aars, wars, ears, jmods,
+zips, or directories) into output jars (and/or apks, aabs, aars, wars, ears,
+jmods, zips, or directories), you can group the <a href="usage.html#injars"><code>-injars</code></a>
+and <a href="usage.html#outjars"><code>-outjars</code></a> options. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars </span><span class="err">base_in1.jar</span>
+<span class="nb">-injars </span><span class="err">base_in2.jar</span>
+<span class="nb">-injars </span><span class="err">base_in3.jar</span>
+<span class="nb">-outjars </span><span class="err">base_out.jar</span>
+
+<span class="nb">-injars  </span><span class="err">extra_in.jar</span>
+<span class="nb">-outjars </span><span class="err">extra_out.jar</span>
+</code></pre></div>
+
+<p>This configuration puts the processed results of all <code>base_in*.jar</code> jars into
+<code>base_out.jar</code>, and the processed results of the <code>extra_in.jar</code> into
+<code>extra_out.jar</code>. Note that only the order of the options matters; the
+additional whitespace is just for clarity.</p>
+<p>This grouping, archiving, and flattening can be arbitrarily complex. DexGuard
+always tries to package output archives in a sensible way, reconstructing the
+input entries as much as required.</p>
+<h2 id="filtering">Filtering the input and the output<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p>The default configuration of the DexGuard plugins already specifies these
+settings for you.</p>
+</div>
+<p>If you want even greater control, you can add <a href="usage.html#filters">filters</a> to
+the input and the output, filtering out apks, aabs, jars, aars, wars, ears,
+jmods, zips, and/or ordinary files. For example, if you want to disregard
+certain files from an input jar:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in.jar(!images/**)</span>
+<span class="nb">-outjars </span><span class="err">out.jar</span>
+</code></pre></div>
+
+<p>This configuration removes any files in the <code>images</code> directory and its
+subdirectories.</p>
+<p>Such filters can be convenient for avoiding warnings about duplicate files in
+the output. For example, only keeping the manifest file from a first input
+jar:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in1.jar</span>
+<span class="nb">-injars  </span><span class="err">in2.jar(!META-INF/MANIFEST.MF)</span>
+<span class="nb">-injars  </span><span class="err">in3.jar(!META-INF/MANIFEST.MF)</span>
+<span class="nb">-outjars </span><span class="err">out.jar</span>
+</code></pre></div>
+
+<p>It is also possible to filter the jars (and/or apks, aabs, aars, wars, ears,
+jmods, zips) themselves, based on their names. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in(**/acme_*.jar;)</span>
+<span class="nb">-outjars </span><span class="err">out.jar</span>
+</code></pre></div>
+
+<p>Note the semi-colon in the filter; the filter in front of it applies to jar
+names. In this case, only <code>acme_*.jar</code> jars are read from the directory <code>in</code>
+and its subdirectories. Filters for war names, ear names, and zip names can be
+prefixed with additional semi-colons. All types of filters can be combined.
+They are orthogonal.</p>
+<p>On the other hand, you can also filter the output, in order to control
+what content goes where. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars  </span><span class="err">in.jar</span>
+<span class="nb">-outjars </span><span class="err">code_out.jar(**.class)</span>
+<span class="nb">-outjars </span><span class="err">resources_out.jar</span>
+</code></pre></div>
+
+<p>This configuration splits the processed output, sending <code>**.class</code> files to
+<code>code_out.jar</code>, and all remaining files to <code>resources_out.jar</code>.</p>
+<p>Again, the filtering can be arbitrarily complex, especially when combined with
+grouping input and output.</p>
+<h2 id="deadcode">Finding dead code<a class="headerlink" href="#deadcode" title="Permanent link">&para;</a></h2>
+<p>These options list unused classes, fields, and methods in the application
+<code>com.example.MyApplication</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars      </span><span class="err">in.jar</span>
+<span class="nb">-libraryjars </span><span class="err">/usr/local/android-sdk/platforms/android-28/android.jar</span>
+
+<span class="nb">-dontoptimize</span>
+<span class="nb">-dontobfuscate</span>
+<span class="nb">-dontpreverify</span>
+<span class="nb">-printusage</span>
+
+<span class="err">-keep public class com.example.MyApplication {</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">java.lang.String</span><span class="o">[]</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>We're not specifying an output jar, just printing out some results. We're
+saving some processing time by skipping the other processing steps.</p>
+<p>The java compiler inlines primitive constants and String constants (<code>static
+final</code> fields). DexGuard would therefore list such fields as not being used in
+the class files that it analyzes, even if they <em>are</em> used in the source files.
+We can add a <a href="usage.html#keepclassmembers"><code>-keepclassmembers</code></a> option that
+keeps those fields a priori, in order to avoid having them listed:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-keepclassmembers</span><span class="w"> </span><span class="kd">class </span><span class="nc">* </span><span class="p">{</span>
+    <span class="k">static</span> <span class="k">final</span> <span class="o">%</span>                <span class="nf">*</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">final</span> <span class="kt">java.lang.String</span> <span class="nf">*</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="annotations">Using annotations to configure DexGuard<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
+<p>The traditional DexGuard configuration allows to keep a clean separation
+between the code and the configuration for shrinking, optimization, and
+obfuscation. However, it is also possible to define specific annotations, and
+then annotate the code to configure the processing. You can find a set of such
+predefined annotations in the directory <code>extras/annotations/lib</code> in the
+DexGuard distribution. The annotation classes are defined in
+<code>annotations.jar</code>. The corresponding DexGuard configuration (or
+meta-configuration, if you prefer) is specified in <code>annotations.pro</code>. With
+these files, you can start annotating your code. For instance, a java source
+file <code>Application.java</code> can be annotated as follows:</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@KeepApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Application</span> <span class="p">{</span>
+  <span class="c1">// ....</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The DexGuard configuration file for the application can then be simplified by
+leveraging these annotations:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">-injars      </span><span class="err">in.jar</span>
+<span class="nb">-outjars     </span><span class="err">out.jar</span>
+<span class="nb">-libraryjars </span><span class="err">/usr/local/android-sdk/platforms/android-28/android.jar</span>
+
+<span class="nb">-include </span><span class="err">lib/annotations.pro</span>
+</code></pre></div>
+
+<p>The annotations are effectively replacing the application-dependent <code>-keep</code>
+options. You may still wish to add traditional <a href="usage.html#keep"><code>-keep</code></a>
+options for processing <a href="#native">native methods</a>,
+<a href="#enumerations">enumerations</a>, <a href="#serializable">serializable classes</a>, and
+<a href="#annotations">annotations</a>.</p>
+<p>The directory <code>extras/annotations</code> contains more examples that illustrate some
+of the possibilities.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="protectionreport.html" title="Protection Report" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Protection Report
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="refcard.html" title="Reference Card" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Reference Card
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Guardsquare
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/guardsquare" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/guardsquare-nv" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/guardsquare" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>

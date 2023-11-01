@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.guardsquare",
+    "module": "dexguard-gradle-plugin",
+    "version": "1.1.9",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.32"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "dexguard-gradle-plugin-1.1.9.jar",
+          "url": "dexguard-gradle-plugin-1.1.9.jar",
+          "size": 215686,
+          "sha512": "0f67c16aa782a137b6ed1ccacdf44c2192a2967b53e35823a5d38575d85a5a859f0df7b6cf6e6f919a370ca47014b67b1e088b015323c31aa9a9b74b33311b28",
+          "sha256": "607b1509d81d0c1824af8ccca1053b3b3755372d0bfe9756826b4ca600274651",
+          "sha1": "f51e0186f64b3c5339e3e62c7cf184e4cf38d960",
+          "md5": "bef71318f9c8cac29a4dd1e1214489f0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.32"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "dexguard-gradle-plugin-1.1.9.jar",
+          "url": "dexguard-gradle-plugin-1.1.9.jar",
+          "size": 215686,
+          "sha512": "0f67c16aa782a137b6ed1ccacdf44c2192a2967b53e35823a5d38575d85a5a859f0df7b6cf6e6f919a370ca47014b67b1e088b015323c31aa9a9b74b33311b28",
+          "sha256": "607b1509d81d0c1824af8ccca1053b3b3755372d0bfe9756826b4ca600274651",
+          "sha1": "f51e0186f64b3c5339e3e62c7cf184e4cf38d960",
+          "md5": "bef71318f9c8cac29a4dd1e1214489f0"
+        }
+      ]
+    }
+  ]
+}

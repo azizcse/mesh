@@ -1,0 +1,18 @@
+{
+  "name": "dexguard-cordova-plugin",
+  "version": "1.0.0",
+  "description": "DexGuard Cordova Plugin",
+  "cordova": {
+    "id": "dexguard-cordova-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "dexguard",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Guardsquare"
+}

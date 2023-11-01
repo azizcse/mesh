@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.w3engineers.meshrnd">
+    <!-- WIFI Direct, Ethernet, Multicast- and Bonjour-Beacon -->
+
+    <queries>
+        <package android:name="com.w3engineers.unicef.telemesh" />
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.CHANGE_WIFI_STATE"
+        android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <application
+        android:name="com.w3engineers.mesh.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:name">
+        <!--
+            <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        -->
+        <activity
+            android:name="com.w3engineers.mesh.ui.TeleMeshServiceMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="message"
+                android:value="InterMeshService main activity" />
+        </activity>
+        <!--<activity
+            android:name="com.w3engineers.mesh.ui.TeleMeshServiceMainActivity"
+            android:label="TeleMesh Service"
+            android:screenOrientation="portrait" />-->
+
+        <service
+            android:name=".TeleMeshService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="telemesh">
+
+            <intent-filter>
+                <action android:name="service.viper_server" />
+
+            </intent-filter>
+
+        </service>
+
+        <activity
+            android:name="com.w3engineers.purchase.ui.tokenguide.PointGuidelineActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.w3engineers.purchase.ui.wallet.WalletActivity"
+            android:label="@string/title_activity_wallet"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.w3engineers.purchase.ui.dataplan.TestDataPlanActivity"
+            android:label="@string/title_activity_data_plan"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.w3engineers.mesh.ui.profilechoice.ProfileChoiceActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="com.w3engineers.mesh.ui.importwallet.ImportWalletActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name="com.w3engineers.mesh.ui.security.SecurityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--<activity
+            android:name=".ui.nav.BottomNavActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.AppService"
+            android:stopWithTask="false" />-->
+
+    </application>
+
+</manifest>
